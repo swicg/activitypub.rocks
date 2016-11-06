@@ -1,0 +1,174 @@
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Inconsolata-Regular'), local('Inconsolata'), local('Inconsolata Regular'), url('../fonts/inconsolata/Inconsolata-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Inconsolata-Bold'), local('Inconsolata Bold'), url('../fonts/inconsolata/Inconsolata-Bold.ttf');
+}
+
+body {
+    background-color: #222222;
+    color: #ffe1ff;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    min-width: 500px;
+}
+
+.main-wrapper {
+    flex: 1;
+    /* This is used to make the footer "flush" with the rest of the page */
+    min-height: 95.5vh;
+}
+
+a {
+    color: #ff67ff;
+    text-decoration: none;
+    transition: text-shadow .22s;
+}
+
+a:hover {
+    text-shadow: 0px 0px 2px #ffb0fe;
+}
+
+a:visited {
+    color: #ff35fd;
+    text-decoration: none;
+}
+
+div.header-logo-wrapper {
+    text-align: center;
+}
+
+div.navbar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    font-size: 1.25em;
+    margin-bottom: 5px;
+}
+
+div.small-navbar {
+    max-width: 500px;
+    padding: 5px;
+}
+
+div.big-navbar {
+    max-width: 700px;
+    padding-bottom: 16px;
+}
+
+div.navbar-menu a {
+    color: #ffe2ff;
+    text-decoration: none;
+    transition: text-shadow .3s;
+    text-shadow: 0px 0px 3px #4f4f4f;
+}
+
+div.navbar-menu a:hover {
+    text-shadow: 0px 0px 3px #ffffff;
+}
+
+div.content-box {
+    border-radius: 5px;
+    border: 3px solid #685f68; 
+    background: #312f31;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+}
+
+div.content-box h2.title {
+    margin-left: -10px;
+}
+
+div.content-box h1.title {
+    margin-left: -10px;
+}
+
+.bigger-text {
+    font-size: 16pt;
+}
+
+/* Not super sold on these */
+
+h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 1.25em;
+    margin: 10px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.footer {
+    font-size: 10pt;
+    text-align: center;
+}
+
+.footer a:hover {
+    text-shadow: 0px 0px 1px #a981a9;
+}
+
+div.code {
+    border-radius: 5px;
+    border: 3px solid #110e13;
+    background: #110e13;
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+    white-space: pre;
+}
+
+.blogpost {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blogpost .post-about {
+    margin-top: -5px;
+    font-size: .75em;
+    color: #d2cfe7;
+}
+
+.blogpost .title a {
+    color: #ffffff;
+}
+
+.news-header {
+    border-radius: 5px;
+    border: 2px solid #2c2a2c;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: #2c2a2c;
+}
+
+.news-header h3 {
+    color: #f2d7f2;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
