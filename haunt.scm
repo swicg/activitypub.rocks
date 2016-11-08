@@ -42,9 +42,8 @@
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
-                  ;; 8sync logo
-                  (div (@ (class "header-logo-wrapper"))
-                       "ActivityPub")
+                  (a (@ (href "/"))
+                     "ActivityPub Rocks!")
                   ;; ;; Header menu
                   ;; (div (@ ,(if big-logo
                   ;;              '(class "navbar-menu big-navbar")
@@ -77,18 +76,48 @@
 
 
 
+;;; Index page
+
+(define pitch
+  '(div
+    (@ (class "pitch"))
+    (p "Don't you miss the days when the web really was the world's greatest "
+       "decentralized network?  Before everything got locked down into a handful "
+       "of walled gardens?  So do we.")
+
+    ;; Main intro
+    (p "Enter "
+       (a (@ (href "https://www.w3.org/TR/activitypub/"))
+          "ActivityPub")
+       "!  ActivityPub is a decentralized social networking protocol"
+       "based on the "
+       (a (@ (href "https://www.w3.org/TR/activitystreams-core/"))
+          "ActivityStreams 2.0")
+       " data format and is being developed as part of the "
+       (a (@ (href "https://www.w3.org/wiki/Socialwg"))
+          "W3C Social Web Working Group")
+       ".  "
+       "It provides a client to server API for creating, updating and deleting "
+       "content, as well as a federated server to server API for delivering "
+       "notifications and subscribing to content.")
+
+    (p "Sounds exciting?  Dive in!")))
+
+(define read-it
+  (let ((wrap-it
+         (lambda (link name)
+           `(p "* ==> "
+               (a (@ (href ,link))
+                  ,name)
+               " <== *"))))
+    `(div (@ (class "read-it"))
+          ,(wrap-it "https://www.w3.org/TR/activitypub/"
+                    "Latest published version")
+          ,(wrap-it "https://www.w3.org/TR/activitypub/"
+                    "Latest editor's draft"))))
 
 (define (index-content posts)
-  `(div
-    ;; Main intro
-    (div (@ (class "content-box bigger-text"))
-         (p "ActivityPub is blah blah blah...")
-         ;; (div (@ (class "code"))
-         ;;      ,(highlights->sxml
-         ;;        (highlight lex-scheme code-snippet)))
-         )
-    
-    ))
+  `(div ,pitch ,read-it))
 
 (define (index-page site posts)
   (make-page
@@ -97,6 +126,9 @@
                 (index-content posts)
                 #:big-logo #t)
    sxml->html))
+
+
+;;; Site
 
 (site #:title "ActivityPub Rocks!"
       #:domain "activitypub.rocks"
