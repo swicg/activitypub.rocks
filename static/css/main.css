@@ -67,79 +67,94 @@ a:visited {
 }
 
 .read-it {
+    font-weight: bold;
     color: #5a4a73;
     text-align: center;
 }
 
-div.navbar-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 8px;
-    font-size: 1.25em;
-    margin-bottom: 5px;
-}
-
-div.small-navbar {
-    max-width: 500px;
-    padding: 5px;
-}
-
-div.big-navbar {
-    max-width: 700px;
-    padding-bottom: 16px;
-}
-
-div.navbar-menu a {
-    color: #ffe2ff;
-    text-decoration: none;
-    transition: text-shadow .3s;
-    text-shadow: 0px 0px 3px #4f4f4f;
-}
-
-div.navbar-menu a:hover {
-    text-shadow: 0px 0px 3px #ffffff;
-}
-
-div.content-box {
-    border-radius: 5px;
-    border: 3px solid #685f68; 
-    background: #312f31;
+div.for-implementers-box {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 3px dashed #cacae4;
+    background: #ffffff;
     padding: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    margin-bottom: 10px;
+    font-size: 14pt;
 }
 
-div.content-box h2.title {
-    margin-left: -10px;
+div.for-implementers-box header {
+    color: #5a4a73;
+    text-align: center;
+    margin: 5px;
+    font-size: 20pt;
 }
 
-div.content-box h1.title {
-    margin-left: -10px;
+h1, h2, h3, h4 {
+    text-align: center;
 }
 
-.bigger-text {
-    font-size: 16pt;
+.news-feed {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-/* Not super sold on these */
-
-h1 {
-    color: #ffffff;
-    font-size: 1.5em;
-    margin: 10px;
-    font-family: 'Inconsolata', monospace;
+.news-feed header {
+    font-size: 20pt;
 }
 
-h2 {
-    color: #ffffff;
-    font-size: 1.25em;
-    margin: 10px;
-    font-family: 'Inconsolata', monospace;
+.news-feed ul {
+    padding: 0px;
+    margin: 5px;
 }
+
+.news-feed li {
+    list-style-type: none;
+}
+
+
+/* 
+ * div.content-box {
+ *     border-radius: 5px;
+ *     border: 3px solid #685f68; 
+ *     background: #312f31;
+ *     padding: 10px;
+ *     padding-left: 30px;
+ *     padding-right: 30px;
+ *     margin-bottom: 10px;
+ * }
+ * 
+ * div.content-box h2.title {
+ *     margin-left: -10px;
+ * }
+ * 
+ * div.content-box h1.title {
+ *     margin-left: -10px;
+ * }
+ * 
+ * .bigger-text {
+ *     font-size: 16pt;
+ * }
+ * 
+ * /\* Not super sold on these *\/
+ * 
+ * h1 {
+ *     color: #ffffff;
+ *     font-size: 1.5em;
+ *     margin: 10px;
+ *     font-family: 'Inconsolata', monospace;
+ * }
+ * 
+ * h2 {
+ *     color: #ffffff;
+ *     font-size: 1.25em;
+ *     margin: 10px;
+ *     font-family: 'Inconsolata', monospace;
+ * }
+ */
 
 .footer {
     font-size: 10pt;

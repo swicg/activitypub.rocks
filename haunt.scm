@@ -17,6 +17,7 @@
 (use-modules (haunt asset)
              (haunt site)
              (haunt page)
+             (haunt post)
              (haunt html)
              (haunt builder blog)
              (haunt builder atom)
@@ -74,6 +75,11 @@
              "Haunt")
           "."))))
 
+
+;;; Blog
+
+(define (post-uri site post)
+  (string-append "/news/" (site-post-slug site post) ".html"))
 
 
 ;;; Index page
@@ -116,14 +122,30 @@
           ,(wrap-it "https://www.w3.org/TR/activitypub/"
                     "Latest editor's draft"))))
 
-(define (index-content posts)
-  `(div ,pitch ,read-it))
+(define for-implementers
+  `(div (@ (class "for-implementers-box"))
+        (header ".-~= Hey, Implementers! =~-.")
+        (p "I love lollipop pie I love cupcake. Soufflé apple pie topping lemon drops cookie gummies carrot cake donut. Brownie chocolate cake jelly beans I love chocolate cake I love candy biscuit pastry. Lollipop cake gummi bears croissant halvah I love pudding I love sesame snaps. Macaroon I love liquorice halvah pastry gingerbread sweet. Lollipop donut soufflé candy. Gummi bears bonbon danish jelly beans lemon drops brownie liquorice chocolate cake croissant. Lollipop muffin jelly beans jelly beans cotton candy.")))
+
+(define (news-feed site posts)
+  `(div (@ (class "news-feed"))
+        (header "-=* News *=-")
+        (ul
+         ,(map (lambda (post)
+                 `(li (a (@ (href ,(post-uri site post)))
+                         ,(post-ref post 'title))))
+               posts))))
+
+
+(define (index-content site posts)
+  `(div ,pitch ,read-it
+        ,for-implementers ,(news-feed site posts)))
 
 (define (index-page site posts)
   (make-page
    "index.html"
    (base-layout site
-                (index-content posts)
+                (index-content site posts)
                 #:big-logo #t)
    sxml->html))
 
