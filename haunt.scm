@@ -24,8 +24,7 @@
              (haunt builder assets)
              (haunt reader skribe))
 
-(define* (base-layout site body
-                      #:key title big-logo)
+(define* (base-layout site body #:key title)
   `((doctype "html")
     (head
      (meta (@ (charset "utf-8")))
@@ -125,15 +124,33 @@
 (define for-implementers
   `(div (@ (class "for-implementers-box"))
         (header ".-~= Hey, Implementers! =~-.")
-        (p "I love lollipop pie I love cupcake. Soufflé apple pie topping lemon drops cookie gummies carrot cake donut. Brownie chocolate cake jelly beans I love chocolate cake I love candy biscuit pastry. Lollipop cake gummi bears croissant halvah I love pudding I love sesame snaps. Macaroon I love liquorice halvah pastry gingerbread sweet. Lollipop donut soufflé candy. Gummi bears bonbon danish jelly beans lemon drops brownie liquorice chocolate cake croissant. Lollipop muffin jelly beans jelly beans cotton candy.")))
+        (p "We're so stoked to have you implementing ActivityPub!  "
+           "To make sure ActivityPub implementations work together, we have:")
+        (ul (li (strong (a (@ (href "/test/"))
+                           "A test suite:"))
+                " -- " ; space between link and item
+                "Make sure your application works right according to the "
+                (a (@ (href "https://www.w3.org/TR/activitypub/"))
+                   "ActivityPub standard") ".")
+            (li (strong (a (@ (href "/implementation-report/"))
+                           "Submit implementation reports"))
+                " -- " ; space between link and item
+                "We'd really appreciate you filling this out! "
+                "Help us understand what features are being implemented. "
+                "A necessary step for becoming an official W3C standard!"))
+        ;; (p "Looking to discuss ActivityPub? "
+        ;;    )
+        ))
 
 (define (news-feed site posts)
   `(div (@ (class "news-feed"))
-        (header "-=* News *=-")
+        (header "-=* ActivityPub News *=-")
         (ul
          ,(map (lambda (post)
                  `(li (a (@ (href ,(post-uri site post)))
-                         ,(post-ref post 'title))))
+                         ,(post-ref post 'title))
+                      (div (@ (class "news-feed-item-date"))
+                           ,(date->string* (post-date post)))))
                posts))))
 
 
@@ -145,9 +162,35 @@
   (make-page
    "index.html"
    (base-layout site
-                (index-content site posts)
-                #:big-logo #t)
+                (index-content site posts))
    sxml->html))
+
+
+;;; Test and implementations report stub pages
+
+(define (test-page-tmpl site)
+  (define tmpl
+    'TODO)
+  (base-layout site tmpl))
+
+(define (test-page site posts)
+  (make-page
+   "test/index.html"
+   (test-page-tmpl site)
+   sxml->html))
+
+
+(define (impl-report-page-tmpl site)
+  (define tmpl
+    'TODO)
+  (base-layout site tmpl))
+
+(define (impl-report-page site posts)
+  (make-page
+   "implementation-report/index.html"
+   (impl-report-page-tmpl site)
+   sxml->html))
+
 
 
 ;;; Site
@@ -159,6 +202,8 @@
       #:readers (list skribe-reader)
       #:builders (list (blog #:prefix "/news")
                        index-page
+                       test-page
+                       impl-report-page
                        (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "static")
                        (atom-feeds-by-tag)))

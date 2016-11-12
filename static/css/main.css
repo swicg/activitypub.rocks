@@ -34,7 +34,7 @@ body {
 }
 
 a {
-    color: #e66283;
+    color: #ca4156;
     text-decoration: none;
     transition: text-shadow .5s;
 }
@@ -44,7 +44,7 @@ a:hover {
 }
 
 a:visited {
-    color: #c43a4b;
+    color: #a1363d;
     text-decoration: none;
 }
 
@@ -108,11 +108,15 @@ h1, h2, h3, h4 {
 
 .news-feed ul {
     padding: 0px;
-    margin: 5px;
+    margin: 10px;
 }
 
 .news-feed li {
     list-style-type: none;
+}
+
+.news-feed-item-date {
+    font-size: 8pt;
 }
 
 
