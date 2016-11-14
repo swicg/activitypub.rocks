@@ -24,7 +24,7 @@
              (haunt builder assets)
              (haunt reader skribe))
 
-(define* (base-layout site body #:key title)
+(define* (base-tmpl site body #:key title)
   `((doctype "html")
     (head
      (meta (@ (charset "utf-8")))
@@ -80,6 +80,45 @@
 (define (post-uri site post)
   (string-append "/news/" (site-post-slug site post) ".html"))
 
+(define* (post-template post #:key post-link)
+  `(div (@ (class "content-box blogpost"))
+        (header (@ (class "post-title"))
+                ,(if post-link
+                     `(a (@ (href ,post-link))
+                         ,(post-ref post 'title))
+                     (post-ref post 'title)))
+        (div (@ (class "post-about"))
+             (span (@ (class "by-line"))
+                   ,(post-ref post 'author))
+             " -- " ,(date->string* (post-date post)))
+        (div (@ (class "post-body"))
+             ,(post-sxml post))))
+
+(define (collection-template site title posts prefix)
+  ;; In our case, we ignore the prefix argument because
+  ;; the filename generated and the pathname might not be the same.
+  ;; So we use (prefix-url) instead.
+  (define (post-uri post)
+    (string-append "/news/" (site-post-slug site post) ".html"))
+  `((div (@ (class "news-header"))
+         (h3 "recent news"))
+    (div (@ (class "post-list"))
+         ,@(map
+            (lambda (post)
+              (post-template post
+                             #:post-link (post-uri post)))
+            posts))))
+
+(define aprocks-haunt-theme
+  (theme #:name "ActivityPub Rocks"
+         #:layout
+         (lambda (site title body)
+           (base-tmpl
+            site body
+            #:title title))
+         #:post-template post-template
+         #:collection-template collection-template))
+
 
 ;;; Index page
 
@@ -129,12 +168,14 @@
         (ul (li (strong (a (@ (href "/test/"))
                            "A test suite:"))
                 " -- " ; space between link and item
+                " [coming soon] "
                 "Make sure your application works right according to the "
                 (a (@ (href "https://www.w3.org/TR/activitypub/"))
                    "ActivityPub standard") ".")
             (li (strong (a (@ (href "/implementation-report/"))
                            "Submit implementation reports"))
                 " -- " ; space between link and item
+                " [coming soon] "
                 "We'd really appreciate you filling this out! "
                 "Help us understand what features are being implemented. "
                 "A necessary step for becoming an official W3C standard!"))
@@ -161,7 +202,7 @@
 (define (index-page site posts)
   (make-page
    "index.html"
-   (base-layout site
+   (base-tmpl site
                 (index-content site posts))
    sxml->html))
 
@@ -170,8 +211,14 @@
 
 (define (test-page-tmpl site)
   (define tmpl
-    'TODO)
-  (base-layout site tmpl))
+    '(div
+      (p "Tests will eventually go here. "
+         "We will have tests for clients (by running a fake server), "
+         "for client to server (by having a client that can run operations "
+         "on your server and validate output), and for server to server "
+         "by having a fake server that can test remote interactions behave "
+         "correctly.")))
+  (base-tmpl site tmpl))
 
 (define (test-page site posts)
   (make-page
@@ -182,8 +229,9 @@
 
 (define (impl-report-page-tmpl site)
   (define tmpl
-    'TODO)
-  (base-layout site tmpl))
+    '(div
+      (p "A form to submit information about your implementation will go here. ")))
+  (base-tmpl site tmpl))
 
 (define (impl-report-page site posts)
   (make-page
@@ -200,7 +248,8 @@
       #:default-metadata
       '((author . "Christopher Allan Webber"))
       #:readers (list skribe-reader)
-      #:builders (list (blog #:prefix "/news")
+      #:builders (list (blog #:prefix "/news"
+                             #:theme aprocks-haunt-theme)
                        index-page
                        test-page
                        impl-report-page

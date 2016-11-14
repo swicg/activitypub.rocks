@@ -137,6 +137,32 @@ h1, h2, h3, h4 {
 }
 
 
+div.blogpost {
+    border-radius: 5px;
+    border: 3px solid #cacae4;
+    background: #ffffff;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16pt;
+}
+
+header.post-title {
+    padding: 5px;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.blogpost .post-about {
+    text-align: center;
+    color: #9c9cb4;
+    font-size: .75em;
+}
+
+
+
 /* 
  * div.content-box {
  *     border-radius: 5px;
@@ -194,21 +220,6 @@ div.code {
     margin: 20px;
     overflow: hidden;
     white-space: pre;
-}
-
-.blogpost {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.blogpost .post-about {
-    margin-top: -5px;
-    font-size: .75em;
-    color: #d2cfe7;
-}
-
-.blogpost .title a {
-    color: #ffffff;
 }
 
 .news-header {
