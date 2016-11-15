@@ -133,7 +133,7 @@
     (p "Enter "
        (a (@ (href "https://www.w3.org/TR/activitypub/"))
           "ActivityPub")
-       "!  ActivityPub is a decentralized social networking protocol"
+       "!  ActivityPub is a decentralized social networking protocol "
        "based on the "
        (a (@ (href "https://www.w3.org/TR/activitystreams-core/"))
           "ActivityStreams 2.0")
