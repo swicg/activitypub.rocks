@@ -1,7 +1,0 @@
-(post
- :title "Hello, world!"
- :date (make-date* 2016 11 14)
- :tags '("hello")
-
- (p [Wake up and smell the s-expressions!])
- (p [Real news blogpost will go here, shortly.]))

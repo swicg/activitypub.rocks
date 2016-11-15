@@ -1,0 +1,24 @@
+(post
+ :title "activitypub.rocks launches!"
+ :date (make-date* 2016 11 14 8 45)
+
+ (p [Today marks the launch of
+     ,(anchor [activitypub.rocks] "https://activitypub.rocks"),
+     the very website you see before you.
+     This will be a combination of an advocacy website for
+     ,(anchor [ActivityPub] "https://www.w3.org/TR/activitypub/")
+     as well as tooling to help test and collect feedback on implementations.])
+
+ (p [There should be more news soon.
+     Hopefully we'll be heading to Candidate Recommendation status shortly,
+     and this very week the
+     ,(anchor [W3C Social Working Group] "https://www.w3.org/wiki/Socialwg/")
+     is having another face to face meeting in Boston.
+     So there will be hopefully more to report!
+     In the meanwhile, if you're hungry for news, you may enjoy
+     ,(anchor [this post on the MediaGoblin blog]
+              "http://mediagoblin.org/news/tpac-2016-and-review-activitypub.html")
+     about the last Social Working Group face to face meeting.])
+
+ (p [Onward and upwards towards standardized, federated, decentralized social
+     networks!]))
