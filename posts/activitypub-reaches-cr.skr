@@ -1,0 +1,26 @@
+(post
+ :title "ActivityPub reaches Candidate Recommendation status!"
+ :date (make-date* 2016 11 17)
+ :slug "activitypub-reaches-cr"
+
+ (p [We're thrilled to announce that
+     ,(anchor [ActivityPub] "https://www.w3.org/TR/activitypub/")
+     has officially reached
+     ;; TODO: Link CR
+     Candidate Recommendation status!
+     This is a huge milestone, signaling that ActivityPub has moved to a
+     point of stability where we're no longer planning major revisions
+     and would like to see as many projects move to implement as possible.])
+
+ (p [In other words, now's a great time for ,(em "YOU") to start implementing!
+     Head on over to
+     ,(anchor [the standard] "https://www.w3.org/TR/activitypub/")
+     and get implementing!])
+
+ (p [We're also planning tools to
+     ,(anchor [test] "http://activitypub.rocks/test/")
+     your implementations soon, and
+     ,(anchor [submit implementation reports]
+              "http://activitypub.rocks/implementation-report/").
+     There's a lot to do, but we're on track towards being a proposed
+     recommendation to the W3C!]))
