@@ -6,8 +6,9 @@
  (p [We're thrilled to announce that
      ,(anchor [ActivityPub] "https://www.w3.org/TR/activitypub/")
      has officially reached
-     ;; TODO: Link CR
-     Candidate Recommendation status!
+     ,(anchor [Candidate Recommendation]
+              "https://www.w3.org/2005/10/Process-20051014/tr.html#RecsCR")
+     status!
      This is a huge milestone, signaling that ActivityPub has moved to a
      point of stability where we're no longer planning major revisions
      and would like to see as many projects move to implement as possible.])
