@@ -59,7 +59,6 @@
                   )
           (div (@ (class "site-main-content"))
                ,body))
-     ;; TODO: Link to source.
      (div (@ (class "footer"))
           (a (@ (href "https://gitlab.com/dustyweb/activitypub.rocks"))
              "Site contents")
