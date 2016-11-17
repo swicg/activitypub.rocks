@@ -29,7 +29,7 @@
     (head
      (meta (@ (charset "utf-8")))
      (title ,(if title
-                 (string-append title " -- 8sync")
+                 (string-append title " -- ActivityPub Rocks!")
                  (site-title site)))
      ;; css
      (link (@ (rel "stylesheet")
