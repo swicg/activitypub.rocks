@@ -16,7 +16,7 @@
  (p [In other words, now's a great time for ,(em "YOU") to start implementing!
      Head on over to
      ,(anchor [the standard] "https://www.w3.org/TR/activitypub/")
-     and get implementing!])
+     and start building!])
 
  (p [We're also planning tools to
      ,(anchor [test] "http://activitypub.rocks/test/")
