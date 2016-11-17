@@ -65,6 +65,10 @@ a:visited {
     text-decoration: none;
 }
 
+code {
+    color: #5a4a73;
+}
+
 #site-header {
     text-align: center;
     font-size: 25pt;

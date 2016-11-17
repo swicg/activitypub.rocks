@@ -179,9 +179,8 @@
                 "We'd really appreciate you filling this out! "
                 "Help us understand what features are being implemented. "
                 "A necessary step for becoming an official W3C standard!"))
-        ;; (p "Looking to discuss ActivityPub? "
-        ;;    )
-        ))
+        (p "Looking to discuss implementing ActivityPub?  You can join the "
+           (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
 
 (define (news-feed site posts)
   `(div (@ (class "news-feed"))
