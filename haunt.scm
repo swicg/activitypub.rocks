@@ -156,7 +156,7 @@
     `(div (@ (class "read-it"))
           ,(wrap-it "https://www.w3.org/TR/activitypub/"
                     "Latest published version")
-          ,(wrap-it "https://www.w3.org/TR/activitypub/"
+          ,(wrap-it "https://w3c.github.io/activitypub/"
                     "Latest editor's draft"))))
 
 (define for-implementers
