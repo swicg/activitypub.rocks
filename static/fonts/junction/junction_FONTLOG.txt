@@ -1,0 +1,32 @@
+FONTLOG for Junction
+This file provides detailed information on the Junction Font Software.
+This information should be distributed along with the Junction fonts
+and any derivative works.
+
+Licence: Open Font Licence
+
+Basic Font Information:
+Junction is an open source humanist san serif typeface. 
+
+
+ChangeLog 
+This is a list of both major and minor changes, most recent first:
+
+2. Feb 2010 (Caroline Hadilaksono) Junction Version 2.0
+- Added ISO 8859-1 Latin 1 (Western) glyphs 
+- Added OpenType ligatures (liga) & lining numerals (lnum) features
+- Re-released as "Junction"
+
+1. Feb 2009 (Caroline Hadilaksono) Junction Version 1.0
+- Initial release of font Junction
+
+
+Acknowledgements
+If you make modifications be sure to add your name (N), email (E),
+web-address (W) and description (D). This list is sorted by last name in 
+alphabetical order:
+
+N: Caroline Hadilaksono
+E: caroline@hadilaksono.com
+W: www.hadilaksono.com
+D: Designer - original font & the extended Latin 1 (Western) glyphs 
