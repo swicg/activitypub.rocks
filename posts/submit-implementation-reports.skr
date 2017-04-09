@@ -1,0 +1,28 @@
+(post
+ :title "Help submit implementation reports!"
+ :date (make-date* 2017 04 09)
+ :slug "submit-implementation-reports"
+
+ (p (em [This was done a while ago, but I forgot to update the website.
+         Oops!]))
+
+ (p [We're happy to announce that ActivityPub is now
+     ,(anchor [open for implementation report submissions]
+              "https://github.com/w3c/activitypub/blob/gh-pages/implementation-reports/TEMPLATE.md")!
+     In order for ActivityPub to transition from being a Candidate Recommendation
+     to being a Proposed Recommendation, we need submissions showing that people
+     are using the standard, and help identifying which features are used.
+     (Filling in the implementation report has an added bonus: alongside
+              following the standard, it's a helpful checklist to make sure
+              you're implementing all the things you meant to!)])
+
+ (p [A huge thank you to
+     ,(anchor [Benjamin Goering] "http://bengo.is/")
+     for adding the implementation report template, which has helped
+     tremendously!
+     You rock, bengo!])
+
+ (p [What's coming next?
+     The test suite should be out as soon as possible!
+     So if you start implementing now, you'll be able to run against
+     the test suite very shortly!]))
