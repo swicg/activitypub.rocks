@@ -230,7 +230,7 @@
 
 (define (impl-report-page-tmpl site)
   (define tmpl
-    '(div
+    `(div
       (p "Implementation report template is "
          (a (@ (href ,impl-report-url))
             "available here")
