@@ -35,7 +35,7 @@
     (license gpl3+)
     (home-page "http://activitypub.rocks")
     (inputs
-     `(("guile" ,guile-2.0)
+     `(("guile" ,guile-2.2)
        ("haunt" ,haunt)
        ("guile-reader" ,guile-reader)))))
 
