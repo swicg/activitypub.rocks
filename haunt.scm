@@ -43,8 +43,10 @@
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
-                  (a (@ (href "/"))
-                     "ActivityPub Rocks!")
+                  (a (@ (href "/")
+                        ;; (style "margin-left: -25px;")
+                        )
+                     (img (@ (src "/static/images/ActivityPub-logo.svg"))))
                   ;; ;; Header menu
                   ;; (div (@ ,(if big-logo
                   ;;              '(class "navbar-menu big-navbar")
@@ -69,7 +71,10 @@
           " and "
           (a (@ (href "http://www.gnu.org/licenses/gpl-3.0.en.html"))
              "the GNU GPL, version 3 or any later version")
-          ".  Powered by "
+          ".  ActivityPub logo by mray, released into public domain under "
+          (a (@ (href "https://creativecommons.org/publicdomain/zero/1.0/"))
+             "CC0 1.0")
+          ". Powered by "
           (a (@ (href "http://haunt.dthompson.us/"))
              "Haunt")
           "."))))
@@ -124,7 +129,8 @@
 
 (define pitch
   '(div
-    (@ (class "pitch"))
+    (@ (class "pitch")
+       (style "text-align: justify;"))
     (p "Don't you miss the days when the web really was the world's greatest "
        "decentralized network?  Before everything got locked down into a handful "
        "of walled gardens?  So do we.")
