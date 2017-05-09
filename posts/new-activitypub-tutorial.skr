@@ -1,0 +1,25 @@
+(post
+ :title "New tutorial, new logo!"
+ :date (make-date* 2017 05 09 15 10)
+ :slug "new-tutorial-new-logo"
+
+ (p [A
+     ,(anchor [new Candidate Recommdnation]
+              "https://www.w3.org/TR/2017/CR-activitypub-20170509/")
+     of ActivityPub has been released, and this one includes a really nice
+     new feature...
+     ,(anchor [a tutorial!]
+              "https://www.w3.org/TR/activitypub/#Overview")
+     It includes some very nice illustrations by mray:])
+
+ (p (anchor (image "https://www.w3.org/TR/activitypub/illustration/tutorial-2.png"
+                   :alt-text [inbox/outbox relationship from the tutorial])
+            "https://www.w3.org/TR/activitypub/#Overview"))
+
+ (p [Not only that!
+     mray has also done us the honor of designing us a sweet new logo:])
+
+ (p (image "/static/images/ActivityPub-logo.svg"
+           :alt-text [New ActivityPub logo]))
+
+ (p [Thank you mray for making ActivityPub look good!]))
