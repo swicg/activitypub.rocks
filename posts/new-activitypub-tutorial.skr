@@ -4,7 +4,7 @@
  :slug "new-tutorial-new-logo"
 
  (p [A
-     ,(anchor [new Candidate Recommdnation]
+     ,(anchor [new Candidate Recommendation]
               "https://www.w3.org/TR/2017/CR-activitypub-20170509/")
      of ActivityPub has been released, and this one includes a really nice
      new feature...
