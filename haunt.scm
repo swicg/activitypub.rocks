@@ -180,7 +180,7 @@
                 "We'd really appreciate you filling this out! "
                 "Help us understand what features are being implemented. "
                 "A necessary step for becoming an official W3C standard!")
-            (li (strong (a (@ (href "/test/"))
+            (li (strong (a (@ (href "https://test.activitypub.rocks/"))
                            "A test suite:"))
                 " -- " ; space between link and item
                 " [coming soon] "
