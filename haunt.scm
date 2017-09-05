@@ -165,10 +165,10 @@
 (define read-it
   (let ((wrap-it
          (lambda (link name)
-           `(p "* ==> "
+           `(p "==> "
                (a (@ (href ,link))
                   ,name)
-               " <== *"))))
+               " <=="))))
     `(div (@ (class "read-it"))
           ,(wrap-it "https://www.w3.org/TR/activitypub/"
                     "Latest published version")
