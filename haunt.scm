@@ -127,13 +127,22 @@
 
 ;;; Index page
 
+(define tutorial-image
+  `(div (@ (style "text-align: center"))
+        (a (@ (href "https://www.w3.org/TR/activitypub/#Overview"))
+           (img (@ (src "https://www.w3.org/TR/activitypub/illustration/tutorial-2.png")
+                   (alt "ActivityPub tutorial image"))))))
+
+
 (define pitch
-  '(div
+  `(div
     (@ (class "pitch")
        (style "text-align: justify;"))
     (p "Don't you miss the days when the web really was the world's greatest "
        "decentralized network?  Before everything got locked down into a handful "
        "of walled gardens?  So do we.")
+
+    ,tutorial-image
 
     ;; Main intro
     (p "Enter "
