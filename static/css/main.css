@@ -16,29 +16,36 @@
 */
 
 @font-face {
-    font-family: 'Inconsolata';
+    font-family: 'PT Sans';
     font-style: normal;
-    font-weight: 400;
-    src: local('Inconsolata-Regular'), local('Inconsolata'), local('Inconsolata Regular'), url('../fonts/inconsolata/Inconsolata-Regular.ttf');
+    src: url('../fonts/pt_sans/PT_Sans-Web-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Inconsolata';
+    font-family: 'PT Sans';
     font-style: normal;
-    font-weight: 700;
-    src: local('Inconsolata-Bold'), local('Inconsolata Bold'), url('../fonts/inconsolata/Inconsolata-Bold.ttf');
+    font-weight: bold;
+    src: url('../fonts/pt_sans/PT_Sans-Web-Bold.ttf');
 }
 
 @font-face {
-    font-family: 'Junction';
-    font-style: normal;
-    font-weight: 400;
-    src: local('JunctionRegular'), local('Junction'), local('Junction Regular'), url('../fonts/junction/junction.ttf');
+    font-family: 'PT Sans';
+    font-style: italic;
+    src: url('../fonts/pt_sans/PT_Sans-Web-Italic.ttf');
 }
+
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: bold;
+    src: url('../fonts/pt_sans/PT_Sans-Web-Bold-Italic.ttf');
+}
+
 
 body {
     background-color: #fcf9ff;
-    color: #313152;
+    color: #6d6d6d;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 960px;
@@ -59,7 +66,7 @@ body {
 }
 
 a {
-    color: #ca4156;
+    color: #F1007E;
     text-decoration: none;
     transition: text-shadow .5s;
 }
