@@ -130,7 +130,7 @@
 (define tutorial-image
   `(div (@ (style "text-align: center"))
         (a (@ (href "https://www.w3.org/TR/activitypub/#Overview"))
-           (img (@ (src "https://www.w3.org/TR/activitypub/illustration/tutorial-2.png")
+           (img (@ (src "/static/images/ActivityPub-tutorial-image.png")
                    (alt "ActivityPub tutorial image"))))))
 
 
