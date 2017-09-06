@@ -192,10 +192,11 @@
             (li (strong (a (@ (href "https://test.activitypub.rocks/"))
                            "A test suite:"))
                 " -- " ; space between link and item
-                " [coming soon] "
                 "Make sure your application works right according to the "
                 (a (@ (href "https://www.w3.org/TR/activitypub/"))
-                   "ActivityPub standard") "."))
+                   "ActivityPub standard") ". "
+                   (i "(Note: work in progress, currently only supports testing "
+                      "client to server's server side of tests.  More soon!)")))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
 
