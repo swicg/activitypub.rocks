@@ -1,0 +1,75 @@
+(post
+ :title "Mastodon launches their ActivityPub support, and a new CR!"
+ :date (make-date* 2017 09 10)
+ :slug "mastodon-ap-and-new-cr"
+ 
+ (p [Greetings!
+     Big news this week, from multiple directions!])
+
+ (h2 [Mastodon and ActivityPub, together at last!])
+
+ (p [First of all,
+     ,(anchor [Mastodon]
+              "https://joinmastodon.org/")
+     has
+     ,(anchor [launched version 1.6 with ActivityPub support]
+              "https://hackernoon.com/mastodon-and-the-w3c-f75f376f422")!
+     This is a ,(em [huge]) piece of news.
+     While Mastodon is not the first implementer of ActivityPub, they
+     are by far the largest existing implementation, with approximately
+     850k registered users.
+     We're excited to have them on board!])
+
+ (h2 [A new Candidate Recommendation!])
+
+ (p [This week we published a
+     ,(anchor [new Candidate Recommendation]
+              "https://www.w3.org/TR/2017/CR-activitypub-20170907/")
+     (aka "CR") of
+     ,(anchor [ActivityPub]
+              "https://www.w3.org/TR/activitypub/").
+     This release contains two major changes:])
+
+ (ul (li [,(code
+            (anchor [Follow]
+                    "https://www.w3.org/TR/activitypub/#follow-activity-inbox"))
+          requests are now explicitly replied to with either an
+          ,(code
+            (anchor [Accept]
+                    "https://www.w3.org/TR/activitypub/#accept-activity-inbox"))
+          or
+          ,(code
+            (anchor [Reject]
+                    "https://www.w3.org/TR/activitypub/#reject-activity-inbox")).])
+     (li [,(code [publicInbox])
+          is now renamed to
+          ,(code
+            (anchor [sharedInbox]
+                    "https://www.w3.org/TR/activitypub/#shared-inbox-delivery"))
+          and in addition to being used for distributing and reading public
+          posts, it may also be used to deliver posts to followers to reduce
+          the number of HTTP requests made on followers-only posts between federated
+          servers.]))
+ 
+ (p [These changes are normative, so update your implementations!])
+
+ (p [The Candidate Recommendation is the period in which we try to
+     stabilize the standard and get enough implementation to make it to
+     Recommendation status.
+     We don't take normative changes lightly, but sometimes we such changes
+     are found to be necessary in this stage... in this case, we found that
+     both of these changes were necessary for Mastodon, and projects the
+     size of Mastodon, to adopt ActivityPub.])
+
+ (h2 [What's next?])
+
+ (p [We've quietly launched the
+     ,(anchor [test suite]
+              "https://test.activitypub.rocks/")...
+     very quietly, because not all test suite functionality is added yet!
+     Only the "client-to-server server" section is yet working.
+     However, we're working on the rest of it and hope to have it up
+     sometime within the next few weeks.])
+
+ (p [That's it for now.
+     Happy implementing, everyone!]))
