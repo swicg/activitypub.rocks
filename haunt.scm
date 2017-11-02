@@ -23,7 +23,13 @@
              (haunt builder blog)
              (haunt builder atom)
              (haunt builder assets)
-             (haunt reader skribe))
+             (haunt reader skribe)
+             (www reports))
+
+(define %current-directory (getcwd))
+(define %implementation-report-directory
+  (string-append %current-directory
+                 "/reports"))
 
 (define* (base-tmpl site body #:key title)
   `((doctype "html")
@@ -250,7 +256,10 @@
       (p "Implementation report template is "
          (a (@ (href ,impl-report-url))
             "available here")
-         ".")))
+         ".")
+      ,(render-implementation-reports
+        (load-all-implementation-reports
+         %implementation-report-directory))))
   (base-tmpl site tmpl))
 
 (define (impl-report-page site posts)

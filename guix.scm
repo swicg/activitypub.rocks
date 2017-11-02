@@ -37,6 +37,7 @@
     (inputs
      `(("guile" ,guile-2.2)
        ("haunt" ,haunt)
-       ("guile-reader" ,guile-reader)))))
+       ("guile-reader" ,guile-reader)
+       ("guile-sjson" ,guile-sjson)))))
 
 aprocks-site
