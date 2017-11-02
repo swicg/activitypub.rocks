@@ -225,6 +225,7 @@ header.post-title {
 .footer {
     font-size: 10pt;
     text-align: center;
+    margin-top: 10px;
 }
 
 .footer a:hover {
@@ -256,4 +257,66 @@ div.code {
     color: #f2d7f2;
     margin-top: 5px;
     margin-bottom: 3px;
+}
+
+div.impl-reports-box {
+}
+
+table.impl-reports {
+    border-collapse: collapse;
+    /* border: 2px solid purple; */
+}
+
+table.impl-reports th, table.impl-reports td {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+th.report-test-item-name {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+table.impl-reports tr.test-item-row {
+    border-bottom: 1px solid #c4c4c4;
+}
+
+table.impl-reports td.result-cell:not(:last-child), 
+table.impl-reports th.report-name:not(:last-child) {
+    border-right: 1px solid #c4c4c4;
+}
+
+tr.dark-row {
+    background: #f5f1f9;
+}
+
+tr.impl-reports-header {
+    background: #f4ecf0;
+}
+
+td.result-yes {
+    font-weight: bold;
+    color: #094113;
+}
+
+td.result-no {
+    font-weight: bold;
+    color: #500e09;
+}
+
+td.result-inconclusive {
+    font-weight: bold;
+    color: #503609;
+}
+
+td.result-missing {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+td.result-not-applicable {
+    font-style: italic;
 }

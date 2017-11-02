@@ -362,37 +362,55 @@
 Reports is a sorted list of all implementation reports."
   (define num-reports
     (length reports))
-  `(table
-    ;; Render the names of each reports
-    (tr
-     (td)  ; left blank, corresponds to test name
-     ,@(map
-        (lambda (report)
-          `(th ,(if (report-url report)
-                    `(a (@ (href ,(report-url report)))
-                        ,(report-name report))
-                    (report-name report))))
-        reports))
-    ,@(apply
-       append
-       (map
-        (lambda (test-item)
-          `((tr
-             (th (@ (column-span ,num-reports)
-                    (class "test-item-description"))
-                 ,(test-item-desc test-item)))
-            (tr
-             ,@(map (lambda (report)
-                      (define result
-                        (report-result-ref report (test-item-sym test-item)))
-                      (define-values (text class)
-                        (match (jsobj-ref result "result")
-                          ("yes" (values "Yes" "result-yes"))
-                          ("no" (values "No" "result-no"))
-                          ("inconclusive" (values "Inconclusive" "result-inconclusive"))
-                          ("not-applicable" (values "N/A" "result-not-applicable"))
-                          ('null (values "Missing??" "result-missing"))))
-                      `(td (@ (class ,class))
-                           ,text))
-                    reports))))
-        all-test-items))))
+  `(div
+    (@ (class "impl-reports-box"))
+    (table
+     (@ (style "font-size: 10pt; text-align: center;")
+        (class "impl-reports"))
+     ;; Render the names of each reports
+     (tr
+      (@ (class "impl-reports-header"))
+      (td (@ (style "border-bottom: 2px solid black; border-right: 2px solid black;"))
+          (i "(hover for description)"))
+      ,@(map
+         (lambda (report)
+           `(th (@ (style "border-bottom: 2px solid black;")
+                   (class "report-name"))
+                ,(if (report-url report)
+                     `(a (@ (href ,(report-url report)))
+                         ,(report-name report))
+                     (report-name report))))
+         reports))
+     ,@(apply
+        append
+        (let ((dark? #t))
+          (map
+           (lambda (test-item)
+             (set! dark? (not dark?))  ; switch row color
+             `(;; (tr
+               ;;  (th (@ (column-span ,num-reports)
+               ;;         (class "test-item-description"))
+               ;;      ,(test-item-desc test-item)))
+               (tr
+                (@ (class ,(string-append "test-item-row "
+                                          (if dark?
+                                              "dark-row"
+                                              "light-row"))))
+                (th (@ (title ,(test-item-desc test-item))
+                       (class "report-test-item-name")
+                       (style "text-align: left; border-right: 2px solid black;"))
+                    ,(symbol->string (test-item-sym test-item)))
+                ,@(map (lambda (report)
+                         (define result
+                           (report-result-ref report (test-item-sym test-item)))
+                         (define-values (text class)
+                           (match (jsobj-ref result "result")
+                             ("yes" (values "Yes" "result-yes"))
+                             ("no" (values "No" "result-no"))
+                             ("inconclusive" (values "Inconclusive" "result-inconclusive"))
+                             ("not-applicable" (values "N/A" "result-not-applicable"))
+                             ('null (values "Missing" "result-missing"))))
+                         `(td (@ (class ,(string-append "result-cell " class)))
+                              ,text))
+                       reports))))
+           all-test-items))))))
