@@ -366,6 +366,26 @@
 Reports is a sorted list of all implementation reports."
   (define num-reports
     (length reports))
+  (define* (profile-row key name title
+                        #:key last? odd?)
+    `(tr (@ (style ,(string-append
+                     (if odd?
+                         "background: #f9f5ee; "
+                         "background: #fcfaf7; ")
+                     (if last?
+                         "border-bottom: 2px solid black;"
+                         "border-bottom: 1px solid #c4c4c4;"))))
+         (th (@ (style "border-right: 2px solid black;")
+                (title ,title))
+             ,name)
+         ,@(map
+            (lambda (report)
+              (if (jsobj-ref report key)
+                  '(td (@ (class "result-cell result-yes"))
+                       "Yes")
+                  '(td (@ (class "result-cell result-no"))
+                       "No")))
+            reports)))
   `(div
     (@ (class "impl-reports-box"))
     (table
@@ -385,9 +405,20 @@ Reports is a sorted list of all implementation reports."
                          ,(report-name report))
                      (report-name report))))
          reports))
+     ,(profile-row "testing-client"
+                   "Client-to-Server Client"
+                   "Implements the Client end of the ActivityPub Client-to-Server protocol")
+     ,(profile-row "testing-c2s-server"
+                   "Client-to-Server Server"
+                   "Implements the Server end of the ActivityPub Client-to-Server protocol"
+                   #:odd? #t)
+     ,(profile-row "testing-s2s-server"
+                   "Federated (Server-to-Server) Server"
+                   "Implements the ActivityPub Server-to-Server federation protocol"
+                   #:last? #t)
      ,@(apply
         append
-        (let ((dark? #t))
+        (let ((dark? #f))
           (map
            (lambda (test-item)
              (set! dark? (not dark?))  ; switch row color
@@ -407,6 +438,8 @@ Reports is a sorted list of all implementation reports."
                 ,@(map (lambda (report)
                          (define result
                            (report-result-ref report (test-item-sym test-item)))
+                         (define comment
+                           (jsobj-ref result "comment"))
                          (define-values (text class)
                            (match (jsobj-ref result "result")
                              ("yes" (values "Yes" "result-yes"))
@@ -414,8 +447,14 @@ Reports is a sorted list of all implementation reports."
                              ("inconclusive" (values "Inconclusive" "result-inconclusive"))
                              ("not-applicable" (values "N/A" "result-not-applicable"))
                              ('null (values "Missing" "result-missing"))))
-                         `(td (@ (class ,(string-append "result-cell " class)))
-                              ,text))
+                         `(td (@ (class ,(string-append "result-cell " class))
+                                 ,@(if comment
+                                       `((title ,comment))
+                                       '()))
+                              ,text
+                              ;; Add an asterisk if there's a comment-on-hover
+                              ,(if comment
+                                   "*" "")))
                        reports))))
            all-test-items))))))
 
