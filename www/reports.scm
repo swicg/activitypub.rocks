@@ -387,7 +387,8 @@ Reports is a sorted list of all implementation reports."
                        "No")))
             reports)))
   `(div
-    (@ (class "impl-reports-box"))
+    (@ (class "impl-reports-box")
+       (style "overflow-x: auto;"))
     (table
      (@ (style "font-size: 10pt; text-align: center;")
         (class "impl-reports"))
