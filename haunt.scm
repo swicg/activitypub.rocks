@@ -251,15 +251,18 @@
 
 
 (define (impl-report-page-tmpl site)
+  (define reports
+    (load-all-implementation-reports
+     %implementation-report-directory))
   (define tmpl
     `(div
       (p "Implementation report template is "
          (a (@ (href ,impl-report-url))
             "available here")
          ".")
-      ,(render-implementation-reports
-        (load-all-implementation-reports
-         %implementation-report-directory))))
+      (h3 "Implementation reports")
+      ,(render-implementation-reports reports)
+      ,@(additional-report-notes reports)))
   (base-tmpl site tmpl))
 
 (define (impl-report-page site posts)

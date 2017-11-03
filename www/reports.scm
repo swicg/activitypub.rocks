@@ -6,7 +6,8 @@
   #:use-module (sjson)
   #:use-module (sjson utils)
   #:export (render-implementation-reports
-            load-all-implementation-reports))
+            load-all-implementation-reports
+            additional-report-notes))
 
 (define-class <test-item> ()
   (sym #:init-keyword #:sym
@@ -79,19 +80,20 @@
      (outbox:update
       MUST
       "Update"
-      #:subitems ((outbox:update:check-authorized
-                   MUST
-                   "Server takes care to be sure that the Update is authorized to modify its object before modifying the server's stored copy")))
+      ;; #:subitems ((outbox:update:check-authorized
+      ;;              MUST
+      ;;              "Server takes care to be sure that the Update is authorized to modify its object before modifying the server's stored copy"))
+      )
     ;;; SHOULD
-     (outbox:not-trust-submitted
-      SHOULD
-      "Server does not trust client submitted content")
-     (outbox:validate-content
-      SHOULD
-      "Validate the content they receive to avoid content spoofing attacks.")
-     (outbox:do-not-overload
-      SHOULD
-      "Take care not to overload other servers with delivery submissions")
+     ;; (outbox:not-trust-submitted
+     ;;  SHOULD
+     ;;  "Server does not trust client submitted content")
+     ;; (outbox:validate-content
+     ;;  SHOULD
+     ;;  "Validate the content they receive to avoid content spoofing attacks.")
+     ;; (outbox:do-not-overload
+     ;;  SHOULD
+     ;;  "Take care not to overload other servers with delivery submissions")
      (outbox:create
       SHOULD
       "Create"
@@ -351,6 +353,8 @@
   (jsobj-ref report "website"))
 (define (report-name report)
   (jsobj-ref report "project-name"))
+(define (report-notes report)
+  (jsobj-ref report "notes"))
 (define (report-result-ref report sym)
   (jsobj-ref
    (jsobj-ref report "results")
@@ -414,3 +418,22 @@ Reports is a sorted list of all implementation reports."
                               ,text))
                        reports))))
            all-test-items))))))
+
+(define (additional-report-notes reports)
+  (match (filter report-notes reports)
+    ;; None?  Then nothing to render
+    (() '())
+    (reports
+     `((h3 "Notes from implementations")
+       (dl
+        (@ (style "font-size: 14pt;"))
+        ,@(apply
+           append
+           (map
+            (lambda (report)
+              `((dt ,(if (report-url report)
+                         `(a (@ (href ,(report-url report)))
+                             ,(report-name report))
+                         (report-name report)))
+                (dd ,(report-notes report))))
+            reports)))))))
