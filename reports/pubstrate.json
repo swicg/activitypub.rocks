@@ -1,35 +1,38 @@
 {
-  "project-name": "AP test run",
-  "website": "https://chaos.dustycloud.org/",
-  "date": "2017-11-02T16:11:38.825341000Z",
-  "notes": "Foo bar baz",
+  "project-name": "Pubstrate",
+  "website": "https://gitlab.com/dustyweb/pubstrate",
+  "date": "2017-11-04T20:50:40.703325000Z",
+  "notes": "More complete test suite coverage coming soon in November 2017.",
+  "testing-client": true,
+  "testing-c2s-server": true,
+  "testing-s2s-server": true,
   "results": {
     "client:submission:discovers-url-from-profile": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-post-with-content-type": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects:provide-object": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects:provide-target": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:authenticated": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:recursively-add-targets": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:recursively-add-targets:limits-depth": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:retrieval:accept-header": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:accepts-activities": {
       "result": "yes"
@@ -38,7 +41,7 @@
       "result": "yes"
     },
     "outbox:removes-bto-and-bcc": {
-      "result": null
+      "result": "yes"
     },
     "outbox:ignores-id": {
       "result": "yes"
@@ -51,18 +54,6 @@
     },
     "outbox:update": {
       "result": "yes"
-    },
-    "outbox:update:check-authorized": {
-      "result": null
-    },
-    "outbox:not-trust-submitted": {
-      "result": null
-    },
-    "outbox:validate-content": {
-      "result": null
-    },
-    "outbox:do-not-overload": {
-      "result": null
     },
     "outbox:create": {
       "result": "yes"
@@ -107,7 +98,7 @@
       "result": "yes"
     },
     "inbox:delivery:addressing": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:delivery:adds-id": {
       "result": "yes"
@@ -116,7 +107,7 @@
       "result": "no"
     },
     "inbox:delivery:deliver-to-collection": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:delivery:deliver-to-collection:recursively": {
       "result": "no"
@@ -125,16 +116,16 @@
       "result": "yes"
     },
     "inbox:delivery:delivers-with-target-for-certain-activities": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:delivery:deduplicates-final-recipient-list": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:delivery:do-not-deliver-to-actor": {
       "result": "no"
     },
     "inbox:delivery:do-not-deliver-block": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:accept:deduplicate": {
       "result": "no"
@@ -143,13 +134,13 @@
       "result": "no"
     },
     "inbox:accept:special-forward:recurses": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:accept:special-forward:limits-recursion": {
       "result": "no"
     },
     "inbox:accept:update:is-authorized": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:accept:update:completely-replace": {
       "result": "no"
@@ -158,19 +149,19 @@
       "result": "no"
     },
     "inbox:accept:follow:add-actor-to-users-followers": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:add:to-collection": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:accept:remove:from-collection": {
       "result": "no"
     },
     "inbox:accept:like:indicate-like-performed": {
-      "result": "yes"
+      "result": "no"
     },
     "server:inbox:responds-to-get": {
-      "result": "no"
+      "result": "yes"
     },
     "server:inbox:is-orderedcollection": {
       "result": "yes"
@@ -179,28 +170,28 @@
       "result": "no"
     },
     "server:object-retrieval:get-id": {
-      "result": "no"
+      "result": "yes"
     },
     "server:object-retrieval:respond-with-as2-re-ld-json": {
       "result": "yes"
     },
     "server:object-retrieval:respond-with-as2-re-activity-json": {
-      "result": "no"
+      "result": "yes"
     },
     "server:object-retrieval:deleted-object:tombstone": {
-      "result": "no"
+      "result": "yes"
     },
     "server:object-retrieval:deleted-object:410-status": {
       "result": "yes"
     },
     "server:object-retrieval:deleted-object:404-status": {
-      "result": "no"
+      "result": "yes"
     },
     "server:object-retrieval:private-403-or-404": {
       "result": "no"
     },
     "server:security-considerations:actually-posted-by-actor": {
-      "result": "yes"
+      "result": "no"
     },
     "server:security-considerations:do-not-post-to-localhost": {
       "result": "no"
@@ -212,7 +203,7 @@
       "result": "no"
     },
     "server:security-considerations:sanitize-fields": {
-      "result": "yes"
+      "result": "no"
     }
   }
 }
