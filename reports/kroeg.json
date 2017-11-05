@@ -1,7 +1,7 @@
 {
   "project-name": "Kroeg",
   "website": "https://github.com/puckipedia/kroeg",
-  "date": "2017-11-04T20:50:40.703325000Z",
+  "date": "2017-07-10T16:04:50+02:00",
   "notes": "Serves ActivityPub and has bridges to OStatus.",
   "testing-client": false,
   "testing-c2s-server": true,
