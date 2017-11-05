@@ -166,6 +166,10 @@
        "content, as well as a federated server to server API for delivering "
        "notifications and subscribing to content.")
 
+    ;; (p "Applications already having adopted or adopting ActivityPub include: "
+    ;;    )
+
+    ;; TODO: Mention existing applications adopting ActivityPub
     (p "Sounds exciting?  Dive in!")))
 
 (define read-it
@@ -181,28 +185,27 @@
           ,(wrap-it "https://w3c.github.io/activitypub/"
                     "Latest editor's draft"))))
 
-(define impl-report-url
-  "https://github.com/w3c/activitypub/blob/gh-pages/implementation-reports/TEMPLATE.md")
-
 (define for-implementers
   `(div (@ (class "for-implementers-box"))
         (header "~= Hey, Implementers! =~")
         (p "We're so stoked to have you implementing ActivityPub!  "
            "To make sure ActivityPub implementations work together, we have:")
-        (ul (li (strong (a (@ (href ,impl-report-url))
-                           "Submit implementation reports"))
-                " -- " ; space between link and item
-                "We'd really appreciate you filling this out! "
-                "Help us understand what features are being implemented. "
-                "A necessary step for becoming an official W3C standard!")
-            (li (strong (a (@ (href "https://test.activitypub.rocks/"))
+        (ul (li (strong (a (@ (href "https://test.activitypub.rocks/"))
                            "A test suite:"))
                 " -- " ; space between link and item
                 "Make sure your application works right according to the "
                 (a (@ (href "https://www.w3.org/TR/activitypub/"))
-                   "ActivityPub standard") ". "
-                   (i "(Note: work in progress, currently only supports testing "
-                      "client to server's server side of tests.  More soon!)")))
+                   "ActivityPub standard") ".")
+            (li (strong (a (@ (href "/implementation-report/"))
+                           "Implementation reports:"))
+                " -- " ; space between link and item
+                "See the implementation coverage of applications already implementing "
+                "ActivityPub... or submit yours! "
+                "Running the "
+                (a (@ (href "https://test.activitypub.rocks/"))
+                           "test suite")
+                " will give you a report and instructions on how to submit it. "
+                "A necessary step for becoming an official W3C standard!"))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
 
@@ -256,10 +259,6 @@
      %implementation-report-directory))
   (define tmpl
     `(div
-      (p "Implementation report template is "
-         (a (@ (href ,impl-report-url))
-            "available here")
-         ".")
       (h3 "Implementation reports")
       ,(render-implementation-reports reports)
       ,@(additional-report-notes reports)))
