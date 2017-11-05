@@ -475,5 +475,6 @@ Reports is a sorted list of all implementation reports."
                          `(a (@ (href ,(report-url report)))
                              ,(report-name report))
                          (report-name report)))
-                (dd ,(report-notes report))))
+                (dd (@ (style "white-space: pre-wrap;"))
+                    ,(report-notes report))))
             reports)))))))
