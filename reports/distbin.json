@@ -1,0 +1,213 @@
+{
+  "project-name": "distbin.com",
+  "website": "https://distbin.com",
+  "date": "2017-04-20T19:01:36-07:00",
+  "notes": "Distbin is a distributed pastebin. Anyone can anonymously create little text posts, and anyone else can reply to them.\n\nYou can even create posts that are inReplyTo parent posts that are hosted elsewhere on the web (like another distbin.com installation), and distbin will tell the parent about it via ActivityPub.\n\ndistbin is made up of at least two components:\n* core - Speaks only JSON/ActivityPub\n* distbin-html\n  * Renders a homepage with a form that helps an end-user build Create Note activites\n  * Renders created activities to HTML\n  * Renders the public collection to HTML",
+  "testing-client": true,
+  "testing-c2s-server": true,
+  "testing-s2s-server": true,
+  "developers": [{"name": "Benjamin Goering", "url": "http://bengo.is"}],
+  "publicly-accessible": true,
+  "foss": false,
+  "programming-language": "JavaScript",
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "no"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "no"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "no"
+    },
+    "client:submission:authenticated": {
+      "result": "no"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "no"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "no"
+    },
+    "client:retrieval:accept-header": {
+      "result": "yes"
+    },
+    "outbox:accepts-activities": {
+      "result": "yes"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "yes"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "no"
+    },
+    "outbox:ignores-id": {
+      "result": "yes"
+    },
+    "outbox:responds-201-created": {
+      "result": "yes"
+    },
+    "outbox:location-header": {
+      "result": "yes"
+    },
+    "outbox:update": {
+      "result": "no"
+    },
+    "outbox:create": {
+      "result": "no"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "no"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "no"
+    },
+    "outbox:follow": {
+      "result": "no"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "no"
+    },
+    "outbox:add": {
+      "result": "no"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "no"
+    },
+    "outbox:remove": {
+      "result": "no"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "no"
+    },
+    "outbox:like": {
+      "result": "no"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "no"
+    },
+    "outbox:block": {
+      "result": "no"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "no"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "yes"
+    },
+    "inbox:delivery:addressing": {
+      "result": "yes"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "yes"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "no"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "no"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "no"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "no"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "no"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "no"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "no"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "no"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "no"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "no"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "no"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "no"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "no"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "no"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "no"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "yes"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "yes"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "no"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "no"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "no"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "no"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "no"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    },
+    "server:security-considerations:sanitize-fields": {
+      "result": "yes"
+    }
+  }
+}
