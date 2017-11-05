@@ -1,0 +1,214 @@
+{
+  "project-name": "Kroeg",
+  "website": "https://github.com/puckipedia/kroeg",
+  "date": "2017-11-04T20:50:40.703325000Z",
+  "notes": "Serves ActivityPub and has bridges to OStatus.",
+  "testing-client": false,
+  "testing-c2s-server": true,
+  "testing-s2s-server": true,
+  "developers": "Puck Meerburg",
+  "publicly-accessible": true,
+  "foss": true,
+  "license": "MIT (Expat)",
+  "programming-language": "C#",
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "not-applicable"
+    },
+    "client:submission:authenticated": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "not-applicable"
+    },
+    "client:retrieval:accept-header": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-activities": {
+      "result": "yes"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "yes"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "yes"
+    },
+    "outbox:ignores-id": {
+      "result": "yes"
+    },
+    "outbox:responds-201-created": {
+      "result": "yes"
+    },
+    "outbox:location-header": {
+      "result": "yes"
+    },
+    "outbox:update": {
+      "result": "yes"
+    },
+    "outbox:create": {
+      "result": "yes"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "yes"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "yes"
+    },
+    "outbox:follow": {
+      "result": "yes"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "yes"
+    },
+    "outbox:add": {
+      "result": "yes"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "yes"
+    },
+    "outbox:remove": {
+      "result": "yes"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "yes"
+    },
+    "outbox:like": {
+      "result": "yes"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "yes"
+    },
+    "outbox:block": {
+      "result": "yes"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "yes"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "yes"
+    },
+    "inbox:delivery:addressing": {
+      "result": "yes"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "yes"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "yes"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "yes"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": null
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "yes"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": null
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "yes"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "yes"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "yes"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "yes"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "yes"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "yes"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "no"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "yes"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    },
+    "server:security-considerations:sanitize-fields": {
+      "result": "no"
+    }
+  }
+}
