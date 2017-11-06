@@ -256,6 +256,13 @@
      %implementation-report-directory))
   (define tmpl
     `(div
+      (p (i "To submit an implementation report, use the "
+            (a (@ (href "https://test.activitypub.rocks/"))
+               "ActivityPub test suite")
+            " to generate an implementation report and then submit "
+            "that report to the "
+            (a (@ (href "https://github.com/w3c/activitypub/issues"))
+               "ActivityPub issue tracker") "."))
       (h3 "Implementation reports")
       ,(render-implementation-reports reports)
       ,@(additional-report-notes reports)))
