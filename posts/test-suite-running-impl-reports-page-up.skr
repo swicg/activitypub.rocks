@@ -1,0 +1,52 @@
+(define (smirk) ";)")
+
+(post
+ :title "Test suite up, implementation reports page up... let's get more reports in!"
+ :date (make-date* 2017 11 06)
+ :slug "test-suite-running-and-impl-reports-page-up"
+ (p [I'm happy to announce that the
+     ,(anchor [ActivityPub test suite]
+              "https://test.activitypub.rocks/")
+     is up and running.
+     Likewise, so is the
+     ,(anchor [implementation reports page]
+              "https://activitypub.rocks/implementation-report/")!])
+
+ (p [As it turns out, these go hand in hand.
+     If you go through the test suite, it'll generate an
+     implementation report that you can easily submit.
+     At the time of writing we have three implementation reports up,
+     but we could really use more!
+     Are you working on an ActivityPub implementation?
+     Please submit one!
+     Not only does it help ActivityPub get through the last leg of
+     its standards process (we need to wrap up over the next few weeks!)
+     but don't you want to look cool by showing up as an implementation
+     on the
+     ,(anchor [implementation reports page]
+              "/implementation-report/")?
+     ,(smirk)])
+
+ (p [Note that it's perfectly acceptable to incrementally submit
+     reports... if it turns out that your implementation doesn't
+     pass as many items on the implementation report as you'd like,
+     it's okay to re-submit later.
+     (At the time of writing, my own implementation Pubstrate has
+     a number of items marked as not passing that I'll be getting
+     passing over the next few weeks!)])
+
+ (p [One note is that the test suite has two components: some of
+     the tests are automated, and some of them prompt the user to
+     manually test something and confirm/deny that it is passing.
+     We would like to have full automated coverage in the future,
+     but the working group agreed that since time is limited and
+     interoperability is already being demonstrated externally
+     through federation etc, this would be good enough for now.
+     But it would be good to get more automated!])
+
+ (p [Anyway,
+     we're in the last mile of getting ActivityPub out the door.
+     And if you're an implementer, you can help us get there.
+     Submit implementation reports, and help us, the world,
+     ActivityPub's standardization effort, and your project's own
+     vanity by getting an implementation report up there!]))
