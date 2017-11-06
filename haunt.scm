@@ -238,12 +238,9 @@
 (define (test-page-tmpl site)
   (define tmpl
     '(div
-      (p "Tests will eventually go here. "
-         "We will have tests for clients (by running a fake server), "
-         "for client to server (by having a client that can run operations "
-         "on your server and validate output), and for server to server "
-         "by having a fake server that can test remote interactions behave "
-         "correctly.")))
+      (p "The test suite is at: "
+         (a (@ (href "https://test.activitypub.rocks/"))
+            "https://test.activitypub.rocks/"))))
   (base-tmpl site tmpl))
 
 (define (test-page site posts)
