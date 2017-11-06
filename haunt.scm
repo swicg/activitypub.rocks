@@ -73,7 +73,7 @@
              "Site contents")
           " dual licensed under "
           (a (@ (href "https://creativecommons.org/licenses/by-sa/4.0/"))
-             "Creative Commons 4.0 International")
+             "Creative Commons Attribution-Sharealike 4.0 International")
           " and "
           (a (@ (href "http://www.gnu.org/licenses/gpl-3.0.en.html"))
              "the GNU GPL, version 3 or any later version")
