@@ -484,7 +484,8 @@ will resolve to '(foo bar baz) if (try-me) evaluates to true, or just
          ,commonmark->sxml)
         ("publicly-accessible" "Publicly Accessible?" ,render-bool)
         ("foss" "Free/Libre/Open Source?" ,render-bool)
-        ("license" "License" ,commonmark->sxml)))
+        ("license" "License" ,commonmark->sxml)
+        ("programming-language" "Programming Language" ,commonmark->sxml)))
     `(table
       (@ (class impl-info)
          (style "font-size: 12pt;"))

@@ -9,6 +9,7 @@
   "testing-s2s-server": true,
   "foss": true,
   "license": "GPLv3 or later",
+  "programming-language": "Guile Scheme",
   "results": {
     "client:submission:discovers-url-from-profile": {
       "result": "yes"
