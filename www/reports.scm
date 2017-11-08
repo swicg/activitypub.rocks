@@ -5,6 +5,7 @@
   #:use-module (ice-9 match)
   #:use-module (sjson)
   #:use-module (sjson utils)
+  #:use-module (commonmark)
   #:export (render-implementation-reports
             load-all-implementation-reports
             additional-report-notes))
@@ -368,13 +369,9 @@ Reports is a sorted list of all implementation reports."
     (length reports))
   (define* (profile-row key name title
                         #:key last? odd?)
-    `(tr (@ (style ,(string-append
-                     (if odd?
-                         "background: #f9f5ee; "
-                         "background: #fcfaf7; ")
-                     (if last?
-                         "border-bottom: 2px solid black;"
-                         "border-bottom: 1px solid #c4c4c4;"))))
+    `(tr (@ (style ,(if odd?
+                        "background: #f9f5ee; "
+                        "background: #fcfaf7; ")))
          (th (@ (style "border-right: 2px solid black;")
                 (title ,title))
              ,name)
@@ -459,22 +456,58 @@ Reports is a sorted list of all implementation reports."
                        reports))))
            all-test-items))))))
 
+(define-syntax-rule (& test body)
+  "For use in quasiquoting with ,@... only conditionally include things if test
+works.  Like:
+
+  `(foo bar ,@(& (try-me) 'baz))
+
+will resolve to '(foo bar baz) if (try-me) evaluates to true, or just
+'(foo bar) if #f."
+  (if test
+      (list body)
+      (list)))
+
 (define (additional-report-notes reports)
+  (define (render-report-table report)
+    (define (render-bool val)
+      (if val "yes" "no"))
+    (define (render-link link)
+      `(a (@ (href ,link))
+          ,link))
+    (define rows
+      `(("homepage" "Homepage" ,render-link)
+        ("repo" "Source Repo" ,render-link)
+        ("developers" "Developers" ,commonmark->sxml)
+        ("notes" "Notes / About" ,commonmark->sxml)
+        ("interops-with" "Interoperability with other implementations"
+         ,commonmark->sxml)
+        ("publicly-accessible" "Publicly Accessible?" ,render-bool)
+        ("foss" "Free/Libre/Open Source?" ,render-bool)
+        ("license" "License" ,commonmark->sxml)))
+    `(table
+      (@ (class impl-info)
+         (style "font-size: 12pt;"))
+      (tr (@ (class "impl-reports-header"))
+          (th (@ (colspan 2)
+                 (style "border-bottom: 2px solid #6d6d6d;"))
+              ,(jsobj-ref report "project-name")))
+      ,(fold-right
+        (match-lambda*
+          (((key name renderer) prev)
+           (match (jsobj-ref report key 'nothing)
+             ('nothing prev)
+             ((= renderer rendered)
+              (cons
+               `(tr (@ (class "impl-report-info"))
+                    (th ,name)
+                    (td ,rendered))
+               prev)))))
+        '()
+        rows)))
   (match (filter report-notes reports)
     ;; None?  Then nothing to render
     (() '())
     (reports
-     `((h3 "Notes from implementations")
-       (dl
-        (@ (style "font-size: 14pt;"))
-        ,@(apply
-           append
-           (map
-            (lambda (report)
-              `((dt ,(if (report-url report)
-                         `(a (@ (href ,(report-url report)))
-                             ,(report-name report))
-                         (report-name report)))
-                (dd (@ (style "white-space: pre-wrap;"))
-                    ,(report-notes report))))
-            reports)))))))
+     `((h3 "Implementation details")
+       ,@(map render-report-table reports)))))

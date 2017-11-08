@@ -1,15 +1,15 @@
 {
   "project-name": "Kroeg",
-  "website": "https://github.com/puckipedia/kroeg",
+  "repo": "https://github.com/puckipedia/kroeg",
   "date": "2017-07-10T16:04:50+02:00",
   "notes": "Serves ActivityPub and has bridges to OStatus.  ActivityPub federation tested against Mastodon.",
   "testing-client": false,
   "testing-c2s-server": true,
   "testing-s2s-server": true,
-  "developers": [{"name": "Puck Meerburg", "url": "https://puckipedia.com/"}],
+  "developers": "[Puck Meerburg](https://puckipedia.com/)",
   "publicly-accessible": true,
   "foss": true,
-  "license": "MIT (Expat)",
+  "license": "Expat (MIT)",
   "programming-language": "C#",
   "results": {
     "client:submission:discovers-url-from-profile": {

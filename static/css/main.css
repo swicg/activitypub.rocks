@@ -288,6 +288,9 @@ table.impl-reports th.report-name:not(:last-child) {
     border-right: 1px solid #c4c4c4;
 }
 
+table.impl-reports tr {
+}
+
 tr.dark-row {
     background: #f5f1f9;
 }
@@ -319,4 +322,33 @@ td.result-missing {
 
 td.result-not-applicable {
     font-style: italic;
+}
+
+table.impl-info {
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+tr.impl-report-info {
+    text-align: left;
+    vertical-align: top;
+    background: #f5eff9;
+}
+
+tr.impl-report-info td p:first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+tr.impl-report-info td p:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+tr.impl-report-info th {
+    width: 20%;
+}
+
+tr.impl-report-info td, tr.impl-report-info th {
+    padding: 3px;
 }
