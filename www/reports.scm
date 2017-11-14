@@ -497,7 +497,7 @@ will resolve to '(foo bar baz) if (try-me) evaluates to true, or just
         (match-lambda*
           (((key name renderer) prev)
            (match (jsobj-ref report key 'nothing)
-             ('nothing prev)
+             ((or 'nothing "") prev)
              ((= renderer rendered)
               (cons
                `(tr (@ (class "impl-report-info"))
