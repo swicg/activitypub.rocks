@@ -7,6 +7,7 @@
   "testing-c2s-server": true,
   "testing-s2s-server": true,
   "developers": "[Puck Meerburg](https://puckipedia.com/)",
+  "interops-with": "[Mastodon](https://joinmastodon.org/)",
   "publicly-accessible": true,
   "foss": true,
   "license": "Expat (MIT)",

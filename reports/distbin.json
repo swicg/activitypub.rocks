@@ -3,7 +3,6 @@
   "homepage": "https://distbin.com",
   "date": "2017-04-20T19:01:36-07:00",
   "notes": "Distbin is a distributed pastebin. Anyone can anonymously create little text posts, and anyone else can reply to them.\n\nYou can even create posts that are inReplyTo parent posts that are hosted elsewhere on the web (like another distbin.com installation), and distbin will tell the parent about it via ActivityPub.\n\ndistbin is made up of at least two components:\n* core - Speaks only JSON/ActivityPub\n* distbin-html\n  * Renders a homepage with a form that helps an end-user build Create Note activites\n  * Renders created activities to HTML\n  * Renders the public collection to HTML",
-  "interops-with": "[Mastodon](https://joinmastodon.org/)",
   "testing-client": true,
   "testing-c2s-server": true,
   "testing-s2s-server": true,
