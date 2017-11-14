@@ -1,0 +1,221 @@
+{
+  "project-name": "Bridgy Fed",
+  "homepage": "https://fed.brid.gy/",
+  "repo": "https://github.com/snarfed/bridgy-fed",
+  "date": "2017-11-09T12:08:00-06:00",
+  "notes": "[Bridgy Fed](https://fed.brid.gy/) is a bridge that converts between [webmentions](http://www.webmention.org/), [ActivityPub](https://activitypub.rocks/) and [OStatus](https://en.wikipedia.org/wiki/OStatus). It connects the [IndieWeb](https://indieweb.org/) with federated social networks like [Mastodon](https://joinmastodon.org/), [Hubzilla](https://project.hubzilla.org/), and others in the [fediverse](https://en.wikipedia.org/wiki/Fediverse) that support two protocols.\n\nBridgy Fed is a loose extension of [Bridgy](https://brid.gy/), which is a similar bridge between the IndieWeb and social media sites. As of November 2017, it has >4k users and has successfully sent >900k webmentions for responses inside those sites.\n\n## Details\n\nUsers use Bridgy Fed by creating an IndieWeb post (in HTML with [microformats2](http://microformats.org/wiki/microformats2)) on their own web site that replies, likes, or reposts (aka announces) a post on a federated social network. They then [send a webmention to Bridgy Fed](https://fed.brid.gy/#use) to trigger it to fetch their IndieWeb post, convert it to ActivityStreams 2 (via [granary](https://granary-demo.appspot.com/)), and deliver it to the target post's author and other recipients via ActivityPub.\n\nBridgy Fed handles the other direction too. If a federated social network user replies to, likes, or reposts an IndieWeb post, Bridgy Fed will accept it in their inbox, translate it into a webmention, send it to the IndieWeb post, and convert the AS2 object to HTML with microformats2 to be rendered for the webmention receiver.\n\nThis is federation, not syndication. IndieWeb posts translated to AS2 objects have both post object and actor based at the IndieWeb site's domain, with appropriate ids and URLs. If the IndieWeb site is `example.com`, the ActivityPub actor id would be `@example.com@example.com`. (This is subject to change; [more background here](https://github.com/snarfed/bridgy-fed/issues/3).)\n\nBridgy Fed can do all this via OStatus as well.\n\n## About the Server-to-Server implementation\n\nThe Bridgy Fed Server:\n\n* Accepts activity submissions _via webmention_, and updates the server's Objects per rules described below\n* Delivers these submissions to the inboxes of other Servers\n* Receives Activity from other servers in an inbox, and updates the server's Objects per rules described below\n* Delivers Objects to Clients _via webmention_",
+  "interops-with": "Various [IndieWeb](https://indieweb.org/) sites, [Mastodon](https://joinmastodon.org/), [Hubzilla](https://project.hubzilla.org/), and others",
+  "testing-client": false,
+  "testing-c2s-server": false,
+  "testing-s2s-server": true,
+  "developers": "[Ryan Barrett](https://snarfed.org/)",
+  "publicly-accessible": true,
+  "foss": false,
+  "programming-language": "Python",
+  "license": "Public Domain / CC0",
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "not-applicable"
+    },
+    "client:submission:authenticated": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "not-applicable"
+    },
+    "client:retrieval:accept-header": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-activities": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "not-applicable"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
+    "outbox:ignores-id": {
+      "result": "not-applicable"
+    },
+    "outbox:responds-201-created": {
+      "result": "not-applicable"
+    },
+    "outbox:location-header": {
+      "result": "not-applicable"
+    },
+    "outbox:update": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
+    "outbox:create": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
+    "outbox:follow": {
+      "result": "not-applicable"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "not-applicable"
+    },
+    "outbox:add": {
+      "result": "not-applicable"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "not-applicable"
+    },
+    "outbox:remove": {
+      "result": "not-applicable"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "not-applicable"
+    },
+    "outbox:like": {
+      "result": "not-applicable"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "not-applicable"
+    },
+    "outbox:block": {
+      "result": "not-applicable"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "yes"
+    },
+    "inbox:delivery:addressing": {
+      "result": "yes"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "yes"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "no"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "no"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "no"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "yes"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "no"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "not-applicable"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "no"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "no"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "no"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "no"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "no"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "no"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    },
+    "server:security-considerations:sanitize-fields": {
+      "result": "yes"
+    }
+  }
+}
