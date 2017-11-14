@@ -145,13 +145,13 @@
       "result": "yes"
     },
     "inbox:accept:update:is-authorized": {
-      "result": null
+      "result": "yes"
     },
     "inbox:accept:update:completely-replace": {
       "result": "yes"
     },
     "inbox:accept:dont-blindly-trust": {
-      "result": null
+      "result": "yes"
     },
     "inbox:accept:follow:add-actor-to-users-followers": {
       "result": "yes"
