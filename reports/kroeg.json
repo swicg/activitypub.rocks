@@ -3,7 +3,7 @@
   "repo": "https://github.com/puckipedia/kroeg",
   "date": "2017-07-10T16:04:50+02:00",
   "notes": "Serves ActivityPub and has bridges to OStatus.  ActivityPub federation tested against Mastodon.",
-  "testing-client": false,
+  "testing-client": true,
   "testing-c2s-server": true,
   "testing-s2s-server": true,
   "developers": "[Puck Meerburg](https://puckipedia.com/)",
@@ -14,31 +14,31 @@
   "programming-language": "C#",
   "results": {
     "client:submission:discovers-url-from-profile": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-post-with-content-type": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects:provide-object": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:submit-objects:provide-target": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:authenticated": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:recursively-add-targets": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:submission:recursively-add-targets:limits-depth": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "client:retrieval:accept-header": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:accepts-activities": {
       "result": "yes"
@@ -200,7 +200,7 @@
       "result": "yes"
     },
     "server:security-considerations:do-not-post-to-localhost": {
-      "result": "no"
+      "result": "yes"
     },
     "server:security-considerations:uri-scheme-whitelist": {
       "result": "yes"
@@ -209,7 +209,7 @@
       "result": "no"
     },
     "server:security-considerations:sanitize-fields": {
-      "result": "no"
+      "result": "yes"
     }
   }
 }
