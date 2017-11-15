@@ -206,7 +206,7 @@
       "result": "yes"
     },
     "server:security-considerations:filter-incoming-content": {
-      "result": "no"
+      "result": "yes"
     },
     "server:security-considerations:sanitize-fields": {
       "result": "yes"
