@@ -12,7 +12,7 @@
   "programming-language": "JavaScript",
   "results": {
     "client:submission:discovers-url-from-profile": {
-      "result": "no"
+      "result": "yes"
     },
     "client:submission:submit-post-with-content-type": {
       "result": "yes"
