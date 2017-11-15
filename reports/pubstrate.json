@@ -111,10 +111,10 @@
       "result": "no"
     },
     "inbox:delivery:deliver-to-collection": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:delivery:deliver-to-collection:recursively": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:delivery:delivers-with-object-for-certain-activities": {
       "result": "yes"
