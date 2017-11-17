@@ -198,7 +198,7 @@
       "result": "no"
     },
     "server:security-considerations:do-not-post-to-localhost": {
-      "result": "no"
+      "result": "yes"
     },
     "server:security-considerations:uri-scheme-whitelist": {
       "result": "yes"
