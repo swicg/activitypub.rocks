@@ -262,7 +262,10 @@
             " to generate an implementation report and then submit "
             "that report to the "
             (a (@ (href "https://github.com/w3c/activitypub/issues"))
-               "ActivityPub issue tracker") "."))
+               "ActivityPub issue tracker") ". "
+            "(Or, file a PR directly to "
+            (a (@ (href "https://gitlab.com/dustyweb/activitypub.rocks/tree/master/reports"))
+               "this site's repository") ".)"))
       (h3 "Implementation reports")
       ,(render-implementation-reports reports)
       ,@(additional-report-notes reports)))
