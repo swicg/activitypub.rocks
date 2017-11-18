@@ -156,10 +156,10 @@
       "result": "yes"
     },
     "inbox:accept:add:to-collection": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:remove:from-collection": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:like:indicate-like-performed": {
       "result": "no"
