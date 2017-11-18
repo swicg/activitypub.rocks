@@ -11,7 +11,7 @@
   "foss": true,
   "license": "AGPLv3",
   "publicly-accessible": true,
-  "programming-language": "Ruby",
+  "programming-language": "Ruby, Javascript",
   "developers": "[Over 400 contributors](https://github.com/tootsuite/mastodon/graphs/contributors) at time of report submission",
   "results": {
     "client:submission:discovers-url-from-profile": {
