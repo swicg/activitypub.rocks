@@ -2,7 +2,7 @@
   "project-name": "Pubstrate",
   "repo": "https://gitlab.com/dustyweb/pubstrate",
   "date": "2017-11-04T20:50:40.703325000Z",
-  "notes": "More complete test suite coverage coming soon in November 2017.",
+  "notes": "ActivityPub / ActivityStreams focused social networking application written in Guile.",
   "developers": "[Christopher Allan Webber](https://dustycloud.org/)",
   "testing-client": true,
   "testing-c2s-server": true,
