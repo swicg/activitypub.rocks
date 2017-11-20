@@ -171,7 +171,7 @@
       "result": "yes"
     },
     "server:inbox:filtered-per-permissions": {
-      "result": "no"
+      "result": "yes"
     },
     "server:object-retrieval:get-id": {
       "result": "yes"
