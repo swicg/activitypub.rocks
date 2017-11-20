@@ -135,13 +135,13 @@
       "result": "no"
     },
     "inbox:accept:special-forward": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:special-forward:recurses": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:special-forward:limits-recursion": {
-      "result": "no"
+      "result": "yes"
     },
     "inbox:accept:update:is-authorized": {
       "result": "no"
