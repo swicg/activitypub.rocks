@@ -369,12 +369,21 @@ Reports is a sorted list of all implementation reports."
     (length reports))
   (define* (profile-row key name title
                         #:key last? odd?)
+    (define number-of-yes
+      (count (lambda (report)
+               (jsobj-ref report key))
+             reports))
+
     `(tr (@ (style ,(if odd?
                         "background: #f9f5ee; "
                         "background: #fcfaf7; ")))
          (th (@ (style "border-right: 2px solid black;")
                 (title ,title))
              ,name)
+         (td (@ (class ,(if (>= number-of-yes 2)
+                            "result-cell result-yes"))
+                (style "border-right: 2px solid grey;"))
+             ,number-of-yes)
          ,@(map
             (lambda (report)
               (if (jsobj-ref report key)
@@ -394,6 +403,8 @@ Reports is a sorted list of all implementation reports."
       (@ (class "impl-reports-header"))
       (td (@ (style "border-bottom: 2px solid black; border-right: 2px solid black;"))
           (i "(hover for description)"))
+      (td (@ (style "border-bottom: 2px solid black; border-right: 2px solid grey;"))
+          (b "# yes"))
       ,@(map
          (lambda (report)
            `(th (@ (style "border-bottom: 2px solid black;")
@@ -419,6 +430,13 @@ Reports is a sorted list of all implementation reports."
         (let ((dark? #f))
           (map
            (lambda (test-item)
+             (define number-of-yes
+               (count (lambda (report)
+                        (equal? (jsobj-ref (report-result-ref
+                                            report (test-item-sym test-item))
+                                           "result")
+                                "yes"))
+                      reports))
              (set! dark? (not dark?))  ; switch row color
              `(;; (tr
                ;;  (th (@ (column-span ,num-reports)
@@ -433,6 +451,12 @@ Reports is a sorted list of all implementation reports."
                        (class "report-test-item-name")
                        (style "text-align: left; border-right: 2px solid black;"))
                     ,(symbol->string (test-item-sym test-item)))
+                
+                (td (@ (class ,(if (>= number-of-yes 2)
+                                   "result-cell result-yes"))
+                       (style "border-right: 2px solid grey;"))
+                    ,number-of-yes)
+
                 ,@(map (lambda (report)
                          (define result
                            (report-result-ref report (test-item-sym test-item)))
