@@ -315,7 +315,6 @@ td.result-inconclusive {
 }
 
 td.result-missing {
-    font-weight: bold;
     font-style: italic;
 }
 

@@ -64,6 +64,10 @@
       "result": "not-applicable",
       "comment": "Behavior supported indirectly using Webmention"
     },
+    "outbox:update:partial": {
+      "result": "not-applicable",
+      "comment": "Behavior supported indirectly using Webmention"
+    },
     "outbox:create": {
       "result": "not-applicable",
       "comment": "Behavior supported indirectly using Webmention"
@@ -104,6 +108,12 @@
       "result": "not-applicable"
     },
     "outbox:block:prevent-interaction-with-actor": {
+      "result": "not-applicable"
+    },
+    "outbox:undo": {
+      "result": "not-applicable"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
       "result": "not-applicable"
     },
     "inbox:delivery:performs-delivery": {

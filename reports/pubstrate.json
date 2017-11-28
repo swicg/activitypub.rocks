@@ -59,6 +59,9 @@
     "outbox:update": {
       "result": "yes"
     },
+    "outbox:update:partial": {
+      "result": "yes"
+    },
     "outbox:create": {
       "result": "yes"
     },
@@ -98,6 +101,12 @@
     "outbox:block:prevent-interaction-with-actor": {
       "result": "yes"
     },
+    "outbox:undo": {
+      "result": "yes"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "yes"
+    },
     "inbox:delivery:performs-delivery": {
       "result": "yes"
     },
@@ -128,6 +137,13 @@
     "inbox:delivery:do-not-deliver-to-actor": {
       "result": "no"
     },
+    "inbox:delivery:sharedInbox": {
+      "result": "no"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "not-applicable",
+      "comment": "Server does not deliver to sharedInbox so this item does not apply."
+    },
     "inbox:delivery:do-not-deliver-block": {
       "result": "no"
     },
@@ -143,6 +159,15 @@
     "inbox:accept:special-forward:limits-recursion": {
       "result": "yes"
     },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "no"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "no"
+    },
     "inbox:accept:update:is-authorized": {
       "result": "no"
     },
@@ -155,6 +180,15 @@
     "inbox:accept:follow:add-actor-to-users-followers": {
       "result": "yes"
     },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "no"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "no"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "no"
+    },
     "inbox:accept:add:to-collection": {
       "result": "yes"
     },
@@ -162,6 +196,12 @@
       "result": "yes"
     },
     "inbox:accept:like:indicate-like-performed": {
+      "result": "no"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "no"
+    },
+    "inbox:accept:undo": {
       "result": "no"
     },
     "server:inbox:responds-to-get": {

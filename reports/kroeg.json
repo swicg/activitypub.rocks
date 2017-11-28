@@ -61,6 +61,9 @@
     "outbox:update": {
       "result": "yes"
     },
+    "outbox:update:partial": {
+      "result": "yes"
+    },
     "outbox:create": {
       "result": "yes"
     },
@@ -100,6 +103,12 @@
     "outbox:block:prevent-interaction-with-actor": {
       "result": "yes"
     },
+    "outbox:undo": {
+      "result": "yes"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "yes"
+    },
     "inbox:delivery:performs-delivery": {
       "result": "yes"
     },
@@ -133,6 +142,12 @@
     "inbox:delivery:do-not-deliver-block": {
       "result": "yes"
     },
+    "inbox:delivery:sharedInbox": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "yes"
+    },
     "inbox:accept:deduplicate": {
       "result": "yes"
     },
@@ -143,6 +158,15 @@
       "result": "yes"
     },
     "inbox:accept:special-forward:limits-recursion": {
+      "result": "yes"
+    },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "yes"
+    },
+    "inbox:accept:delete:tombstone": {
       "result": "yes"
     },
     "inbox:accept:update:is-authorized": {
@@ -157,6 +181,18 @@
     "inbox:accept:follow:add-actor-to-users-followers": {
       "result": "yes"
     },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "yes"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:accept:does-not-add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "yes"
+    },
     "inbox:accept:add:to-collection": {
       "result": "yes"
     },
@@ -164,6 +200,12 @@
       "result": "yes"
     },
     "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:undo": {
       "result": "yes"
     },
     "server:inbox:responds-to-get": {

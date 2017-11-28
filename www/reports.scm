@@ -84,7 +84,10 @@
       ;; #:subitems ((outbox:update:check-authorized
       ;;              MUST
       ;;              "Server takes care to be sure that the Update is authorized to modify its object before modifying the server's stored copy"))
-      )
+      #:subitems ((outbox:update:partial
+                   NON-NORMATIVE
+                   "Supports partial updates in client-to-server protocol (but not server-to-server)")))
+
     ;;; SHOULD
      ;; (outbox:not-trust-submitted
      ;;  SHOULD
@@ -133,7 +136,14 @@
       "Block"
       #:subitems ((outbox:block:prevent-interaction-with-actor
                    SHOULD
-                   "Prevent the blocked object from interacting with any object posted by the actor."))))))
+                   "Prevent the blocked object from interacting with any object posted by the actor.")))
+
+     (outbox:undo
+      NON-NORMATIVE
+      "Supports the Undo activity in the client-to-server protocol"
+      #:subitems ((outbox:undo:ensures-activity-and-actor-are-same
+                   MUST
+                   "Ensures that the activity and actor are the same in activity being undone."))))))
 
 
 (define server-inbox-delivery
@@ -171,7 +181,13 @@
       "Does not deliver to recipients which are the same as the actor of the Activity being notified about")
      (inbox:delivery:do-not-deliver-block
       SHOULD
-      "SHOULD NOT deliver Block Activities to their object."))))
+      "SHOULD NOT deliver Block Activities to their object.")
+     (inbox:delivery:sharedInbox
+      MAY
+      "Delivers to sharedInbox endpoints to reduce the number of receiving actors delivered to by identifying all followers which share the same sharedInbox who would otherwise be individual recipients and instead deliver objects to said sharedInbox."
+      #:subitems ((inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox
+                   MUST
+                   "(For servers which deliver to sharedInbox:) Deliver to actor inboxes and collections otherwise addressed which do not have a sharedInbox."))))))
 
 (define server-inbox-accept
   (build-test-items
@@ -189,6 +205,19 @@
       SHOULD
       "Limit recursion in this process")
 
+     ;; Create
+     (inbox:accept:create
+      NON-NORMATIVE
+      "Supports receiving a Create object in an actor's inbox")
+
+     ;; Delete
+     (inbox:accept:delete
+      SHOULD
+      "Assuming object is owned by sending actor/server, removes object's representation"
+      #:subitems ((inbox:accept:delete:tombstone
+                   MAY
+                   "MAY replace object's representation with a Tombstone object")))
+
      ;; * Update
      (inbox:accept:update:is-authorized
       MUST
@@ -205,6 +234,15 @@
      (inbox:accept:follow:add-actor-to-users-followers
       SHOULD
       "Add the actor to the object user's Followers Collection.")
+     (inbox:accept:follow:generate-accept-or-reject
+      SHOULD
+      "Generates either an Accept or Reject activity with Follow as object and deliver to actor of the Follow")
+     (inbox:accept:accept:add-actor-to-users-following
+      SHOULD
+      "If in reply to a Follow activity, adds actor to receiver's Following Collection")
+     (inbox:accept:reject:does-not-add-actor-to-users-following
+      MUST
+      "If in reply to a Follow activity, MUST NOT add actor to receiver's Following Collection")
      ;; * Add
      (inbox:accept:add:to-collection
       SHOULD
@@ -216,6 +254,12 @@
      (inbox:accept:like:indicate-like-performed
       SHOULD
       "Perform appropriate indication of the like being performed (See 7.10 for examples)")
+     (inbox:accept:announce:add-to-shares-collection
+      SHOULD
+      "Increments object's count of likes by adding the received activity to the 'shares' collection if this collection is present")
+     (inbox:accept:undo
+      NON-NORMATIVE
+      "Performs Undo of object in federated context")
      ;; @@: The same as dont-blindly-trust...
      ;; (inbox:accept:validate-content
      ;;  SHOULD
@@ -432,10 +476,12 @@ Reports is a sorted list of all implementation reports."
            (lambda (test-item)
              (define number-of-yes
                (count (lambda (report)
-                        (equal? (jsobj-ref (report-result-ref
-                                            report (test-item-sym test-item))
-                                           "result")
-                                "yes"))
+                        (define item
+                          (report-result-ref
+                           report (test-item-sym test-item)))
+                        (and item
+                             (equal? (jsobj-ref item "result")
+                                     "yes")))
                       reports))
              (set! dark? (not dark?))  ; switch row color
              `(;; (tr
@@ -461,14 +507,15 @@ Reports is a sorted list of all implementation reports."
                          (define result
                            (report-result-ref report (test-item-sym test-item)))
                          (define comment
-                           (jsobj-ref result "comment"))
+                           (and result
+                                (jsobj-ref result "comment")))
                          (define-values (text class)
-                           (match (jsobj-ref result "result")
+                           (match (and result (jsobj-ref result "result"))
                              ("yes" (values "Yes" "result-yes"))
                              ("no" (values "No" "result-no"))
                              ("inconclusive" (values "Inconclusive" "result-inconclusive"))
                              ("not-applicable" (values "N/A" "result-not-applicable"))
-                             ('null (values "Missing" "result-missing"))))
+                             ((or 'null #f) (values "Missing" "result-missing"))))
                          `(td (@ (class ,(string-append "result-cell " class))
                                  ,@(if comment
                                        `((title ,comment))
