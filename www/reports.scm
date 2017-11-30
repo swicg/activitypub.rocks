@@ -143,7 +143,7 @@
       "Supports the Undo activity in the client-to-server protocol"
       #:subitems ((outbox:undo:ensures-activity-and-actor-are-same
                    MUST
-                   "Ensures that the activity and actor are the same in activity being undone."))))))
+                   "Ensures that the actor in the activity actor is the same in activity being undone."))))))
 
 
 (define server-inbox-delivery
