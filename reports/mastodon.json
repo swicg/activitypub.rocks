@@ -194,7 +194,7 @@
     "inbox:accept:accept:add-actor-to-users-following": {
       "result": "yes"
     },
-    "inbox:accept:accept:does-not-add-actor-to-users-following": {
+    "inbox:accept:accept:add-actor-to-users-following": {
       "result": "yes"
     },
     "inbox:accept:reject:does-not-add-actor-to-users-following": {
