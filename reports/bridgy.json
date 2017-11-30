@@ -149,6 +149,12 @@
     "inbox:delivery:do-not-deliver-block": {
       "result": "not-applicable"
     },
+    "inbox:delivery:sharedInbox": {
+      "result": "no"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "not-applicable"
+    },
     "inbox:accept:deduplicate": {
       "result": "no"
     },
@@ -160,6 +166,15 @@
     },
     "inbox:accept:special-forward:limits-recursion": {
       "result": "no"
+    },
+    "inbox:accept:create": {
+      "result": "no"
+    },
+    "inbox:accept:delete": {
+      "result": "no"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "yes"
     },
     "inbox:accept:update:is-authorized": {
       "result": "not-applicable"
@@ -173,6 +188,15 @@
     "inbox:accept:follow:add-actor-to-users-followers": {
       "result": "not-applicable"
     },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "not-applicable"
+    },
     "inbox:accept:add:to-collection": {
       "result": "not-applicable"
     },
@@ -181,6 +205,13 @@
     },
     "inbox:accept:like:indicate-like-performed": {
       "result": "yes"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "yes",
+      "comment": "Indirectly, via Webmention"
+    },
+    "inbox:accept:undo": {
+      "result": "no"
     },
     "server:inbox:responds-to-get": {
       "result": "no"
