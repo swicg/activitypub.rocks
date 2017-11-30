@@ -256,7 +256,7 @@
       "Perform appropriate indication of the like being performed (See 7.10 for examples)")
      (inbox:accept:announce:add-to-shares-collection
       SHOULD
-      "Increments object's count of likes by adding the received activity to the 'shares' collection if this collection is present")
+      "Increments object's count of shares by adding the received activity to the 'shares' collection if this collection is present")
      (inbox:accept:undo
       NON-NORMATIVE
       "Performs Undo of object in federated context")
