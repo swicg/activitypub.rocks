@@ -10,7 +10,7 @@
   "testing-s2s-server": true,
   "developers": "[Ryan Barrett](https://snarfed.org/)",
   "publicly-accessible": true,
-  "foss": false,
+  "foss": true,
   "programming-language": "Python",
   "license": "Public Domain / CC0",
   "results": {
