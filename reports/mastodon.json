@@ -212,9 +212,6 @@
     "inbox:accept:like:indicate-like-performed": {
       "result": "yes"
     },
-    "inbox:accept:like:indicate-like-performed": {
-      "result": "yes"
-    },
     "inbox:accept:announce:add-to-shares-collection": {
       "result": "yes"
     },
