@@ -174,7 +174,7 @@
       "result": "no"
     },
     "inbox:accept:delete:tombstone": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:accept:update:is-authorized": {
       "result": "not-applicable"
