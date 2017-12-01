@@ -57,7 +57,12 @@
       "result": "yes"
     },
     "outbox:update": {
-      "result": "no"
+      "result": "no",
+      "comment": "Distbin objects are immutable"
+    },
+    "outbox:update:partial": {
+      "result": "no",
+      "comment": "Distbin objects are immutable"
     },
     "outbox:create": {
       "result": "no"
@@ -98,6 +103,12 @@
     "outbox:block:prevent-interaction-with-actor": {
       "result": "no"
     },
+    "outbox:undo": {
+      "result": "no"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "no"
+    },
     "inbox:delivery:performs-delivery": {
       "result": "yes"
     },
@@ -131,6 +142,12 @@
     "inbox:delivery:do-not-deliver-block": {
       "result": "no"
     },
+    "inbox:delivery:sharedInbox": {
+      "result": "no"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "no"
+    },
     "inbox:accept:deduplicate": {
       "result": "yes"
     },
@@ -141,6 +158,15 @@
       "result": "no"
     },
     "inbox:accept:special-forward:limits-recursion": {
+      "result": "no"
+    },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "no"
+    },
+    "inbox:accept:delete:tombstone": {
       "result": "no"
     },
     "inbox:accept:update:is-authorized": {
@@ -155,6 +181,18 @@
     "inbox:accept:follow:add-actor-to-users-followers": {
       "result": "no"
     },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "no"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "no"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "no"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "no"
+    },
     "inbox:accept:add:to-collection": {
       "result": "no"
     },
@@ -162,6 +200,12 @@
       "result": "no"
     },
     "inbox:accept:like:indicate-like-performed": {
+      "result": "no"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "no"
+    },
+    "inbox:accept:undo": {
       "result": "no"
     },
     "server:inbox:responds-to-get": {
