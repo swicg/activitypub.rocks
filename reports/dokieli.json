@@ -1,0 +1,253 @@
+{
+  "project-name": "dokieli",
+  "homepage": "https://dokie.li/",
+  "date": "2018-01-03T15:06:35.178170000Z",
+  "notes": "[dokieli](https://dokie.li/) is a clientside editor for decentralised article publishing, annotations and social interactions. It can work as a single-page application or as a Web browser extension.\n\n* dokieli can create and consume content in different RDF serializations (RDFa in HTML and SVG, Turtle, JSON-LD) for fine-grained semantic structure;\n* can work with [Linked Data Platform](https://www.w3.org/TR/ldp/) based servers for personal data storage;\n* implements the sender and consumer roles of [Linked Data Notifications](https://www.w3.org/TR/ldn/);\n* [Web Annotation](https://www.w3.org/TR/annotation-model/) for structured annotations;\n* WebID for identity discovery and profile use;\n* ActivityPub and ActivityStreams 2 to send and consume activities/objects",
+  "repo": "https://github.com/linkeddata/dokieli",
+  "developers": "[Sarven Capadisli](https://github.com/csarven)",
+  "interops-with": "",
+  "license": "Apache License 2.0",
+  "programming-language": "Javascript",
+  "testing-client": true,
+  "testing-c2s-server": false,
+  "testing-s2s-server": false,
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "yes"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "yes"
+    },
+    "client:submission:authenticated": {
+      "result": "yes"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "yes"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "yes"
+    },
+    "client:retrieval:accept-header": {
+      "result": "yes"
+    },
+    "outbox:accepts-activities": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "not-applicable"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "not-applicable"
+    },
+    "outbox:ignores-id": {
+      "result": "not-applicable"
+    },
+    "outbox:responds-201-created": {
+      "result": "not-applicable"
+    },
+    "outbox:location-header": {
+      "result": "not-applicable"
+    },
+    "outbox:update": {
+      "result": "not-applicable"
+    },
+    "outbox:update:partial": {
+      "result": "not-applicable"
+    },
+    "outbox:create": {
+      "result": "not-applicable"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "not-applicable"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "not-applicable"
+    },
+    "outbox:follow": {
+      "result": "not-applicable"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "not-applicable"
+    },
+    "outbox:add": {
+      "result": "not-applicable"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "not-applicable"
+    },
+    "outbox:remove": {
+      "result": "not-applicable"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "not-applicable"
+    },
+    "outbox:like": {
+      "result": "not-applicable"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "not-applicable"
+    },
+    "outbox:block": {
+      "result": "not-applicable"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "not-applicable"
+    },
+    "outbox:undo": {
+      "result": "not-applicable"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:addressing": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:sharedInbox": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:special-forward": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:create": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:delete": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "not-applicable"
+    },
+    "inbox:accept:undo": {
+      "result": "not-applicable"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "not-applicable"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "not-applicable"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "not-applicable"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "not-applicable"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "not-applicable"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "not-applicable"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "not-applicable"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "not-applicable"
+    },
+    "server:security-considerations:sanitize-fields": {
+      "result": "not-applicable"
+    }
+  }
+}
