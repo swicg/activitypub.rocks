@@ -4,7 +4,7 @@
   "date": "2017-11-16T00:12:42.441271000Z",
   "notes": "very unfinished, intent to eventually federate with any server that supports activitypub (primary objective Mastodon, as the name implies)",
   "repo": "https://github.com/rowanlupton/smilodon",
-  "interop": "Some testing against Mastodon, WIP",
+  "interops-with": "Some testing against Mastodon, WIP",
   "developers": "[Rowan Lupton](https://web.rowan.website/)",
   "testing-client": false,
   "testing-c2s-server": false,
