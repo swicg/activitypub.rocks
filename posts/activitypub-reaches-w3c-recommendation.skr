@@ -1,0 +1,24 @@
+(post
+ :title "ActivityPub reaches W3C Recommendation status!  Everybody party!"
+ :date (make-date* 2018 03 20)
+ :slug "activitypub-reaches-w3c-recommendation"
+
+ (p (em [Ooops... this post was written months ago, but accidentally wasn't
+         pushed publicly till now!
+         So... a delayed celebration to all!]))
+
+ (p [We're proud to announce that after a three year journey,
+     ,(anchor [ActivityPub]
+              "https://www.w3.org/TR/activitypub/")
+     is
+     ,(anchor [now a W3C Recommendation]
+              "https://www.w3.org/blog/news/archives/6785")!
+     Thank you and congratulations to the many, many people involved
+     in this standardization effort.
+     We couldn't have done it without you.])
+
+ (p [Now comes the fun part... building ActivityPub applications!
+     Join us in the
+     ,(anchor [Social Web Community Group]
+              "https://www.w3.org/wiki/SocialCG")
+     to discuss ActivityPub implementation and new frontiers!]))
