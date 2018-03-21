@@ -1,0 +1,253 @@
+{
+  "project-name": "PeerTube",
+  "homepage": "https://peertube.cpy.re",
+  "date": "2018-01-11T18:13:40.852235000Z",
+  "notes": "Federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with [WebTorrent](https://github.com/feross/webtorrent).\n\nUnder heavy development, implementation might be improved in the future :)",
+  "repo": "https://github.com/Chocobozzz/PeerTube",
+  "interop": "Mastodon (https://peertube.cpy.re/videos/watch/da2b08d4-a242-4170-b32a-4ec8cbdca701)",
+  "testing-client": false,
+  "testing-c2s-server": false,
+  "testing-s2s-server": true,
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "not-applicable"
+    },
+    "client:submission:authenticated": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "not-applicable"
+    },
+    "client:retrieval:accept-header": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-activities": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "not-applicable"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "not-applicable"
+    },
+    "outbox:ignores-id": {
+      "result": "not-applicable"
+    },
+    "outbox:responds-201-created": {
+      "result": "not-applicable"
+    },
+    "outbox:location-header": {
+      "result": "not-applicable"
+    },
+    "outbox:update": {
+      "result": "not-applicable"
+    },
+    "outbox:update:partial": {
+      "result": "not-applicable"
+    },
+    "outbox:create": {
+      "result": "not-applicable"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "not-applicable"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "not-applicable"
+    },
+    "outbox:follow": {
+      "result": "not-applicable"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "not-applicable"
+    },
+    "outbox:add": {
+      "result": "not-applicable"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "not-applicable"
+    },
+    "outbox:remove": {
+      "result": "not-applicable"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "not-applicable"
+    },
+    "outbox:like": {
+      "result": "not-applicable"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "not-applicable"
+    },
+    "outbox:block": {
+      "result": "not-applicable"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "not-applicable"
+    },
+    "outbox:undo": {
+      "result": "not-applicable"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "not-applicable"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:addressing": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "not-applicable",
+      "comment": "Tests only apply if supporting both C2S and S2S"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "yes"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "no"
+    },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "yes"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "no"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "yes"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "yes"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "yes"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "yes"
+    },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "yes"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "no"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "no"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:undo": {
+      "result": "yes"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "no"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "no"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "no"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "no"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "yes"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "no"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "no"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    }
+  }
+}
