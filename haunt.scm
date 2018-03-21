@@ -158,7 +158,8 @@
        "based on the "
        (a (@ (href "https://www.w3.org/TR/activitystreams-core/"))
           "ActivityStreams 2.0")
-       " data format and is being developed as part of the "
+       " data format. "
+       "ActivityPub is an official W3C recommended standard published by the "
        (a (@ (href "https://www.w3.org/wiki/Socialwg"))
           "W3C Social Web Working Group")
        ".  "
@@ -204,8 +205,7 @@
                 "Running the "
                 (a (@ (href "https://test.activitypub.rocks/"))
                            "test suite")
-                " will give you a report and instructions on how to submit it. "
-                "A necessary step for becoming an official W3C standard!"))
+                " will give you a report and instructions on how to submit it."))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
 
