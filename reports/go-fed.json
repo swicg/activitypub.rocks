@@ -1,0 +1,257 @@
+{
+  "project-name": "go-fed",
+  "homepage": "https://go-fed.org",
+  "date": "2018-08-04T14:53:49.975893000Z",
+  "notes": "go-fed is a library that implements ActivityStreams and ActivityPub in Go.\n\nWhether you wish to create a new application, add ActivityPub to an existing one, or just use ActivityStreams data types, go-fed is here to help. The website hosts a tutorial geared for developers who may not be familiar with the ActivityStreams and ActivityPub protocols. It also hosts GoDoc-like documentation for each versioned release.\n\nApplications using go-fed can turn many of the \"No\" entries in this implementation report to \"Yes\". Use the security protocols, spam filtering, and administrative tooling required for your application's needs.\n\n\"Why wait 'til tomorrow? [go-fed.today](https://go-fed.today)!\"\n\nOfficial implementation reports were first generated using go-fed `v0.2.0`.",
+  "repo": "https://github.com/go-fed/activity",
+  "interop": "",
+  "testing-client": false,
+  "testing-c2s-server": true,
+  "testing-s2s-server": true,
+  "publicly-accessible": true,
+  "foss": true,
+  "license": "BSD 3-Clause",
+  "programming-language": "Go",
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "not-applicable"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "not-applicable"
+    },
+    "client:submission:authenticated": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "not-applicable"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "not-applicable"
+    },
+    "client:retrieval:accept-header": {
+      "result": "not-applicable"
+    },
+    "outbox:accepts-activities": {
+      "result": "yes"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "yes"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "yes"
+    },
+    "outbox:ignores-id": {
+      "result": "yes"
+    },
+    "outbox:responds-201-created": {
+      "result": "yes"
+    },
+    "outbox:location-header": {
+      "result": "yes"
+    },
+    "outbox:update": {
+      "result": "yes"
+    },
+    "outbox:update:partial": {
+      "result": "yes"
+    },
+    "outbox:create": {
+      "result": "yes"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "yes"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "yes"
+    },
+    "outbox:follow": {
+      "result": "yes"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "no"
+    },
+    "outbox:add": {
+      "result": "yes"
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:remove": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:like": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:block": {
+      "result": "yes"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "yes"
+    },
+    "outbox:undo": {
+      "result": "no",
+      "comment": "Neither 200 nor 201 status code returned in submission response."
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "no"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "yes"
+    },
+    "inbox:delivery:addressing": {
+      "result": "yes"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "yes"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox": {
+      "result": "no"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "no"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "yes"
+    },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "yes"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "yes"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "yes"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "yes"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "no"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "yes"
+    },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "yes"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "no"
+    },
+    "inbox:accept:undo": {
+      "result": "no"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "yes"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "yes"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "no"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "no"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "no"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "no"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "no"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "no"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    }
+  }
+}

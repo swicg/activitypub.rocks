@@ -1,0 +1,257 @@
+{
+  "project-name": "microblog.pub",
+  "homepage": "https://microblog.pub",
+  "date": "2018-06-01T19:26:33.38955000Z",
+  "notes": "A self-hosted, single-user, ActivityPub powered microblog.",
+  "repo": "https://github.com/tsileo/microblog.pub",
+  "interop": "Any ActivityPub compatible server (and tested against Mastodon)",
+  "testing-client": true,
+  "testing-c2s-server": true,
+  "testing-s2s-server": true,
+  "publicly-accessible": true,
+  "foss": true,
+  "license": "GNU AGPLv3",
+  "programming-language": "Python",
+  "results": {
+    "client:submission:discovers-url-from-profile": {
+      "result": "yes"
+    },
+    "client:submission:submit-post-with-content-type": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects:provide-object": {
+      "result": "yes"
+    },
+    "client:submission:submit-objects:provide-target": {
+      "result": "no"
+    },
+    "client:submission:authenticated": {
+      "result": "yes"
+    },
+    "client:submission:recursively-add-targets": {
+      "result": "yes"
+    },
+    "client:submission:recursively-add-targets:limits-depth": {
+      "result": "yes"
+    },
+    "client:retrieval:accept-header": {
+      "result": "yes"
+    },
+    "outbox:accepts-activities": {
+      "result": "yes"
+    },
+    "outbox:accepts-non-activity-objects": {
+      "result": "yes"
+    },
+    "outbox:removes-bto-and-bcc": {
+      "result": "yes"
+    },
+    "outbox:ignores-id": {
+      "result": "yes"
+    },
+    "outbox:responds-201-created": {
+      "result": "yes"
+    },
+    "outbox:location-header": {
+      "result": "yes"
+    },
+    "outbox:update": {
+      "result": "yes"
+    },
+    "outbox:update:partial": {
+      "result": "yes"
+    },
+    "outbox:create": {
+      "result": "yes"
+    },
+    "outbox:create:merges-audience-properties": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:create:actor-to-attributed-to": {
+      "result": "inconclusive",
+      "comment": "Unexpected server error while running test!"
+    },
+    "outbox:follow": {
+      "result": "yes"
+    },
+    "outbox:follow:adds-followed-object": {
+      "result": "no"
+    },
+    "outbox:add": {
+      "result": "no",
+      "comment": "Neither 200 nor 201 status code returned in submission response."
+    },
+    "outbox:add:adds-object-to-target": {
+      "result": "no",
+      "comment": "Neither 200 nor 201 status code returned in submission response."
+    },
+    "outbox:remove": {
+      "result": "no",
+      "comment": "Neither 200 nor 201 status code returned in submission response."
+    },
+    "outbox:remove:removes-from-target": {
+      "result": "no",
+      "comment": "Neither 200 nor 201 status code returned in submission response."
+    },
+    "outbox:like": {
+      "result": "yes"
+    },
+    "outbox:like:adds-object-to-liked": {
+      "result": "yes"
+    },
+    "outbox:block": {
+      "result": "yes"
+    },
+    "outbox:block:prevent-interaction-with-actor": {
+      "result": "yes"
+    },
+    "outbox:undo": {
+      "result": "yes"
+    },
+    "outbox:undo:ensures-activity-and-actor-are-same": {
+      "result": "yes"
+    },
+    "inbox:delivery:performs-delivery": {
+      "result": "yes"
+    },
+    "inbox:delivery:addressing": {
+      "result": "yes"
+    },
+    "inbox:delivery:adds-id": {
+      "result": "yes"
+    },
+    "inbox:delivery:submit-with-credentials": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection": {
+      "result": "yes"
+    },
+    "inbox:delivery:deliver-to-collection:recursively": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-object-for-certain-activities": {
+      "result": "yes"
+    },
+    "inbox:delivery:delivers-with-target-for-certain-activities": {
+      "result": "no"
+    },
+    "inbox:delivery:deduplicates-final-recipient-list": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-to-actor": {
+      "result": "yes"
+    },
+    "inbox:delivery:do-not-deliver-block": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox": {
+      "result": "yes"
+    },
+    "inbox:delivery:sharedInbox:deliver-to-inbox-if-no-sharedInbox": {
+      "result": "yes"
+    },
+    "inbox:accept:deduplicate": {
+      "result": "yes"
+    },
+    "inbox:accept:special-forward": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:recurses": {
+      "result": "no"
+    },
+    "inbox:accept:special-forward:limits-recursion": {
+      "result": "no"
+    },
+    "inbox:accept:create": {
+      "result": "yes"
+    },
+    "inbox:accept:delete": {
+      "result": "yes"
+    },
+    "inbox:accept:delete:tombstone": {
+      "result": "no"
+    },
+    "inbox:accept:update:is-authorized": {
+      "result": "yes"
+    },
+    "inbox:accept:update:completely-replace": {
+      "result": "yes"
+    },
+    "inbox:accept:dont-blindly-trust": {
+      "result": "yes"
+    },
+    "inbox:accept:follow:add-actor-to-users-followers": {
+      "result": "yes"
+    },
+    "inbox:accept:follow:generate-accept-or-reject": {
+      "result": "yes"
+    },
+    "inbox:accept:accept:add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:reject:does-not-add-actor-to-users-following": {
+      "result": "yes"
+    },
+    "inbox:accept:add:to-collection": {
+      "result": "no"
+    },
+    "inbox:accept:remove:from-collection": {
+      "result": "no"
+    },
+    "inbox:accept:like:indicate-like-performed": {
+      "result": "yes"
+    },
+    "inbox:accept:announce:add-to-shares-collection": {
+      "result": "yes"
+    },
+    "inbox:accept:undo": {
+      "result": "yes"
+    },
+    "server:inbox:responds-to-get": {
+      "result": "yes"
+    },
+    "server:inbox:is-orderedcollection": {
+      "result": "yes"
+    },
+    "server:inbox:filtered-per-permissions": {
+      "result": "yes"
+    },
+    "server:object-retrieval:get-id": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-ld-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:respond-with-as2-re-activity-json": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:tombstone": {
+      "result": "no"
+    },
+    "server:object-retrieval:deleted-object:410-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:deleted-object:404-status": {
+      "result": "yes"
+    },
+    "server:object-retrieval:private-403-or-404": {
+      "result": "no"
+    },
+    "server:security-considerations:actually-posted-by-actor": {
+      "result": "yes"
+    },
+    "server:security-considerations:do-not-post-to-localhost": {
+      "result": "yes"
+    },
+    "server:security-considerations:uri-scheme-whitelist": {
+      "result": "yes"
+    },
+    "server:security-considerations:filter-incoming-content": {
+      "result": "no"
+    }
+  }
+}
