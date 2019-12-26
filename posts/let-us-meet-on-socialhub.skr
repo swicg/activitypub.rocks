@@ -14,7 +14,7 @@
  (p [The new SocialHub, like the previous one we had to abandon, runs
      Discourse, a forum software that can be used via email, but shines
      on the web, and is
-     ,(anchor [about to implement ActivityPub] "https://socialhub.activitypub.rock/c/software/discourse?u=how")
+     ,(anchor [about to implement ActivityPub] "https://socialhub.activitypub.rocks/c/software/discourse?u=how")
      support!])
 
  (p [If you are implementing ActivityPub-compatible software, you're
