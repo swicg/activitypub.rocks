@@ -47,7 +47,8 @@
       "result": "no"
     },
     "outbox:removes-bto-and-bcc": {
-      "result": "unknown"
+      "result": "partly",
+      "comment": "Keeps it in storage but remove it on delivery",
     },
     "outbox:ignores-id": {
       "result": "yes"
@@ -59,7 +60,7 @@
       "result": "yes"
     },
     "outbox:update": {
-      "result": "yes"
+      "result": "no"
     },
     "outbox:update:partial": {
       "result": "unknown"
@@ -76,10 +77,10 @@
       "comment": "Overrides the actor (and attributedTo for a Create'd object) to the authenticated user"
     },
     "outbox:follow": {
-      "result": "yes"
+      "result": "no"
     },
     "outbox:follow:adds-followed-object": {
-      "result": "yes"
+      "result": "no"
     },
     "outbox:add": {
       "result": "no"
@@ -100,16 +101,16 @@
       "result": "yes"
     },
     "outbox:block": {
-      "result": "yes"
+      "result": "no"
     },
     "outbox:block:prevent-interaction-with-actor": {
       "result": "unknown"
     },
     "outbox:undo": {
-      "result": "yes"
+      "result": "no"
     },
     "outbox:undo:ensures-activity-and-actor-are-same": {
-      "result": "yes"
+      "result": "no"
     },
     "inbox:delivery:performs-delivery": {
       "result": "yes"
