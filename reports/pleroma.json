@@ -1,12 +1,12 @@
 {
   "project-name": "Pleroma",
   "homepage": "https://pleroma.social/",
-  "date": "2018-05-25T13:00:34.66056000Z",
+  "date": "2020-10-26T02:48:00Z",
   "notes": "",
   "repo": "https://git.pleroma.social/pleroma/pleroma",
   "interop": "Mastodon, PeerTube, Misskey, Hubzilla",
   "testing-client": false,
-  "testing-c2s-server": false,
+  "testing-c2s-server": true,
   "testing-s2s-server": true,
   "publicly-accessible": true,
   "foss": true,
@@ -41,97 +41,94 @@
       "result": "not-applicable"
     },
     "outbox:accepts-activities": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:accepts-non-activity-objects": {
-      "result": "not-applicable"
+      "result": "no"
     },
     "outbox:removes-bto-and-bcc": {
-      "result": "not-applicable"
+      "result": "unknown"
     },
     "outbox:ignores-id": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:responds-201-created": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:location-header": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:update": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:update:partial": {
-      "result": "not-applicable"
+      "result": "unknown"
     },
     "outbox:create": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:create:merges-audience-properties": {
-      "result": "not-applicable"
+      "result": "no?",
+      "comment": "Tries to fill missing Create audience fields from the object and makes sure Create and it's object have the same audience properties"
     },
     "outbox:create:actor-to-attributed-to": {
-      "result": "not-applicable"
+      "result": "yes?"
+      "comment": "Overrides the actor (and attributedTo for a Create'd object) to the authenticated user"
     },
     "outbox:follow": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:follow:adds-followed-object": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:add": {
-      "result": "not-applicable"
+      "result": "no"
     },
     "outbox:add:adds-object-to-target": {
-      "result": "not-applicable"
+      "result": "no"
     },
     "outbox:remove": {
-      "result": "not-applicable"
+      "result": "no"
     },
     "outbox:remove:removes-from-target": {
-      "result": "not-applicable"
+      "result": "no"
     },
     "outbox:like": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:like:adds-object-to-liked": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:block": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:block:prevent-interaction-with-actor": {
-      "result": "not-applicable"
+      "result": "unknown"
     },
     "outbox:undo": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "outbox:undo:ensures-activity-and-actor-are-same": {
-      "result": "not-applicable"
+      "result": "yes"
     },
     "inbox:delivery:performs-delivery": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "yes"
     },
     "inbox:delivery:addressing": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "yes"
     },
     "inbox:delivery:adds-id": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "yes"
     },
     "inbox:delivery:submit-with-credentials": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "what"
     },
     "inbox:delivery:deliver-to-collection": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "partly",
+      "comment": "Support for addressing to collections is only for your own followers/following collection"
     },
     "inbox:delivery:deliver-to-collection:recursively": {
-      "result": "not-applicable",
-      "comment": "Tests only apply if supporting both C2S and S2S"
+      "result": "no"
     },
     "inbox:delivery:delivers-with-object-for-certain-activities": {
       "result": "yes"
@@ -251,6 +248,9 @@
       "result": "yes"
     },
     "server:security-considerations:filter-incoming-content": {
+      "result": "yes"
+    }
+    "server:security-considerations:sanitize-fields": {
       "result": "yes"
     }
   }
