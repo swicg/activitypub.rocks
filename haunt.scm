@@ -1,5 +1,5 @@
 ;;; activitypub.rocks website
-;;; Copyright © 2016 Christopher Allan Webber <cwebber@dustycloud.org>
+;;; Copyright © 2016 Christopher Lemmer Webber <cwebber@dustycloud.org>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -302,7 +302,7 @@
 (site #:title "ActivityPub Rocks!"
       #:domain "activitypub.rocks"
       #:default-metadata
-      '((author . "Christopher Allan Webber"))
+      '((author . "Christopher Lemmer Webber"))
       #:readers (list skribe-reader)
       #:builders (list (blog #:prefix "/news"
                              #:theme aprocks-haunt-theme)
