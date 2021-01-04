@@ -216,7 +216,16 @@
                 "See the implementation coverage of applications which implemented "
                 "ActivityPub during the standardization process."))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
-           (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
+           (code "#social") " IRC channel on " (code "irc.w3.org") "! "
+           "See also "
+           (a (@ (href "https://socialhub.activitypub.rocks/"))
+              "SocialHub")
+           ", a community-run forum to discuss ActivityPub developments and ideas, "
+           "and the "
+           (a (@ (href "https://www.w3.org/wiki/SocialCG"))
+              "Social CG")
+           ", a W3C Community Group to continue the work of advancing the "
+           "federated social web... including ActivityPub!")))
 
 (define (news-feed site posts)
   `(div (@ (class "news-feed"))
