@@ -140,6 +140,19 @@
                    (alt "ActivityPub tutorial image"))))))
 
 
+(define read-it
+  (let ((wrap-it
+         (lambda (link name)
+           `(p "==> "
+               (a (@ (href ,link))
+                  ,name)
+               " <=="))))
+    `(div (@ (class "read-it"))
+          ,(wrap-it "https://www.w3.org/TR/activitypub/"
+                    "Latest published version")
+          ,(wrap-it "https://w3c.github.io/activitypub/"
+                    "Latest editor's draft"))))
+
 (define pitch
   `(div
     (@ (class "pitch")
@@ -179,20 +192,8 @@
        "Check out this "
        (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-activitypub-users"))
           "guide for ActivityPub users")
-       " (community edited)!")))
-
-(define read-it
-  (let ((wrap-it
-         (lambda (link name)
-           `(p "==> "
-               (a (@ (href ,link))
-                  ,name)
-               " <=="))))
-    `(div (@ (class "read-it"))
-          ,(wrap-it "https://www.w3.org/TR/activitypub/"
-                    "Latest published version")
-          ,(wrap-it "https://w3c.github.io/activitypub/"
-                    "Latest editor's draft"))))
+       " (community edited)!")
+    ))
 
 (define for-implementers
   `(div (@ (class "for-implementers-box"))
