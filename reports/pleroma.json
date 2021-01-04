@@ -47,8 +47,8 @@
       "result": "no"
     },
     "outbox:removes-bto-and-bcc": {
-      "result": "partly",
-      "comment": "Keeps it in storage but remove it on delivery",
+      "result": "yes",
+      "comment": "Keeps it in storage but remove it on delivery"
     },
     "outbox:ignores-id": {
       "result": "yes"
@@ -69,11 +69,11 @@
       "result": "yes"
     },
     "outbox:create:merges-audience-properties": {
-      "result": "no?",
-      "comment": "Tries to fill missing Create audience fields from the object and makes sure Create and it's object have the same audience properties"
+      "result": "yes",
+      "comment": "Tries to fill missing Create audience fields from the object and makes sure Create and its object have the same audience properties"
     },
     "outbox:create:actor-to-attributed-to": {
-      "result": "yes?"
+      "result": "yes",
       "comment": "Overrides the actor (and attributedTo for a Create'd object) to the authenticated user"
     },
     "outbox:follow": {
@@ -122,10 +122,10 @@
       "result": "yes"
     },
     "inbox:delivery:submit-with-credentials": {
-      "result": "what"
+      "result": "unknown"
     },
     "inbox:delivery:deliver-to-collection": {
-      "result": "partly",
+      "result": "not-applicable",
       "comment": "Support for addressing to collections is only for your own followers/following collection"
     },
     "inbox:delivery:deliver-to-collection:recursively": {
