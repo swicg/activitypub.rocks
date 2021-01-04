@@ -179,8 +179,7 @@
        "Check out this "
        (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-activitypub-users"))
           "guide for ActivityPub users")
-       " (community edited)!")
-    ))
+       " (community edited)!")))
 
 (define read-it
   (let ((wrap-it
