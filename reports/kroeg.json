@@ -1,6 +1,6 @@
 {
   "project-name": "Kroeg",
-  "repo": "https://github.com/puckipedia/kroeg",
+  "repo": "https://git.puckipedia.com/kroeg/server",
   "date": "2017-07-10T16:04:50+02:00",
   "notes": "Serves ActivityPub and has bridges to OStatus.  ActivityPub federation tested against Mastodon.",
   "testing-client": true,
@@ -11,7 +11,7 @@
   "publicly-accessible": true,
   "foss": true,
   "license": "Expat (MIT)",
-  "programming-language": "C#",
+  "programming-language": "Rust",
   "results": {
     "client:submission:discovers-url-from-profile": {
       "result": "yes"
