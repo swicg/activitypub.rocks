@@ -63,7 +63,7 @@
       "result": "no"
     },
     "outbox:update:partial": {
-      "result": "unknown"
+      "result": "inconclusive"
     },
     "outbox:create": {
       "result": "yes"
@@ -104,7 +104,7 @@
       "result": "no"
     },
     "outbox:block:prevent-interaction-with-actor": {
-      "result": "unknown"
+      "result": "inconclusive"
     },
     "outbox:undo": {
       "result": "no"
@@ -122,7 +122,7 @@
       "result": "yes"
     },
     "inbox:delivery:submit-with-credentials": {
-      "result": "unknown"
+      "result": "inconclusive"
     },
     "inbox:delivery:deliver-to-collection": {
       "result": "not-applicable",
