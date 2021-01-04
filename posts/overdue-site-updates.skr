@@ -16,7 +16,7 @@
      ,(anchor [better reflects]
               "https://gitlab.com/dustyweb/activitypub.rocks/-/commit/391cfae9d208eddb51b21c06032307f8f45d9c35")
      the community-hosted resources where ActivityPub-oriented
-     advancement and development has been happening.
+     advancement and development have been happening.
      In particular, the link to the test suite, which has been down for
      ages (yes, sorry, we know),
      now instead points to the most excellent
