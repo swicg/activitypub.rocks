@@ -171,7 +171,16 @@
     ;;    )
 
     ;; TODO: Mention existing applications adopting ActivityPub
-    (p "Sounds exciting?  Dive in!")))
+    (p "Sounds exciting?  Dive in!")
+
+    ,read-it
+
+    (p "Or, are you a user looking for ActivityPub software to use? "
+       "Check out this "
+       (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-activitypub-users"))
+          "guide for ActivityPub users")
+       " (community edited)!")
+    ))
 
 (define read-it
   (let ((wrap-it
@@ -191,7 +200,11 @@
         (header "~= Hey, Implementers! =~")
         (p "We're so stoked to have you implementing ActivityPub!  "
            "To make sure ActivityPub implementations work together, we have:")
-        (ul (li (strong (a (@ (href "https://test.activitypub.rocks/"))
+        (ul (li (strong (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
+                           "Guide for new ActivityPub implementers"))
+                " -- " ; space between link and item
+                " Community edited and unofficial, but useful!")
+            (li (strong (a (@ (href "https://test.activitypub.dev/"))
                            "A test suite:"))
                 " -- " ; space between link and item
                 "Make sure your application works right according to the "
@@ -200,12 +213,8 @@
             (li (strong (a (@ (href "/implementation-report/"))
                            "Implementation reports:"))
                 " -- " ; space between link and item
-                "See the implementation coverage of applications already implementing "
-                "ActivityPub... or submit yours! "
-                "Running the "
-                (a (@ (href "https://test.activitypub.rocks/"))
-                           "test suite")
-                " will give you a report and instructions on how to submit it."))
+                "See the implementation coverage of applications which implemented "
+                "ActivityPub during the standardization process."))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "!")))
 
@@ -222,7 +231,7 @@
 
 
 (define (index-content site posts)
-  `(div ,pitch ,read-it
+  `(div ,pitch
         ,for-implementers ,(news-feed site posts)))
 
 (define (index-page site posts)
