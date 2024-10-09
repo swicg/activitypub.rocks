@@ -4,9 +4,9 @@ name: Site builder
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  workflow_dispatch:  # This adds the "Run workflow" button in the GitHub Actions UI
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] # Triggers the workflow on push or pull request events but only for the "main" branch
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
