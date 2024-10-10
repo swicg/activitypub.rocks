@@ -4,7 +4,7 @@
  :slug "overdue-site-updates"
 
  (p [Hello, hello... it's been about a year since
-     ,(anchor [SocialHub launched] "/news/let-us-meet-on-socialhub.html").
+     ,(anchor [SocialHub launched] "../news/let-us-meet-on-socialhub.html").
      This has been a successful community-run resource for discussing
      ActivityPub development and its future.])
 

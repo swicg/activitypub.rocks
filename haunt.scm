@@ -29,7 +29,7 @@
 (define %current-directory (getcwd))
 (define %implementation-report-directory
   (string-append %current-directory
-                 "/reports"))
+                 "reports"))
 
 (define* (base-tmpl site body #:key title)
   `((doctype "html")
@@ -40,19 +40,19 @@
                  (site-title site)))
      ;; css
      (link (@ (rel "stylesheet")
-              (href "/static/css/main.css")))
+              (href "static/css/main.css")))
      ;; atom feed
      (link (@ (rel "alternate")
               (title "ActivityPub news")
               (type "application/atom+xml")
-              (href "/feed.xml"))))
+              (href "feed.xml"))))
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
-                  (a (@ (href "/")
+                  (a (@ (href "")
                         ;; (style "margin-left: -25px;")
                         )
-                     (img (@ (src "/static/images/ActivityPub-logo.svg"))))
+                     (img (@ (src "static/images/ActivityPub-logo.svg"))))
                   ;; ;; Header menu
                   ;; (div (@ ,(if big-logo
                   ;;              '(class "navbar-menu big-navbar")
@@ -89,7 +89,7 @@
 ;;; Blog
 
 (define (post-uri site post)
-  (string-append "/news/" (site-post-slug site post) ".html"))
+  (string-append "news/" (site-post-slug site post) ".html"))
 
 (define* (post-template post #:key post-link)
   `(div (@ (class "content-box blogpost"))
@@ -110,7 +110,7 @@
   ;; the filename generated and the pathname might not be the same.
   ;; So we use (prefix-url) instead.
   (define (post-uri post)
-    (string-append "/news/" (site-post-slug site post) ".html"))
+    (string-append "news/" (site-post-slug site post) ".html"))
   `((div (@ (class "news-header"))
          (h3 "recent news"))
     (div (@ (class "post-list"))
@@ -136,7 +136,7 @@
 (define tutorial-image
   `(div (@ (style "text-align: center"))
         (a (@ (href "https://www.w3.org/TR/activitypub/#Overview"))
-           (img (@ (src "/static/images/ActivityPub-tutorial-image.png")
+           (img (@ (src "static/images/ActivityPub-tutorial-image.png")
                    (alt "ActivityPub tutorial image"))))))
 
 
@@ -210,7 +210,7 @@
                 "Make sure your application works right according to the "
                 (a (@ (href "https://www.w3.org/TR/activitypub/"))
                    "ActivityPub standard") ".")
-            (li (strong (a (@ (href "/implementation-report/"))
+            (li (strong (a (@ (href "implementation-report/"))
                            "Implementation reports:"))
                 " -- " ; space between link and item
                 "See the implementation coverage of applications which implemented "
@@ -304,11 +304,11 @@
       #:default-metadata
       '((author . "Christopher Lemmer Webber"))
       #:readers (list skribe-reader)
-      #:builders (list (blog #:prefix "/news"
+      #:builders (list (blog #:prefix "news"
                              #:theme aprocks-haunt-theme)
                        index-page
                        test-page
                        impl-report-page
-                       (atom-feed #:blog-prefix "/news")
+                       (atom-feed #:blog-prefix "news")
                        (static-directory "static" "static")
                        (atom-feeds-by-tag)))

@@ -19,7 +19,7 @@
  (p [Not only that!
      mray has also done us the honor of designing us a sweet new logo:])
 
- (p (image "/static/images/ActivityPub-logo.svg"
+ (p (image "../static/images/ActivityPub-logo.svg"
            :alt-text [New ActivityPub logo]))
 
  (p [Thank you mray for making ActivityPub look good!]))

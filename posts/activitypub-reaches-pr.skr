@@ -5,7 +5,7 @@
 
  (p [A little over one year later after
      ,(anchor [reaching Candidate Recommendation status]
-              "/news/activitypub-reaches-cr.html")
+              "../news/activitypub-reaches-cr.html")
      we're pleased to announce that
      ,(anchor [ActivityPub]
               "https://www.w3.org/TR/activitypub/")
@@ -30,7 +30,7 @@
 
  (p [In the meanwhile we're seeing the number of
      ,(anchor [implementations of ActivityPub to be growing]
-              "/implementation-report/").
+              "../implementation-report/").
      What exciting new ActivityPub-using projects are on the horizon?
      We hope to see you submit your implementation to the implementation
      reports page next!]))
