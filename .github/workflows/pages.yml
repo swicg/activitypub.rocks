@@ -8,33 +8,44 @@ on:
   push:
     branches: [ "main" ] # Triggers the workflow on push or pull request events but only for the "main" branch
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
   # This workflow contains a single job called "build"
-  build:
+  install:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
       - name: install guix
-        run: apt install guix
+        run: |
+          sudo apt update
+          sudo apt install -y guix
 
       # Install haunt
       - name: install haunt
         run: guix install haunt
 
+  build:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
       # Runs a set of commands using the runners shell
       - name: build site
         run: haunt build
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
