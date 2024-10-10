@@ -29,7 +29,7 @@
 (define %current-directory (getcwd))
 (define %implementation-report-directory
   (string-append %current-directory
-                 "reports"))
+                 "/reports"))
 
 (define* (base-tmpl site body #:key title)
   `((doctype "html")
@@ -89,7 +89,7 @@
 ;;; Blog
 
 (define (post-uri site post)
-  (string-append "news/" (site-post-slug site post) ".html"))
+  (string-append "/news/" (site-post-slug site post) ".html"))
 
 (define* (post-template post #:key post-link)
   `(div (@ (class "content-box blogpost"))
@@ -110,7 +110,7 @@
   ;; the filename generated and the pathname might not be the same.
   ;; So we use (prefix-url) instead.
   (define (post-uri post)
-    (string-append "news/" (site-post-slug site post) ".html"))
+    (string-append "/news/" (site-post-slug site post) ".html"))
   `((div (@ (class "news-header"))
          (h3 "recent news"))
     (div (@ (class "post-list"))
@@ -304,11 +304,11 @@
       #:default-metadata
       '((author . "Christopher Lemmer Webber"))
       #:readers (list skribe-reader)
-      #:builders (list (blog #:prefix "news"
+      #:builders (list (blog #:prefix "/news"
                              #:theme aprocks-haunt-theme)
                        index-page
                        test-page
                        impl-report-page
-                       (atom-feed #:blog-prefix "news")
+                       (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "static")
                        (atom-feeds-by-tag)))
