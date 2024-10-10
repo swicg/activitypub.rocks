@@ -12,7 +12,12 @@ on:
 jobs:
   # Build job
   build:
-    runs-on: ghcr.io/swicg/haunt:latest
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/swicg/haunt:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
