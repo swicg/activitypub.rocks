@@ -300,7 +300,7 @@
 ;;; Site
 
 (site #:title "ActivityPub Rocks!"
-      #:domain "activitypub.rocks"
+      #:site-origin "https://swicg.github.io/activitypub.rocks/"
       #:default-metadata
       '((author . "Christopher Lemmer Webber"))
       #:readers (list skribe-reader)
