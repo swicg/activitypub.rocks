@@ -49,7 +49,7 @@
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
-                  (a (@ (href "")
+                  (a (@ (href "/")
                         ;; (style "margin-left: -25px;")
                         )
                      (img (@ (src "/static/images/ActivityPub-logo.svg"))))
