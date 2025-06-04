@@ -1,0 +1,5 @@
+The contents of this repository are dual licensed under GPLv3 or later
+(as published by the Free Software Foundation) and Creative Commmons
+Attribution-Sharealike 4.0 (as published by Creative Commons).
+
+See COPYING-CC-BY-SA-4.0.txt and COPYING-GPLv3.txt for more information.
