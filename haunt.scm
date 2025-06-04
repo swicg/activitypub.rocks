@@ -40,7 +40,7 @@
                  (site-title site)))
      ;; css
      (link (@ (rel "stylesheet")
-              (href "static/css/main.css")))
+              (href "/static/css/main.css")))
      ;; atom feed
      (link (@ (rel "alternate")
               (title "ActivityPub news")
