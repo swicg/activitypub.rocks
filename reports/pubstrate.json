@@ -3,7 +3,7 @@
   "repo": "https://gitlab.com/dustyweb/pubstrate",
   "date": "2017-11-04T20:50:40.703325000Z",
   "notes": "ActivityPub / ActivityStreams focused social networking application written in Guile.",
-  "developers": "[Christopher Allan Webber](https://dustycloud.org/)",
+  "developers": "[Christine Lemmer-Webber](https://dustycloud.org/)",
   "testing-client": true,
   "testing-c2s-server": true,
   "testing-s2s-server": true,
