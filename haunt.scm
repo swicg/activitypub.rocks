@@ -52,7 +52,7 @@
                   (a (@ (href "")
                         ;; (style "margin-left: -25px;")
                         )
-                     (img (@ (src "static/images/ActivityPub-logo.svg"))))
+                     (img (@ (src "/static/images/ActivityPub-logo.svg"))))
                   ;; ;; Header menu
                   ;; (div (@ ,(if big-logo
                   ;;              '(class "navbar-menu big-navbar")
@@ -136,7 +136,7 @@
 (define tutorial-image
   `(div (@ (style "text-align: center"))
         (a (@ (href "https://www.w3.org/TR/activitypub/#Overview"))
-           (img (@ (src "static/images/ActivityPub-tutorial-image.png")
+           (img (@ (src "/static/images/ActivityPub-tutorial-image.png")
                    (alt "ActivityPub tutorial image"))))))
 
 
@@ -310,5 +310,5 @@
                        test-page
                        impl-report-page
                        (atom-feed #:blog-prefix "/news")
-                       (static-directory "static" "static")
+                       (static-directory "static" "/static")
                        (atom-feeds-by-tag)))
