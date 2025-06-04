@@ -69,7 +69,7 @@
           (div (@ (class "site-main-content"))
                ,body))
      (div (@ (class "footer"))
-          (a (@ (href "https://gitlab.com/dustyweb/activitypub.rocks"))
+          (a (@ (href "https://github.com/swicg/activitypub.rocks/"))
              "Site contents")
           " dual licensed under "
           (a (@ (href "https://creativecommons.org/licenses/by-sa/4.0/"))
