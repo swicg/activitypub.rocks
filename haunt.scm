@@ -45,11 +45,11 @@
      (link (@ (rel "alternate")
               (title "ActivityPub news")
               (type "application/atom+xml")
-              (href "feed.xml"))))
+              (href "/feed.xml"))))
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
-                  (a (@ (href "")
+                  (a (@ (href "/")
                         ;; (style "margin-left: -25px;")
                         )
                      (img (@ (src "/static/images/ActivityPub-logo.svg"))))
