@@ -45,7 +45,7 @@
      (link (@ (rel "alternate")
               (title "ActivityPub news")
               (type "application/atom+xml")
-              (href "feed.xml"))))
+              (href "/feed.xml"))))
     (body
      (div (@ (class "main-wrapper"))
           (header (@ (id "site-header"))
