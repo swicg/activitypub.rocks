@@ -6,6 +6,12 @@ This is the repo for maintaining https://activitypub.rocks/
 
 ## Design principles
 
+## Topics for coverage
+
+* Primarily ActivityPub and related specifications as a developer stack
+* NOT Fediverse culture (e.g. why and how to add alt text)
+* NOT existing software implementation details (e.g. a Mastodon administrator's guide)
+
 ## Audiences
 
 These are the audiences in sequence of priority and questions they might want to ask.
