@@ -2,6 +2,18 @@
 
 This is the repo for maintaining https://activitypub.rocks/
 
+## Building the site
+
+The site uses a static site generator called [Haunt](https://dthompson.us/projects/haunt.html) to generate HTML from Scheme .scm files.
+
+To make it easier to work with for those who are not familiar with Scheme, there is a Docker image that can be used to build the site. From your working directory, run:
+
+```bash
+docker run -it -v"$(pwd)":/src -w /src ghcr.io/evanp/haunt:latest /usr/bin/haunt build
+```
+
+This will generate the site in the `site` subdirectory of your working directory. The output is ignored by Git, and just used for testing your changes to the Scheme files.
+
 ## Editorial process
 
 ## Design principles
@@ -38,5 +50,3 @@ These are the audiences in sequence of priority and questions they might want to
 4. End users
     * "How do I get started using ActivityPub-enabled software or services?"
     * "Where are there other resources for end-users to learn about the Fediverse and ActivityPub?"
-
-
