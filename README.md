@@ -14,6 +14,14 @@ docker run -it -v"$(pwd)":/src -w /src ghcr.io/evanp/haunt:latest /usr/bin/haunt
 
 This will generate the site in the `site` subdirectory of your working directory. The output is ignored by Git, and just used for testing your changes to the Scheme files.
 
+The current code uses absolute paths for links and images, so your site will not look great when loaded from the filesystem directly. You can use a local web server to serve the site, again using Docker from the same working directory:
+
+```bash
+docker run --rm -it -v "$(pwd)/site":/usr/share/nginx/html:ro -p 8080:80 nginx:alpine
+```
+
+This will start a web server on port 8080, and you can view the site at `http://localhost:8080/`. You can also use any other web server you prefer, such as Python's built-in HTTP server or Node.js's http-server.
+
 ## Editorial process
 
 ## Design principles
