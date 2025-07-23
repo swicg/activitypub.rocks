@@ -302,7 +302,7 @@
 (site #:title "ActivityPub Rocks!"
       #:domain "activitypub.rocks"
       #:default-metadata
-      '((author . "Christine Lemmer-Webber"))
+      '((author . "Christine Lemmer-Webber, Social Web Community Group (SWICG)"))
       #:readers (list skribe-reader)
       #:builders (list (blog #:prefix "/news"
                              #:theme aprocks-haunt-theme)
