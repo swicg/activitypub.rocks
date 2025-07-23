@@ -1,0 +1,17 @@
+(post
+ :title "Maintaining activitypub.rocks going forward"
+ :date (make-date* 2025 07 23)
+ :slug "maintaining-activitypub-rocks-going-forward"
+ :author "Johannes Ernst"
+
+ (p [As of summer 2025, maintenance of the activitypub.rocks is passing to
+    the ,(anchor [Social Web Community Group] "https://www.w3.org/community/socialcg/")
+    in the ,(anchor [W3C] "https://www.w3.org/" ).])
+
+ (p [We are just starting, but we have a plan! Please refer to the
+    ,(anchor [issue tracker] "https://github.com/swicg/activitypub.rocks/issues")
+    and the ,(anchor [README.md] "https://github.com/swicg/activitypub.rocks/blob/main/README.md")
+    in the repo for this site.])
+
+ (p [Want to help? PRs are appreciated.])
+)
