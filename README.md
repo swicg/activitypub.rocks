@@ -9,7 +9,7 @@ The site uses a static site generator called [Haunt](https://dthompson.us/projec
 To make it easier to work with for those who are not familiar with Scheme, there is a Docker image that can be used to build the site. From your working directory, run:
 
 ```bash
-docker run -it -v"$(pwd)":/src -w /src ghcr.io/evanp/haunt:latest /usr/bin/haunt build
+docker run --rm -it -v"$(pwd)":/src -w /src ghcr.io/evanp/haunt:latest /usr/bin/haunt build
 ```
 
 This will generate the site in the `site` subdirectory of your working directory. The output is ignored by Git, and just used for testing your changes to the Scheme files.
