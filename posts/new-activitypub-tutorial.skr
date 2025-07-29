@@ -2,6 +2,7 @@
  :title "New tutorial, new logo!"
  :date (make-date* 2017 05 09 15 10)
  :slug "new-tutorial-new-logo"
+ :author "Christine Lemmer-Webber"
 
  (p [A
      ,(anchor [new Candidate Recommendation]
