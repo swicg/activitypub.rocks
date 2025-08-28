@@ -24,6 +24,7 @@
              (haunt builder atom)
              (haunt builder assets)
              (haunt reader skribe)
+             (haunt reader commonmark)
              (www reports))
 
 (define %current-directory (getcwd))
@@ -303,7 +304,7 @@
       #:domain "activitypub.rocks"
       #:default-metadata
       '((author . "Christine Lemmer-Webber"))
-      #:readers (list skribe-reader)
+      #:readers (list commonmark-reader skribe-reader)
       #:builders (list (blog #:prefix "/news"
                              #:theme aprocks-haunt-theme)
                        index-page
