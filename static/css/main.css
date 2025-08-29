@@ -187,47 +187,6 @@ header.post-title {
     height: auto;
 }
 
-
-/* 
- * div.content-box {
- *     border-radius: 5px;
- *     border: 3px solid #685f68; 
- *     background: #312f31;
- *     padding: 10px;
- *     padding-left: 30px;
- *     padding-right: 30px;
- *     margin-bottom: 10px;
- * }
- * 
- * div.content-box h2.title {
- *     margin-left: -10px;
- * }
- * 
- * div.content-box h1.title {
- *     margin-left: -10px;
- * }
- * 
- * .bigger-text {
- *     font-size: 16pt;
- * }
- * 
- * /\* Not super sold on these *\/
- * 
- * h1 {
- *     color: #ffffff;
- *     font-size: 1.5em;
- *     margin: 10px;
- *     font-family: 'Inconsolata', monospace;
- * }
- * 
- * h2 {
- *     color: #ffffff;
- *     font-size: 1.25em;
- *     margin: 10px;
- *     font-family: 'Inconsolata', monospace;
- * }
- */
-
 .footer {
     font-size: 10pt;
     text-align: center;
@@ -270,7 +229,6 @@ div.impl-reports-box {
 
 table.impl-reports {
     border-collapse: collapse;
-    /* border: 2px solid purple; */
 }
 
 table.impl-reports th, table.impl-reports td {
