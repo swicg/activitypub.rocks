@@ -4,15 +4,18 @@
  :slug "maintaining-activitypub-rocks-going-forward"
  :author "Johannes Ernst"
 
- (p [As Christine just announced in another post, she is stepping down as the maintainer of
-    this site. Maintenance of activitypub.rocks is passing to
-    the ,(anchor [Social Web Community Group] "https://www.w3.org/community/socialcg/")
+ (p [Hi all, this is ,(anchor [Johannes Ernst] "https://j12t.org/"), in my role as the website task
+    force lead (I think that's the title) of the
+    ,(anchor [Social Web Community Group] "https://www.w3.org/community/socialcg/")
     in the ,(anchor [W3C] "https://www.w3.org/" ).])
+
+ (p [As Christine just announced in another post, she is stepping down as the maintainer of
+    this site. Maintenance of activitypub.rocks is passing to SWICG.])
 
  (p [We are just starting, but we have a plan! Please refer to the
     ,(anchor [issue tracker] "https://github.com/swicg/activitypub.rocks/issues")
     and the ,(anchor [README.md] "https://github.com/swicg/activitypub.rocks/blob/main/README.md")
     in the repo for this site.])
 
- (p [Want to help? PRs are appreciated.])
+ (p [Want to help? PRs are appreciated. And, of course, you are welcome to join SWICG and help out.])
 )
