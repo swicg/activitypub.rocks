@@ -304,7 +304,7 @@
       #:domain "activitypub.rocks"
       #:default-metadata
       '((author . "Social Web Community Group (SWICG)"))
-      #:readers (list skribe-reader)
+      #:readers (list commonmark-reader skribe-reader)
       #:builders (list (blog #:prefix "/news"
                              #:theme aprocks-haunt-theme)
                        index-page
