@@ -1,10 +1,11 @@
 (post
  :title "Maintaining activitypub.rocks going forward"
- :date (make-date* 2025 07 23)
+ :date (make-date* 2025 09 03)
  :slug "maintaining-activitypub-rocks-going-forward"
  :author "Johannes Ernst"
 
- (p [As of summer 2025, maintenance of the activitypub.rocks is passing to
+ (p [As Christine just announced in another post, she is stepping down as the maintainer of
+    this site. Maintenance of activitypub.rocks is passing to
     the ,(anchor [Social Web Community Group] "https://www.w3.org/community/socialcg/")
     in the ,(anchor [W3C] "https://www.w3.org/" ).])
 
