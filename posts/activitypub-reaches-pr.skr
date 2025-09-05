@@ -2,6 +2,7 @@
  :title "ActivityPub reaches Proposed Recommendation status!"
  :date (make-date* 2017 12 08)
  :slug "activitypub-reaches-pr"
+ :author "Christine Lemmer-Webber"
 
  (p [A little over one year later after
      ,(anchor [reaching Candidate Recommendation status]

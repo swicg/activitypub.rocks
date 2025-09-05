@@ -2,7 +2,8 @@
  :title "Mastodon launches their ActivityPub support, and a new CR!"
  :date (make-date* 2017 09 10)
  :slug "mastodon-ap-and-new-cr"
- 
+  :author "Christine Lemmer-Webber"
+
  (p [Greetings!
      Big news this week, from multiple directions!])
 
@@ -50,7 +51,7 @@
           posts, it may also be used to deliver posts to followers to reduce
           the number of HTTP requests made on followers-only posts between federated
           servers.]))
- 
+
  (p [These changes are normative, so update your implementations!])
 
  (p [The Candidate Recommendation is the period in which we try to

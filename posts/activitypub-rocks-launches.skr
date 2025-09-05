@@ -1,6 +1,7 @@
 (post
  :title "activitypub.rocks launches!"
  :date (make-date* 2016 11 14 8 45)
+ :author "Christine Lemmer-Webber"
 
  (p [Today marks the launch of
      ,(anchor [activitypub.rocks] "https://activitypub.rocks"),

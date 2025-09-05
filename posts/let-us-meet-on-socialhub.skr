@@ -2,6 +2,7 @@
  :title "Let us meet on SocialHub!"
  :date (make-date* 2019 12 26 17 46)
  :author "hellekin"
+ :author "Christine Lemmer-Webber"
 
  (p [In case you missed the latest and hottest in the ActivityPub
      community, for a few months we have revived the
@@ -36,7 +37,7 @@
 
  (p [We're also discussing how to
      ,(anchor [make this site more useful] "https://socialhub.activitypub.rocks/t/discussing-the-evolution-of-the-activitypub-rocks-site/142?u=how")
-     for the world. Keep your eyes peeled!])      
+     for the world. Keep your eyes peeled!])
 
  (p [You may
      ,(anchor [leave comments to this article] "https://socialhub.activitypub.rocks/t/let-us-meet-on-socialhub/430/?u=how")
