@@ -48,27 +48,26 @@
               (type "application/atom+xml")
               (href "/feed.xml"))))
     (body
-     (div (@ (class "main-wrapper"))
-          (header (@ (id "site-header"))
-                  (a (@ (href "/")
-                        ;; (style "margin-left: -25px;")
-                        )
-                     (img (@ (src "/static/images/ActivityPub-logo.svg"))))
-                  ;; ;; Header menu
-                  ;; (div (@ ,(if big-logo
-                  ;;              '(class "navbar-menu big-navbar")
-                  ;;              '(class "navbar-menu small-navbar")))
-                  ;;      ,@(map
-                  ;;         (lambda (item)
-                  ;;           (match item
-                  ;;             ((name url)
-                  ;;              `(div
-                  ;;                (a (@ (href url))
-                  ;;                   ,name)))))
-                  ;;         header-menu))
-                  )
-          (div (@ (class "site-main-content"))
-               ,body))
+      (header (@ (id "site-header"))
+        (a (@ (href "/")
+             ;; (style "margin-left: -25px;")
+             )
+          (img (@ (src "/static/images/ActivityPub-logo.svg"))))
+        ;; ;; Header menu
+        ;; (div (@ ,(if big-logo
+        ;;              '(class "navbar-menu big-navbar")
+        ;;              '(class "navbar-menu small-navbar")))
+        ;;      ,@(map
+        ;;         (lambda (item)
+        ;;           (match item
+        ;;             ((name url)
+        ;;              `(div
+        ;;                (a (@ (href url))
+        ;;                   ,name)))))
+        ;;         header-menu))
+        )
+      (div (@ (class "site-main-content"))
+        ,body)
      (div (@ (class "footer"))
           (a (@ (href "https://github.com/swicg/activitypub.rocks/"))
              "Site contents")
