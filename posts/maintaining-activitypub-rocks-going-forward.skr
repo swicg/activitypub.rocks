@@ -4,8 +4,8 @@
  :slug "maintaining-activitypub-rocks-going-forward"
  :author "Johannes Ernst"
 
- (p [Hi all, this is ,(anchor [Johannes Ernst] "https://j12t.org/"), in my role as the website task
-    force lead (I think that's the title) of the
+ (p [Hi all, this is ,(anchor [Johannes Ernst] "https://j12t.org/"), in my role as the lead
+    of the website task force of the
     ,(anchor [Social Web Community Group] "https://www.w3.org/community/socialcg/")
     in the ,(anchor [W3C] "https://www.w3.org/" ).])
 
