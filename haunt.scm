@@ -48,7 +48,7 @@
               (type "application/atom+xml")
               (href "/feed.xml"))))
     (body
-      (header (@ (id "site-header"))
+      (header
         (a (@ (href "/")
              ;; (style "margin-left: -25px;")
              )
