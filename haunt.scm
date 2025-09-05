@@ -66,7 +66,7 @@
         ;;                   ,name)))))
         ;;         header-menu))
         )
-      (div (@ (class "site-main-content"))
+      (main
         ,body)
       (footer
           (a (@ (href "https://github.com/swicg/activitypub.rocks/"))

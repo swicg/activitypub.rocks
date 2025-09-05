@@ -183,7 +183,7 @@ header.post-title {
     font-size: .75em;
 }
 
-.site-main-content img, .site-main-content video {
+main img, main video {
     display: block;
     margin: auto;
     max-width: 100%;
