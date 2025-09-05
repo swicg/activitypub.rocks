@@ -156,8 +156,7 @@
 
 (define pitch
   `(div
-    (@ (class "pitch")
-       (style "text-align: justify;"))
+    (@ (class "pitch"))
     (p "Don't you miss the days when the web really was the world's greatest "
        "decentralized network?  Before everything got locked down into a handful "
        "of walled gardens?  So do we.")
