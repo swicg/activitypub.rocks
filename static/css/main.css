@@ -190,7 +190,7 @@ header.post-title {
     height: auto;
 }
 
-.footer {
+footer {
     font-size: 10pt;
     text-align: center;
     /* This is used to make the footer "flush" with the rest of the page */
@@ -199,7 +199,7 @@ header.post-title {
     padding-bottom: 8px;
 }
 
-.footer a:hover {
+footer a:hover {
     text-shadow: 0px 0px 1px #a981a9;
 }
 

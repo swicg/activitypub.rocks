@@ -68,7 +68,7 @@
         )
       (div (@ (class "site-main-content"))
         ,body)
-     (div (@ (class "footer"))
+      (footer
           (a (@ (href "https://github.com/swicg/activitypub.rocks/"))
              "Site contents")
           " dual licensed under "
