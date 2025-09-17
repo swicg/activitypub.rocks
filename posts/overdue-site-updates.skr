@@ -2,6 +2,7 @@
  :title "Some (long overdue) site updates"
  :date (make-date* 2021 01 04)
  :slug "overdue-site-updates"
+ :author "Christine Lemmer-Webber"
 
  (p [Hello, hello... it's been about a year since
      ,(anchor [SocialHub launched] "../news/let-us-meet-on-socialhub.html").
