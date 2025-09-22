@@ -200,18 +200,10 @@
         (p "We're so stoked to have you implementing ActivityPub!  "
            "To make sure ActivityPub implementations work together, we have:")
         (ul (li (strong (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
-                           "Guide for new ActivityPub implementers"))
-                " -- " ; space between link and item
+                           "Guide for new ActivityPub implementers:"))
                 " Community edited and unofficial, but useful!")
-            (li (strong (a (@ (href "https://test.activitypub.dev/"))
-                           "A test suite:"))
-                " -- " ; space between link and item
-                "Make sure your application works right according to the "
-                (a (@ (href "https://www.w3.org/TR/activitypub/"))
-                   "ActivityPub standard") ".")
             (li (strong (a (@ (href "implementation-report/"))
                            "Implementation reports:"))
-                " -- " ; space between link and item
                 "See the implementation coverage of applications which implemented "
                 "ActivityPub during the standardization process."))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
@@ -255,9 +247,7 @@
 (define (test-page-tmpl site)
   (define tmpl
     '(div
-      (p "The test suite is at: "
-         (a (@ (href "https://test.activitypub.rocks/"))
-            "https://test.activitypub.rocks/"))))
+      (p "The test suite is currently offline.")))
   (base-tmpl site tmpl))
 
 (define (test-page site posts)
