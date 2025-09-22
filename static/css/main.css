@@ -42,27 +42,24 @@
     src: url('../fonts/pt_sans/PT_Sans-Web-Bold-Italic.ttf');
 }
 
+html {
+    height: 100%;
+}
 
 body {
     background-color: #fcf9ff;
     color: #6d6d6d;
     padding-left: 20px;
     padding-right: 20px;
+    height: 100%;
     max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     font-family: 'PT Sans';
     display: flex;
     flex-direction: column;
     line-height: 1.5;
     font-size: 18pt;
     min-width: 500px;
-}
-
-.main-wrapper {
-    flex: 1;
-    /* This is used to make the footer "flush" with the rest of the page */
-    min-height: 95.5vh;
 }
 
 a {
@@ -88,7 +85,7 @@ code {
     text-align: center;
     font-size: 25pt;
     font-weight: bold;
-    margin: 10px;
+    margin: 18px 10px 0;
 }
 
 #site-header a {
@@ -190,7 +187,10 @@ header.post-title {
 .footer {
     font-size: 10pt;
     text-align: center;
-    margin-top: 10px;
+    /* This is used to make the footer "flush" with the rest of the page */
+    margin-top: auto;
+    padding-top: 10px;
+    padding-bottom: 8px;
 }
 
 .footer a:hover {
