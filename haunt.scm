@@ -247,9 +247,7 @@
 (define (test-page-tmpl site)
   (define tmpl
     '(div
-      (p "The test suite is at: "
-         (a (@ (href "https://test.activitypub.rocks/"))
-            "https://test.activitypub.rocks/"))))
+      (p "The test suite is currently offline.")))
   (base-tmpl site tmpl))
 
 (define (test-page site posts)
