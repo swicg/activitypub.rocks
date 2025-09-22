@@ -3,6 +3,7 @@
  :date (make-date* 2019 12 26 17 46)
  :author "hellekin"
  :author "Christine Lemmer-Webber"
+ :tags '("old")
 
  (p [In case you missed the latest and hottest in the ActivityPub
      community, for a few months we have revived the

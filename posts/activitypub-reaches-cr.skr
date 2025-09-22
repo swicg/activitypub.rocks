@@ -3,6 +3,7 @@
  :date (make-date* 2016 11 17)
  :slug "activitypub-reaches-cr"
  :author "Christine Lemmer-Webber"
+ :tags '("old")
 
  (p [We're thrilled to announce that
      ,(anchor [ActivityPub] "https://www.w3.org/TR/activitypub/")

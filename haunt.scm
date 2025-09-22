@@ -226,6 +226,16 @@
            ", a W3C Community Group to continue the work of advancing the "
            "federated social web... including ActivityPub!")))
 
+(define (posts-with-tag posts tag)
+  (filter (lambda (p)
+             (member tag (post-tags p)))
+           posts ))
+
+(define (posts-without-tag posts tag)
+  (filter (lambda (p)
+             (not (member tag (post-tags p))))
+           posts ))
+
 (define (news-feed site posts)
   `(div (@ (class "news-feed"))
         (header "-=* ActivityPub News *=-")
@@ -235,7 +245,7 @@
                          ,(post-ref post 'title))
                       (div (@ (class "news-feed-item-date"))
                            ,(date->string* (post-date post)))))
-               (take-up-to 10 (posts/reverse-chronological posts))))))
+               (take-up-to 10 (posts/reverse-chronological (posts-without-tag posts "old")))))))
 
 
 (define (index-content site posts)
