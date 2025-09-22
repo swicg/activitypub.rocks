@@ -219,7 +219,10 @@
            "See also "
            (a (@ (href "https://socialhub.activitypub.rocks/"))
               "SocialHub")
-           ", a community-run forum to discuss ActivityPub developments and ideas, "
+           " or "
+           (a (@ (href "https://activitypub.space/"))
+              "ActivityPub.Space")
+           ", community-run forums to discuss ActivityPub developments and ideas, "
            "and the "
            (a (@ (href "https://www.w3.org/wiki/SocialCG"))
               "Social CG")
