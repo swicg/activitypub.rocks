@@ -1,16 +1,16 @@
 /* activitypub.rocks website
    Copyright © 2016 Christine Lemmer-Webber <cwebber@dustycloud.org>
-  
+
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
    the Free Software Foundation, either version 3 of the License, or
    (at your option) any later version.
-  
+
    This program is distributed in the hope that it will be useful,
    but WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
    GNU General Public License for more details.
-  
+
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
@@ -153,6 +153,10 @@ h1, h2, h3, h4 {
 }
 
 
+.news-feed p.older {
+    margin-top: 30pt;
+}
+
 div.blogpost {
     border-radius: 5px;
     border: 3px solid #cacae4;
@@ -247,7 +251,7 @@ table.impl-reports tr.test-item-row {
     border-bottom: 1px solid #c4c4c4;
 }
 
-table.impl-reports td.result-cell:not(:last-child), 
+table.impl-reports td.result-cell:not(:last-child),
 table.impl-reports th.report-name:not(:last-child) {
     border-right: 1px solid #c4c4c4;
 }
