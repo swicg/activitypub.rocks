@@ -5,6 +5,7 @@
  :date (make-date* 2017 11 06)
  :slug "test-suite-running-and-impl-reports-page-up"
  :author "Christine Lemmer-Webber"
+ :tags '("old")
 
  (p [I'm happy to announce that the
      ,(anchor [ActivityPub test suite]

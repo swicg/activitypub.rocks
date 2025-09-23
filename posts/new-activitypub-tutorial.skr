@@ -3,6 +3,7 @@
  :date (make-date* 2017 05 09 15 10)
  :slug "new-tutorial-new-logo"
  :author "Christine Lemmer-Webber"
+ :tags '("old")
 
  (p [A
      ,(anchor [new Candidate Recommendation]

@@ -2,7 +2,8 @@
  :title "Mastodon launches their ActivityPub support, and a new CR!"
  :date (make-date* 2017 09 10)
  :slug "mastodon-ap-and-new-cr"
-  :author "Christine Lemmer-Webber"
+ :author "Christine Lemmer-Webber"
+ :tags '("old")
 
  (p [Greetings!
      Big news this week, from multiple directions!])
