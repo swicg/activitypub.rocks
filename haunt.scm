@@ -297,7 +297,7 @@
    (impl-report-page-tmpl site)
    sxml->html))
 
-(define (historic-page-tmpl site posts)
+(define (historic-news-page-tmpl site posts)
   (define tmpl
     `(div
       (h1 "Historic news")
@@ -313,10 +313,10 @@
   (base-tmpl site tmpl))
 
 
-(define (historic-page site posts)
+(define (historic-news-page site posts)
   (make-page
    "historic/news/index.html"
-   (historic-page-tmpl site posts)
+   (historic-news-page-tmpl site posts)
    sxml->html))
 
 ;;; Site
@@ -331,7 +331,7 @@
                        index-page
                        test-page
                        impl-report-page
-                       historic-page
+                       historic-news-page
                        (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "/static")
                        (atom-feeds-by-tag)))
