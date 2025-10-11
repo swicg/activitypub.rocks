@@ -200,11 +200,7 @@
            "To make sure ActivityPub implementations work together, we have:")
         (ul (li (strong (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
                            "Guide for new ActivityPub implementers:"))
-                " Community edited and unofficial, but useful!")
-            (li (strong (a (@ (href "implementation-report/"))
-                           "Implementation reports:"))
-                "See the implementation coverage of applications which implemented "
-                "ActivityPub during the standardization process."))
+                " Community edited and unofficial, but useful!"))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "! "
            "See also "
