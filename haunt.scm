@@ -304,7 +304,7 @@
 (define (historic-news-page-tmpl site posts)
   (define tmpl
     `(div
-      (h1 "Historic news")
+      (h1 "Historic News")
       (p "For current news, see the "
          (a (@ (href "/")) "home page."))
       (ul
@@ -323,6 +323,25 @@
    (historic-news-page-tmpl site posts)
    sxml->html))
 
+(define (historic-content-page-tmpl site posts)
+  (define tmpl
+    `(div
+      (h1 "Historic Content")
+      (p "Content that may be of historical interest.")
+      (ul
+        (li (strong (a (@ (href "/implementation-report/"))
+                       "Implementation reports:"))
+            " See the implementation coverage of applications which implemented "
+            "ActivityPub during the standardization process."))))
+  (base-tmpl site tmpl))
+
+(define (historic-content-page site posts)
+  (make-page
+   "historic/content/index.html"
+   (historic-content-page-tmpl site posts)
+   sxml->html))
+
+
 ;;; Site
 
 (site #:title "ActivityPub Rocks!"
@@ -336,6 +355,7 @@
                        test-page
                        impl-report-page
                        historic-news-page
+                       historic-content-page
                        (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "/static")
                        (atom-feeds-by-tag)))
