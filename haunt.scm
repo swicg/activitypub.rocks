@@ -242,10 +242,18 @@
               "Older News")
         )))
 
+(define historic-content
+  `(div (@ (class "historic"))
+        (p (@ (class "historic"))
+          (a (@ (href "/historic/content/index.html"))
+              "Historic Content"))))
+
 
 (define (index-content site posts)
   `(div ,pitch
-        ,for-implementers ,(news-feed site posts)))
+        ,for-implementers
+        ,(news-feed site posts)
+        ,historic-content))
 
 (define (index-page site posts)
   (make-page
