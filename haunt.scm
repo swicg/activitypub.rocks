@@ -48,7 +48,7 @@
               (type "application/atom+xml")
               (href "/feed.xml"))))
     (body
-      (header (@ (id "site-header"))
+      (header
         (a (@ (href "/")
              ;; (style "margin-left: -25px;")
              )
@@ -66,9 +66,9 @@
         ;;                   ,name)))))
         ;;         header-menu))
         )
-      (div (@ (class "site-main-content"))
+      (main
         ,body)
-     (div (@ (class "footer"))
+      (footer
           (a (@ (href "https://github.com/swicg/activitypub.rocks/"))
              "Site contents")
           " dual licensed under "
