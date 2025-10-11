@@ -85,7 +85,6 @@
              "Haunt")
           "."))))
 
-
 ;;; Blog
 
 (define (post-uri site post)
@@ -218,6 +217,16 @@
            ", a W3C Community Group to continue the work of advancing the "
            "federated social web... including ActivityPub!")))
 
+(define (posts-with-tag posts tag)
+  (filter (lambda (p)
+             (member tag (post-tags p)))
+           posts ))
+
+(define (posts-without-tag posts tag)
+  (filter (lambda (p)
+             (not (member tag (post-tags p))))
+           posts ))
+
 (define (news-feed site posts)
   `(div (@ (class "news-feed"))
         (header "-=* ActivityPub News *=-")
@@ -227,7 +236,11 @@
                          ,(post-ref post 'title))
                       (div (@ (class "news-feed-item-date"))
                            ,(date->string* (post-date post)))))
-               (take-up-to 10 (posts/reverse-chronological posts))))))
+               (take-up-to 10 (posts/reverse-chronological (posts-without-tag posts "old")))))
+        (p (@ (class "older"))
+          (a (@ (href "/historic/news/index.html"))
+              "Older News")
+        )))
 
 
 (define (index-content site posts)
@@ -284,8 +297,28 @@
    (impl-report-page-tmpl site)
    sxml->html))
 
+(define (historic-page-tmpl site posts)
+  (define tmpl
+    `(div
+      (h1 "Historic news")
+      (p "For current news, see the "
+         (a (@ (href "/")) "home page."))
+      (ul
+       ,(map (lambda (post)
+               `(li (a (@ (href ,(post-uri site post)))
+                       ,(post-ref post 'title))
+                    (div (@ (class "news-feed-item-date"))
+                         ,(date->string* (post-date post)))))
+              (posts/reverse-chronological (posts-with-tag posts "old"))))))
+  (base-tmpl site tmpl))
 
-
+
+(define (historic-page site posts)
+  (make-page
+   "historic/news/index.html"
+   (historic-page-tmpl site posts)
+   sxml->html))
+
 ;;; Site
 
 (site #:title "ActivityPub Rocks!"
@@ -298,6 +331,7 @@
                        index-page
                        test-page
                        impl-report-page
+                       historic-page
                        (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "/static")
                        (atom-feeds-by-tag)))
