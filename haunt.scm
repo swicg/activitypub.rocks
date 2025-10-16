@@ -238,6 +238,21 @@
               "Older News")
         )))
 
+(define about
+  `(div (@ (class "about-box"))
+        (header "~= About this Site =~")
+        (p "This site is maintained by the Web Task Force of the Social Community Group in the W3C,"
+           " the current steward of the ActivityPub stack of standards.")
+        (p "To learn more about the SocialCG and how to participate, go to its "
+           (a (@ (href "https://www.w3.org/community/socialcg/")) "home page")
+           ".")
+        (p "To contribute to this website, come to a Task Force meeting (see "
+           (a (@ (href "https://www.w3.org/groups/cg/socialcg/calendar/"))
+              "SocialCG calendar")
+           ") or submit an issue or pull request "
+           (a (@ (href "https://github.com/swicg/activitypub.rocks")) "on Github")
+           ".")))
+
 (define historic-content
   `(div (@ (class "historic"))
         (p (@ (class "historic"))
@@ -249,6 +264,7 @@
   `(div ,pitch
         ,for-implementers
         ,(news-feed site posts)
+        ,about
         ,historic-content))
 
 (define (index-page site posts)
