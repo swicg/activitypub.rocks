@@ -105,7 +105,8 @@ code {
     text-align: center;
 }
 
-div.for-implementers-box {
+div.for-implementers-box,
+div.about-box {
     margin-top: 50px;
     margin-left: 40px;
     margin-right: 40px;
@@ -119,7 +120,8 @@ div.for-implementers-box {
     font-size: 16pt;
 }
 
-div.for-implementers-box header {
+div.for-implementers-box header,
+div.about-box header {
     color: #5a4a73;
     text-align: center;
     margin: 5px;
