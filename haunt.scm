@@ -264,7 +264,8 @@
 (define (test-page-tmpl site)
   (define tmpl
     '(div
-      (p "The test suite is currently offline.")))
+      (p "The original test suite is offline and only of historic interest.")
+      (p "Test-related resources: to be added (work in progress, pardon our dust).")))
   (base-tmpl site tmpl))
 
 (define (test-page site posts)
