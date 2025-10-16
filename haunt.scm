@@ -199,20 +199,8 @@
         (p "We're so stoked to have you implementing ActivityPub!  "
            "To make sure ActivityPub implementations work together, we have:")
         (ul (li (strong (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
-                           "Guide for new ActivityPub implementers"))
-                " -- " ; space between link and item
-                " Community edited and unofficial, but useful!")
-            (li (strong (a (@ (href "https://test.activitypub.dev/"))
-                           "A test suite:"))
-                " -- " ; space between link and item
-                "Make sure your application works right according to the "
-                (a (@ (href "https://www.w3.org/TR/activitypub/"))
-                   "ActivityPub standard") ".")
-            (li (strong (a (@ (href "implementation-report/"))
-                           "Implementation reports:"))
-                " -- " ; space between link and item
-                "See the implementation coverage of applications which implemented "
-                "ActivityPub during the standardization process."))
+                           "Guide for new ActivityPub implementers:"))
+                " Community edited and unofficial, but useful!"))
         (p "Looking to discuss implementing ActivityPub?  You can join the "
            (code "#social") " IRC channel on " (code "irc.w3.org") "! "
            "See also "
@@ -250,10 +238,18 @@
               "Older News")
         )))
 
+(define historic-content
+  `(div (@ (class "historic"))
+        (p (@ (class "historic"))
+          (a (@ (href "/historic/content/index.html"))
+              "Historic Content"))))
+
 
 (define (index-content site posts)
   `(div ,pitch
-        ,for-implementers ,(news-feed site posts)))
+        ,for-implementers
+        ,(news-feed site posts)
+        ,historic-content))
 
 (define (index-page site posts)
   (make-page
@@ -268,9 +264,8 @@
 (define (test-page-tmpl site)
   (define tmpl
     '(div
-      (p "The test suite is at: "
-         (a (@ (href "https://test.activitypub.rocks/"))
-            "https://test.activitypub.rocks/"))))
+      (p "The original test suite is offline and only of historic interest.")
+      (p "Test-related resources: to be added (work in progress, pardon our dust).")))
   (base-tmpl site tmpl))
 
 (define (test-page site posts)
@@ -286,9 +281,9 @@
      %implementation-report-directory))
   (define tmpl
     `(div
+      (p (@ (class "historic")) "(Of historic interest only)")
       (p (i "To submit an implementation report, use the "
-            (a (@ (href "https://test.activitypub.rocks/"))
-               "ActivityPub test suite")
+            (s "ActivityPub test suite")
             " to generate an implementation report and then submit "
             "that report to the "
             (a (@ (href "https://github.com/w3c/activitypub/issues"))
@@ -307,10 +302,10 @@
    (impl-report-page-tmpl site)
    sxml->html))
 
-(define (historic-page-tmpl site posts)
+(define (historic-news-page-tmpl site posts)
   (define tmpl
     `(div
-      (h1 "Historic news")
+      (h1 "Historic News")
       (p "For current news, see the "
          (a (@ (href "/")) "home page."))
       (ul
@@ -323,11 +318,30 @@
   (base-tmpl site tmpl))
 
 
-(define (historic-page site posts)
+(define (historic-news-page site posts)
   (make-page
    "historic/news/index.html"
-   (historic-page-tmpl site posts)
+   (historic-news-page-tmpl site posts)
    sxml->html))
+
+(define (historic-content-page-tmpl site posts)
+  (define tmpl
+    `(div
+      (h1 "Historic Content")
+      (p "Content that may be of historical interest.")
+      (ul
+        (li (strong (a (@ (href "/implementation-report/"))
+                       "Implementation reports:"))
+            " See the implementation coverage of applications which implemented "
+            "ActivityPub during the standardization process."))))
+  (base-tmpl site tmpl))
+
+(define (historic-content-page site posts)
+  (make-page
+   "historic/content/index.html"
+   (historic-content-page-tmpl site posts)
+   sxml->html))
+
 
 ;;; Site
 
@@ -341,7 +355,8 @@
                        index-page
                        test-page
                        impl-report-page
-                       historic-page
+                       historic-news-page
+                       historic-content-page
                        (atom-feed #:blog-prefix "/news")
                        (static-directory "static" "/static")
                        (atom-feeds-by-tag)))

@@ -152,9 +152,9 @@ h1, h2, h3, h4 {
     font-size: 12pt;
 }
 
-
-.news-feed p.older {
-    margin-top: 30pt;
+p.historic {
+    text-align: center;
+    font-size: 16pt;
 }
 
 div.blogpost {
