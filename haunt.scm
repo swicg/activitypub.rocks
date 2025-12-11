@@ -186,11 +186,6 @@
 
     ,read-it
 
-    (p "Or, are you a user looking for ActivityPub software to use? "
-       "Check out this "
-       (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-activitypub-users"))
-          "guide for ActivityPub users")
-       " (community edited)!")
     ))
 
 (define for-implementers
@@ -198,20 +193,42 @@
         (header "~= Hey, Implementers! =~")
         (p "We're so stoked to have you implementing ActivityPub!  "
            "To make sure ActivityPub implementations work together, we have:")
-        (ul (li (strong (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
-                           "Guide for new ActivityPub implementers:"))
-                " Community edited and unofficial, but useful!"))
-        (p "Looking to discuss implementing ActivityPub?  You can join the "
-           (code "#social") " IRC channel on " (code "irc.w3.org") "! "
-           "See also "
-           (a (@ (href "https://socialhub.activitypub.rocks/"))
-              "SocialHub")
-           ", a community-run forum to discuss ActivityPub developments and ideas, "
-           "and the "
-           (a (@ (href "https://www.w3.org/wiki/SocialCG"))
-              "Social CG")
-           ", a W3C Community Group to continue the work of advancing the "
-           "federated social web... including ActivityPub!")))
+        (p "Places for developer discussion:")
+        (ul (li (a (@ (href "https://socialhub.activitypub.rocks")) "Discussion forums") ": Discourse with ActivityPub support")
+            (li (a (@ (href "https://activitypub.space")) "Discussion forums") ": NodeBB with ActivityPub support")
+            (li (a (@ (href "https://matrix.to/#/#fediverse-developer-network:matrix.org")) "Developer chat") ": Matrix")
+            (li (a (@ (href "https://webirc.w3.org/")) "Developer and standardization chat") ": IRC channel #social"))
+        (p "Implementations and usage:")
+        (ul (li (a (@ (href "https://fedidb.com")) "FediDB") ": Fediverse Network Stats")
+            (li (a (@ (href "https://fediverse.observer/stats")) "Fediverse Observer") ": Fediverse Network Stats")
+            (li (a (@ (href "https://the-federation.info")) "The Federation") ": Fediverse Network Stats"))
+        (p "Documentation:")
+        (ul (li (a (@ (href "https://socialhub.activitypub.rocks/pub/guide-for-new-activitypub-implementers"))
+                      "Guide for new ActivityPub implementers")
+                ": Community edited and unofficial, but useful!")
+            (li (a (@ (href "https://www.oreilly.com/library/view/activitypub/9781098162733/")) "Evan Prodromou: ActivityPub") ": Book published by O'Reilly'")
+            (li (a (@ (href "https://www.w3.org/wiki/ActivityPub/Primer")) "ActivityPub Primer") ": Community-edited Wiki")
+            (li (a (@ (href "https://seb.jambor.dev/posts/understanding-activitypub/")) "Understanding ActivityPub") ": Blog post by Sebastian Jambor")
+            (li (a (@ (href "https://blog.joinmastodon.org/2018/07/how-to-make-friends-and-verify-requests/"))
+                "How to make friends and verify requests. Implementing an ActivityPub inbox") ": Blog post by Eugen Rochko from the Mastodon project")
+            (li (a (@ (href "https://fedidevs.org")) "FediDevs.org") ": Developer documentation and community"))
+        (p "Libraries:")
+        (ul (li (a (@ (href "https://fedify.dev")) "Fedify - ActivityPub server framework") ": Typescript library"))
+        (p "Testing:")
+        (ul (li (a (@ (href "https://activitypub-testing.socialweb.coop/implementation-guide/")) "activitypub-testing") ": Implementation Guide")
+            (li (a (@ (href "https://feditest.org")) "FediTest") ": Testing distributed, heterogeneous systems with complex protocols such as the Fediverse."))
+        (p "News:")
+        (ul (li (a (@ (href "https://connectedplaces.online/")) "Connected Places") ": Newsletter about the open social web")
+            (li "... and see below!"))
+        (p "Ongoing standardization work:")
+        (ul (li (a (@ (href "https://www.w3.org/community/SocialCG/")) "SocialCG") ": W3C Community Group that advances the federated social web including ActivityPub"))
+        (p "Other resources:")
+        (ul (li (a (@ (href "https://delightful.coding.social/delightful-fediverse-clients")) "Delightful fediverse clients")
+                 ": Curated list of module and desktop apps for accessing the ActivityPub network")
+            (li (a (@ (href "https://delightful.coding.social/delightful-fediverse-experience/")) "Delightful fediverse experience")
+                 ": Curated list of decentralized social networking software based on ActivityPub")
+            (li (a (@ (href "https://delightful.coding.social/delightful-fediverse-development/")) "Delightful fediverse development")
+                 ": Curated list of resources for developers creating software based on ActivityPub"))))
 
 (define (posts-with-tag posts tag)
   (filter (lambda (p)
