@@ -186,7 +186,11 @@
 
     ,read-it
 
-    ))
+    (p "To understand the whole ActivityPub stack as it is commonly implemented, also read:")
+    (ul (li (a (@ (href "https://swicg.github.io/activitypub-webfinger/")) "ActivityPub and WebFinger"))
+        (li (a (@ (href "https://swicg.github.io/activitypub-http-signature/")) "ActivityPub and HTTP Signatures"))
+        (li (a (@ (href "https://swicg.github.io/activitypub-data-portability/")) "Data Portability in ActivityPub"))
+    )))
 
 (define for-implementers
   `(div (@ (class "for-implementers-box"))
@@ -217,7 +221,7 @@
         (p "Testing:")
         (ul (li (a (@ (href "https://activitypub-testing.socialweb.coop/implementation-guide/")) "activitypub-testing") ": Implementation Guide")
             (li (a (@ (href "https://feditest.org")) "FediTest") ": Testing distributed, heterogeneous systems with complex protocols such as the Fediverse.")
-            (li (a (@ (href "https://browser.pub")) "BrowserPub") ": A browser for exploring ActivityPub and the ⁂fediverse."))
+            (li (a (@ (href "https://browser.pub")) "BrowserPub") ": A browser for exploring ActivityPub and the fediverse."))
         (p "News:")
         (ul (li (a (@ (href "https://connectedplaces.online/")) "Connected Places") ": Newsletter about the open social web")
             (li "... and see below!"))
