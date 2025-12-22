@@ -81,20 +81,20 @@ code {
     color: #5a4a73;
 }
 
-#site-header {
+header {
     text-align: center;
     font-size: 25pt;
     font-weight: bold;
     margin: 18px 10px 0;
 }
 
-#site-header a {
+header a {
     color: #313152;
     text-shadow: 0px 0px 1px #e66283;
     transition: text-shadow 1s, color 1s;
 }
 
-#site-header a:hover {
+header a:hover {
     text-shadow: 0px 0px 2px #6abdcd;
     color: #7362ac;
 }
@@ -183,14 +183,14 @@ header.post-title {
     font-size: .75em;
 }
 
-.site-main-content img, .site-main-content video {
+main img, main video {
     display: block;
     margin: auto;
     max-width: 100%;
     height: auto;
 }
 
-.footer {
+footer {
     font-size: 10pt;
     text-align: center;
     /* This is used to make the footer "flush" with the rest of the page */
@@ -199,7 +199,7 @@ header.post-title {
     padding-bottom: 8px;
 }
 
-.footer a:hover {
+footer a:hover {
     text-shadow: 0px 0px 1px #a981a9;
 }
 
