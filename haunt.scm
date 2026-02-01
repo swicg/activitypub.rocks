@@ -226,6 +226,8 @@
         (p "News:")
         (ul (li (a (@ (href "https://connectedplaces.online/")) "Connected Places") ": Newsletter about the open social web")
             (li "... and see below!"))
+        (p "Events:")
+        (ul (li (a (@ (href "https://fediforum.org/events/")) "Open Social Web Events") ": curated by FediForum"))
         (p "Ongoing standardization work:")
         (ul (li (a (@ (href "https://www.w3.org/community/SocialCG/")) "SocialCG") ": W3C Community Group that advances the federated social web including ActivityPub"))
         (p "Other resources:")
