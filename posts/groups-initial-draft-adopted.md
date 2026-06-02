@@ -5,7 +5,7 @@ desc: At today's meeting, we adopted an initial draft of the Groups TF report
 tags: groups, task forces, progress update
 ---
 
-Originally posted at: https://lists.w3.org/Archives/Public/public-swicg/2026May/0043.html
+Originally posted at: <https://lists.w3.org/Archives/Public/public-swicg/2026May/0043.html>
 
 At today's meeting, we adopted an [initial draft of the Groups TF
 report](https://swicg.github.io/groups/).
@@ -37,6 +37,6 @@ This post is soliciting feedback and participation from anyone
 interested in the work being done on Groups. Please provide any
 feedback in [GitHub issues](https://github.com/swicg/groups/issues) and/or on [the mailing list](mailto:public-swicg@w3.org).
 
-RESOLVED: adopt https://swicg.github.io/groups/ as first working draft of TF report.
+RESOLVED: adopt <https://swicg.github.io/groups/> as first working draft of TF report.
 
 If there are any objections, please raise them within the next 2 weeks.
