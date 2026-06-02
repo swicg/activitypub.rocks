@@ -236,7 +236,9 @@
             (li (a (@ (href "https://delightful.coding.social/delightful-fediverse-experience/")) "Delightful fediverse experience")
                  ": Curated list of decentralized social networking software based on ActivityPub")
             (li (a (@ (href "https://delightful.coding.social/delightful-fediverse-development/")) "Delightful fediverse development")
-                 ": Curated list of resources for developers creating software based on ActivityPub"))))
+                 ": Curated list of resources for developers creating software based on ActivityPub")
+            (li (a (@ (href "https://connect.fediforum.org/")) "FediForum Connect")
+                 ": Curated list of open social web products and services for organizations, communities and creators"))))
 
 (define (posts-with-tag posts tag)
   (filter (lambda (p)
