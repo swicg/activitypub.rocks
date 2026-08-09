@@ -217,7 +217,11 @@
                 "How to make friends and verify requests. Implementing an ActivityPub inbox") ": Blog post by Eugen Rochko from the Mastodon project")
             (li (a (@ (href "https://fedidevs.org")) "FediDevs.org") ": Developer documentation and community"))
         (p "Interactive exploration:")
-        (ul (li (a (@ (href "https://activitypub.academy")) "ActivityPub.academy") ": A modified Mastodon instance for interactive protocol exploration"))
+        (ul (li (a (@ (href "https://activitypub.academy")) "ActivityPub.academy") ": A modified Mastodon instance for interactive protocol exploration")
+            (li (a (@ (href "https://httpsig.org")) "httpsig.org") ": Try out HTTP signatures (RFC 9421) interactively"))
+
+
+
         (p "Libraries:")
         (ul (li (a (@ (href "https://fedify.dev")) "Fedify - ActivityPub server framework") ": Typescript library"))
         (p "Testing:")

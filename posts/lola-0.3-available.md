@@ -1,7 +1,7 @@
 title: LOLA Portability for ActivityPub 0.3 available
 author: Johannes Ernst
 date: 2026-06-15 14:54
-tags: portability, progress update
+tags: portability, progress update, old
 ---
 
 A [new version of the LOLA Portability for ActivityPub specification](https://swicg.github.io/activitypub-data-portability/lola.html)

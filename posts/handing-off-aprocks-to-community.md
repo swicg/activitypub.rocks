@@ -2,7 +2,7 @@ title: Handing off activitypub.rocks to the ActivityPub community
 author: Christine Lemmer-Webber
 date: 2025-08-28 10:00
 desc: Handing off activitypub.rocks to the ActivityPub community
-tags: meta, website
+tags: meta, website, old
 ---
 Hello everyone, Christine Lemmer-Webber here. I'm here to hand off
 this humble website, built and maintained by myself but, to be honest,
@@ -27,7 +27,7 @@ would not become a W3C standard for another two years.
 It was unclear at the time this website was created that ActivityPub
 would reach the level of success it has. ActivityPub has a long
 history, preceding even its work in the W3C process, with its most
-clear beginnings as the 
+clear beginnings as the
 [Pump.io API](https://github.com/pump-io/pump.io/blob/master/API.md)
 designed by Evan Prodromou.
 Erin Shepherd transformed pump.io's API documentation into a draft of

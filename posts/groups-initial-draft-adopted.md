@@ -2,7 +2,7 @@ title: Groups task force: initial draft adopted for task force report
 author: a
 date: 2026-05-28 17:43
 desc: At today's meeting, we adopted an initial draft of the Groups TF report
-tags: groups, task forces, progress update
+tags: groups, task forces, progress update, old
 ---
 
 Originally posted at: <https://lists.w3.org/Archives/Public/public-swicg/2026May/0043.html>

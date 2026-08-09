@@ -2,7 +2,7 @@ title: Initial Draft of Basic Profile for ActivityPub API Servers
 author: Evan Prodromou
 date: 2026-05-19 10:00
 desc: New draft document from the ActivityPub API task force
-tags: api
+tags: api, old
 ---
 
 There is a new [Basic Profile for ActivityPub API Servers](https://swicg.github.io/activitypub-api/basicprofile) initial draft put out by the [ActivityPub API Task Force](https://swicg.github.io/activitypub-api/). Developers and community members are encouraged to provide feedback on the [issue tracker for the task force](https://github.com/swicg/activitypub-api/issues).

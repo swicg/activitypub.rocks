@@ -3,6 +3,7 @@
  :date (make-date* 2025 09 03)
  :slug "maintaining-activitypub-rocks-going-forward"
  :author "Johannes Ernst"
+ :tags '("old")
 
  (p [Hi all, this is ,(anchor [Johannes Ernst] "https://j12t.org/"), in my role as the lead
     of the website task force of the
