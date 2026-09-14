@@ -1,0 +1,14 @@
+{{ define "title" }}{{ .Title }} -- {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="blogpost">
+  <header class="post-title">{{ .Title }}</header>
+  <div class="post-about">
+    <span class="by-line">{{ .Params.author | default site.Params.author }}</span>
+    -- {{ .Date.Format "Mon 02 January 2006" }}
+  </div>
+  <div class="post-body">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

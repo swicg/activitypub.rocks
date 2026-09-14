@@ -1,0 +1,17 @@
+{{- $posts := partial "news/all.html" . -}}
+{{- $self := (.OutputFormats.Get "rss").Permalink -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ site.Title }}</title>
+    <link>{{ site.Home.Permalink }}</link>
+    <description>ActivityPub news</description>
+    <language>{{ site.Language.Locale }}</language>
+    <lastBuildDate>{{ (or (index $posts 0).Date now).UTC.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</lastBuildDate>
+    <atom:link href="{{ $self }}" rel="self" type="application/rss+xml" />
+{{ partial "rss-items.html" $posts }}
+  </channel>
+</rss>

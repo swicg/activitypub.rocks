@@ -1,0 +1,9 @@
+{{ define "title" }}{{ .Title }} -- {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<div>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ partial "news/list.html" .Pages }}
+</div>
+{{ end }}

@@ -1,2 +1,4 @@
-/site/
-/site-gnu-org/
+/public/
+/public-staging/
+/resources/_gen/
+.hugo_build.lock

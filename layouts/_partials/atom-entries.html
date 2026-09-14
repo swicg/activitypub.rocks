@@ -1,0 +1,10 @@
+{{- range . }}
+  <entry>
+    <title>{{ .Title }}</title>
+    <id>{{ .Permalink }}</id>
+    <author><name>{{ .Params.author | default site.Params.author }}</name></author>
+    <updated>{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}</updated>
+    <link href="{{ .Permalink }}" rel="alternate" />
+    <content type="html">{{ .Content | transform.XMLEscape | safeHTML }}</content>
+  </entry>
+{{- end }}

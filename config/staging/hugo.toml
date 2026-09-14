@@ -1,0 +1,8 @@
+baseURL = "https://staging.activitypub.rocks/"
+
+# Show work that is not ready for the live site yet.
+buildDrafts = true
+buildFuture = true
+
+[params]
+  noindex = true

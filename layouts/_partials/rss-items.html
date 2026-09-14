@@ -1,0 +1,11 @@
+{{- range $post := . }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+      <dc:creator>{{ .Params.author | default site.Params.author }}</dc:creator>
+      <pubDate>{{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 +0000" }}</pubDate>
+      <description>{{ with .Description }}{{ . }}{{ else }}{{ $post.Content | transform.XMLEscape | safeHTML }}{{ end }}</description>
+      <content:encoded>{{ .Content | transform.XMLEscape | safeHTML }}</content:encoded>
+    </item>
+{{- end }}

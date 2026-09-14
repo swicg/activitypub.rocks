@@ -1,0 +1,38 @@
+locale = "en-us"
+title = "ActivityPub Rocks!"
+disableKinds = ["taxonomy", "sitemap"]
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks.term]
+  tags = "/feeds/tags/:slug"
+
+[params]
+  author = "Social Web Community Group (SWICG)"
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.atom]
+    mediaType = "application/atom+xml"
+    baseName = "feed"
+    isHTML = false
+    isPlainText = false
+    rel = "alternate"
+  [outputFormats.rss]
+    mediaType = "application/rss+xml"
+    baseName = "rss"
+    isHTML = false
+    isPlainText = false
+    rel = "alternate"
+
+[outputs]
+  home = ["html", "atom", "rss"]
+  page = ["html"]
+  section = ["html"]
+  term = ["atom", "rss"]
+
+[markup.goldmark.renderer]
+  unsafe = true
