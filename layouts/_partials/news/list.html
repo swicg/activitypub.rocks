@@ -1,0 +1,7 @@
+<ul>
+  {{- range . }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <div class="news-feed-item-date">{{ .Date.Format "Mon 02 January 2006" }}</div>
+  </li>
+  {{- end }}
+</ul>

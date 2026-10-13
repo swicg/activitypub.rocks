@@ -1,0 +1,11 @@
+{{- $ref := .Get 0 -}}
+{{- $label := .Get 1 -}}
+{{- with .Page.GetPage $ref -}}
+{{-   if $label -}}
+<a href="{{ .RelPermalink }}">{{ $label }}</a>
+{{-   else -}}
+<a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+{{-   end -}}
+{{- else -}}
+<span class="undef">{{ $ref }}</span>
+{{- end -}}

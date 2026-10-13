@@ -1,0 +1,44 @@
+---
+title: Some (long overdue) site updates
+date: 2021-01-04T00:00:00Z
+author: Christine Lemmer-Webber
+tags:
+  - old
+---
+
+Hello, hello... it's been about a year since
+[SocialHub launched](/news/let-us-meet-on-socialhub/).
+This has been a successful community-run resource for discussing
+ActivityPub development and its future.
+
+Since that time, a number of updates have been requested and suggested
+of this site.
+After significant delays (sorry), the frontpage of
+[activitypub.rocks](https://activitypub.rocks/)
+now
+[better reflects](https://gitlab.com/dustyweb/activitypub.rocks/-/commit/391cfae9d208eddb51b21c06032307f8f45d9c35)
+the community-hosted resources where ActivityPub-oriented
+advancement and development have been happening.
+In particular, the link to the test suite, which has been down for
+ages (yes, sorry, we know),
+now instead points to the most excellent
+[test.activitypub.dev](https://test.activitypub.dev/).
+Massive thank you to
+[cj](https://mastodon.technology/@cj)
+of
+[go-fed](https://go-fed.org/)
+for providing this excellent and much-needed resource.
+
+ActivityPub has come a long way since the days when this website
+first launched... at that time, the primary focus of this website
+was advocacy for the hope that ActivityPub would become a
+W3C-recommended standard.
+We're well past those days now... the ActivityPub community is a
+flourishing one, with many implementations and more interest and
+users than ever.
+Today's update makes a few small updates to better reflect such
+changing reality, and we hope to do so more moving forward.
+At the same time, we're also happy that this website had to be
+updated to point to many external, community-oriented resources...
+a sign of a healthy community.
+May the future of ActivityPub be as bright as its present!

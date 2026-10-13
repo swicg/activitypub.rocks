@@ -1,0 +1,12 @@
+{{- $posts := partial "news/all.html" . -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+{{- $self := (.OutputFormats.Get "atom").Permalink -}}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.Title }}</title>
+  <id>{{ $self }}</id>
+  <subtitle>Recent Posts</subtitle>
+  <updated>{{ (or (index $posts 0).Date now).UTC.Format "2006-01-02T15:04:05Z" }}</updated>
+  <link href="{{ $self }}" rel="self" />
+  <link href="{{ site.BaseURL }}" />
+{{ partial "atom-entries.html" $posts }}
+</feed>

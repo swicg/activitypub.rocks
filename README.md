@@ -4,23 +4,22 @@ This is the repo for maintaining https://activitypub.rocks/
 
 ## Building the site
 
-The site uses a static site generator called [Haunt](https://dthompson.us/projects/haunt.html) to generate HTML from Scheme .scm files.
+The site is built with static site generator [Hugo](https://gohugo.io/).
 
-To make it easier to work with for those who are not familiar with Scheme, there is a Docker image that can be used to build the site. From your working directory, run:
-
-```bash
-docker run --rm -it -v"$(pwd)":/src -w /src ghcr.io/evanp/haunt:latest /usr/bin/haunt build
-```
-
-This will generate the site in the `site` subdirectory of your working directory. The output is ignored by Git, and just used for testing your changes to the Scheme files.
-
-The current code uses absolute paths for links and images, so your site will not look great when loaded from the filesystem directly. You can use a local web server to serve the site, again using Docker from the same working directory:
+To preview, in the top directory of the repo, run:
 
 ```bash
-docker run --rm -it -v "$(pwd)/site":/usr/share/nginx/html:ro -p 8080:80 nginx:alpine
+make serve
 ```
 
-This will start a web server on port 8080, and you can view the site at `http://localhost:8080/`. You can also use any other web server you prefer, such as Python's built-in HTTP server or Node.js's http-server.
+This starts a local web server -- Hugo prints the URL, usually
+`http://localhost:1313/` -- and rebuilds the site whenever you change a file.
+
+To produce the files that get deployed instead of serving them, run:
+
+```bash
+make build
+```
 
 ## Editorial process
 
