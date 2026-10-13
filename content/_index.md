@@ -66,6 +66,8 @@ work together, we have:
 * **[ActivityPub.academy](https://activitypub.academy)**: A modified Mastodon instance for
   interactive protocol exploration
 * **[httpsig.org](https://httpsig.org)**: Try out HTTP signatures (RFC 9421) interactively
+* **[Fediverse Schema Observatory](https://asml.cyber.harvard.edu/fediverse-schema-observatory/)**: tracks
+  the types and shapes of data exchanged between ActivityPub servers
 
 ### Libraries:
 

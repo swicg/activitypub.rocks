@@ -6,10 +6,10 @@ build :
 build-staging :
 	hugo --gc -e staging --destination public-staging
 
-serve :
-	hugo server --buildDrafts
+hugo-server :
+	hugo server --buildDrafts --renderToMemory
 
 clean :
 	rm -rf public/ public-staging/ resources/_gen/
 
-.PHONY: default build build-staging serve clean
+.PHONY: default build build-staging hugo-server clean
