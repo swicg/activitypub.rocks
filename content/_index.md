@@ -46,7 +46,7 @@ work together, we have:
 
 ### Implementations and usage:
 
-* **[FediDB](https://webirc.w3.org/">)**: Fediverse Network Stats
+* **[FediDB](https://fedidb.com)**: Fediverse Network Stats
 * **[Fediverse Observer](https://fediverse.observer/stats)**: Fediverse Network Stats
 * **[The Federation](https://the-federation.info)**: Fediverse Network Stats
 
