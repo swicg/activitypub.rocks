@@ -39,10 +39,17 @@ work together, we have:
 
 ### Places for developer discussion:
 
+In English:
+
 * **[Discussion forums](https://socialhub.activitypub.rocks)**: Discourse with ActivityPub support
 * **[Discussion forums](https://activitypub.space)**: NodeBB with ActivityPub support
 * **[Developer chat](https://matrix.to/#/#fediverse-developer-network:matrix.org)**: Matrix
 * **[Developer and standardization chat](https://webirc.w3.org/)**: IRC channel #social
+
+Beyond  English:
+
+* In Catalan: **[afora.fedi.cat](https://agora.fedi.cat)**
+* In Korean: **[fedidev.kr](https://fedidev.kr)**
 
 ### Implementations and usage:
 
