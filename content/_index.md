@@ -91,8 +91,10 @@ work together, we have:
 
 ### Ongoing standardization work:
 
-* **[SocialCG](https://www.w3.org/community/SocialCG/)**: W3C Community Group that advances the federated
+* **[SocialCG](https://www.w3.org/community/SocialCG/): W3C Community Group** that advances the federated
   social web including ActivityPub
+* **[SocialWG](https://www.w3.org/groups/wg/social/): W3C Working Group**, re-chartered in 2026, that will
+  produce the next revision of the ActivityPub standard
 
 ### Other resources:
 
