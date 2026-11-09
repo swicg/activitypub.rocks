@@ -71,7 +71,8 @@ work together, we have:
 
 ### Libraries:
 
-* **[Fedify - ActivityPub server framework](https://fedify.dev)**: Typescript library
+* **[Fedify](https://fedify.dev)**: TypeScript federation framework 
+* **[Fedipub](https://fedipub.dev)**: Engine that brings ActivityPub to Ruby on Rails applications
 
 ### Testing:
 
