@@ -1,5 +1,6 @@
 locale = "en-us"
 title = "ActivityPub Rocks!"
+theme = "2018"
 disableKinds = ["taxonomy", "sitemap"]
 
 [taxonomies]
