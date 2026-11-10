@@ -27,7 +27,7 @@ Sounds exciting?  Dive in!
 | Name | Published standard | Ongoing work |
 |------|--------------------|-----------------------|
 | ActivityPub | [W3C Recommendation 23 January 2018](https://www.w3.org/TR/activitypub/) | [Latest editor's draft](https://w3c.github.io/activitypub/) |
-| ActivityStreams | [W3 Recommendation 23 May 2017](https://www.w3.org/TR/activitystreams-core/) | N/A |
+| ActivityStreams | [W3C Recommendation 23 May 2017](https://www.w3.org/TR/activitystreams-core/) | N/A |
 | Activity Vocabulary | [W3C Recommendation 23 May 2017](https://www.w3.org/TR/activitystreams-vocabulary/) | N/A |
 
 To understand the whole ActivityPub stack as it is commonly implemented, also read:
