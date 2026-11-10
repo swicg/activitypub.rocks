@@ -153,6 +153,24 @@ hr {
     margin: 48px 0;
     padding: 8px 24px 24px;
     border-radius: 2px;
+}
+
+.spec table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.spec table tr > :first-child {
+    font-weight: bold;
+}
+.spec td, .spec th {
+    padding: 1ex;
+    text-align: center;
+    border-width: 1px 0;
+    border-color: var(--muted);
+    border-style: solid;
+}
+
+.implementers {
     background: var(--panel);
 }
 
