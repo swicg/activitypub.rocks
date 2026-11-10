@@ -5,9 +5,7 @@
     {{ if site.Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
     <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
     <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-    {{- range site.Home.OutputFormats }}{{ if ne .Name "html" }}
-    <link rel="alternate" title="ActivityPub news" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}">
-    {{- end }}{{ end }}
+    {{- partial "feed-links.html" . }}
   </head>
   <body>
     <header>
