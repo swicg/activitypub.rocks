@@ -97,7 +97,7 @@ a:visited {
 ul {
     margin: 24px 0;
 }
-li, li > p {
+li, li > p, li > ul {
     margin: 0;
 }
 code {
