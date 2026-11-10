@@ -67,6 +67,7 @@ Beyond  English:
 * **[How to make friends and verify requests. Implementing an ActivityPub inbox](https://blog.joinmastodon.org/2018/07/how-to-make-friends-and-verify-requests/)**:
   Blog post by Eugen Rochko from the Mastodon project
 * **[FediDevs.org](https://fedidevs.org)**: Developer documentation and community
+* **[SocialDocs](https://socialdocs.org)**: Comprehensive developer resource for ActivityPub, Mastodon, and the Fediverse
 
 ### Interactive exploration:
 
