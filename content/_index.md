@@ -48,7 +48,7 @@ In English:
 
 Beyond  English:
 
-* In Catalan: **[afora.fedi.cat](https://agora.fedi.cat)**
+* In Catalan: **[agora.fedi.cat](https://agora.fedi.cat)**
 * In Korean: **[fedidev.kr](https://fedidev.kr)**
 
 ### Implementations and usage:
