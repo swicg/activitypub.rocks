@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if site.Params.noindex }}<meta name="robots" content="noindex, nofollow">{{ end }}
+    <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ "css/agentic.css" | relURL }}">
+    {{- partial "feed-links.html" . }}
+  </head>
+  <body>
+    <nav class="wrap site-nav">
+      <a class="site-name" href="{{ site.Home.RelPermalink }}">
+        <img src="{{ "images/ActivityPub-logo.svg" | relURL }}" alt="{{ site.Title }}">
+      </a>
+      <div class="nav-links">
+        {{- range site.Menus.main }}
+        <a href="{{ if hasPrefix .URL "#" }}{{ site.Home.RelPermalink }}{{ end }}{{ .URL }}">{{ .Name }}</a>
+        {{- end }}
+      </div>
+    </nav>
+    <main class="wrap">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
