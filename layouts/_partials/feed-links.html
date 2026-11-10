@@ -1,0 +1,3 @@
+{{- range site.Home.OutputFormats }}{{ if ne .Name "html" }}
+    <link rel="alternate" title="ActivityPub news" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}">
+    {{- end }}{{ end -}}
