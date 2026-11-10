@@ -1,5 +1,6 @@
 ---
 title: ActivityPub Rocks!
+description: The open, decentralized social networking protocol of the W3C.
 ---
 
 Don't you miss the days when the web really was the world's greatest
@@ -19,6 +20,10 @@ to content.
 
 Sounds exciting?  Dive in!
 
+<section id="specs">
+
+## Specification
+
 <div class="read-it">
 <p>==&gt; <a href="https://www.w3.org/TR/activitypub/">Latest published version</a> &lt;==</p>
 <p>==&gt; <a href="https://w3c.github.io/activitypub/">Latest editor's draft</a> &lt;==</p>
@@ -29,6 +34,8 @@ To understand the whole ActivityPub stack as it is commonly implemented, also re
 * [ActivityPub and WebFinger](https://swicg.github.io/activitypub-webfinger/)
 * [ActivityPub and HTTP Signatures](https://swicg.github.io/activitypub-http-signature/)
 * [Data Portability in ActivityPub](https://swicg.github.io/activitypub-data-portability/)
+
+</section>
 
 {{% box %}}
 

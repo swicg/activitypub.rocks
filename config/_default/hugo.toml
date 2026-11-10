@@ -1,6 +1,8 @@
 locale = "en-us"
 title = "ActivityPub Rocks!"
-theme = "2018"
+# Design lives in themes/<name>; switch designs by changing this.
+# theme = "2018"
+theme = "agentic"
 disableKinds = ["taxonomy", "sitemap"]
 
 [taxonomies]
@@ -11,6 +13,16 @@ disableKinds = ["taxonomy", "sitemap"]
 
 [params]
   author = "Social Web Community Group (SWICG)"
+
+# Site navigation, for themes that show it.
+[[menus.main]]
+  name = "Specifications"
+  url = "#specs"   # fragment on the home page
+  weight = 10
+[[menus.main]]
+  name = "GitHub"
+  url = "https://github.com/swicg/activitypub.rocks"
+  weight = 20
 
 [mediaTypes."application/atom+xml"]
   suffixes = ["xml"]

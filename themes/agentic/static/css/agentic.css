@@ -1,0 +1,202 @@
+/*
+ * Minimal design modeled after agenticcommerce.dev, with the accent colors of the ActivityPub logo symbol.
+ */
+
+:root {
+    --accent: #f1007e;        /* logo pink */
+    --accent-2: #c678c5;      /* logo purple */
+    --bg: #fff;
+    --fg: #171b1e;
+    --muted: #6d7178;
+    --panel: #f4f6fa;
+    --rule: #171b1e;
+    --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #000;
+        --fg: #fff;
+        --muted: #c7c9cc;
+        --panel: #171b1e;
+        --rule: #fff;
+    }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* Page-width container; uses width rather than padding so that rules stay aligned with the content */
+.wrap, body > footer {
+    width: min(1408px, 100% - 32px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 48rem) {
+    .wrap, body > footer { width: min(1408px, 100% - 64px); }
+}
+
+/* Links: accent color with a thin underline */
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color .3s;
+}
+
+a:hover { color: var(--accent-2); }
+
+/* Navigation */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.site-name { display: inline-flex; }
+
+.site-name img { height: 56px; width: auto; }   /* the SVG has built-in whitespace */
+
+.nav-links {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Headings */
+
+h1, h2 {
+    font-weight: 700;
+    color: var(--fg);
+}
+
+h1 {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    margin-top: 48px;
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-top: 32px;
+}
+
+@media (min-width: 40rem) {
+    h1, h2 { font-size: 32px; line-height: 36px; }
+}
+
+@media (min-width: 64rem) {
+    h1 { font-size: 48px; line-height: 48px; }
+}
+
+.hero { padding: 40px 0 48px; }
+
+@media (min-width: 64rem) {
+    .hero { padding: 72px 0 88px; }
+}
+
+.hero h1 { margin: 0; max-width: 18em; }
+
+.hero h1 span {
+    display: block;
+    color: var(--muted);
+}
+
+hr {
+    border: 0;
+    border-top: 0.5px solid var(--rule);
+    margin: 0 0 32px;
+}
+
+/* Body text */
+
+.prose { max-width: 46rem; }
+
+.prose img { max-width: 100%; height: auto; }
+
+.meta {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.box {
+    margin: 48px 0;
+    padding: 8px 24px 24px;
+    border-radius: 2px;
+    background: var(--panel);
+}
+
+.box h2 { margin-top: 24px; }
+
+.read-it { font-family: var(--mono); font-size: 14px; }
+
+code, pre { font-family: var(--mono); font-size: 14px; }
+
+pre {
+    padding: 16px;
+    border-radius: 2px;
+    background: var(--panel);
+    overflow-x: auto;
+}
+
+/* News list */
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    max-width: 46rem;
+    border-top: 0.5px solid var(--rule);
+}
+
+.news-list li {
+    display: grid;
+    gap: 4px 24px;
+    padding: 12px 0;
+    border-bottom: 0.5px solid var(--rule);
+}
+
+@media (min-width: 40rem) {
+    .news-list li { grid-template-columns: 6.5rem 1fr; }
+}
+
+/* Footer */
+
+footer {
+    margin-top: 88px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-top: 0.5px solid var(--rule);
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--muted);
+}
