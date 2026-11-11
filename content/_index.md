@@ -20,14 +20,15 @@ to content.
 
 Sounds exciting?  Dive in!
 
-<section id="specs">
+{{% box class="spec" %}}
 
-## Specification
+## Specifications
 
-<div class="read-it">
-<p>==&gt; <a href="https://www.w3.org/TR/activitypub/">Latest published version</a> &lt;==</p>
-<p>==&gt; <a href="https://w3c.github.io/activitypub/">Latest editor's draft</a> &lt;==</p>
-</div>
+| Name | Published standard | Ongoing work |
+|------|--------------------|-----------------------|
+| ActivityPub | [W3C Recommendation 23 January 2018](https://www.w3.org/TR/activitypub/) | [Latest editor's draft](https://w3c.github.io/activitypub/) |
+| ActivityStreams | [W3C Recommendation 23 May 2017](https://www.w3.org/TR/activitystreams-core/) | N/A |
+| Activity Vocabulary | [W3C Recommendation 23 May 2017](https://www.w3.org/TR/activitystreams-vocabulary/) | N/A |
 
 To understand the whole ActivityPub stack as it is commonly implemented, also read:
 
@@ -35,9 +36,9 @@ To understand the whole ActivityPub stack as it is commonly implemented, also re
 * [ActivityPub and HTTP Signatures](https://swicg.github.io/activitypub-http-signature/)
 * [Data Portability in ActivityPub](https://swicg.github.io/activitypub-data-portability/)
 
-</section>
+{{% /box %}}
 
-{{% box %}}
+{{% box class="implementers" %}}
 
 ## Hey, Implementers!
 
