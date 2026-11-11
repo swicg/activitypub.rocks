@@ -9,7 +9,7 @@ The site is built with static site generator [Hugo](https://gohugo.io/).
 To preview, in the top directory of the repo, run:
 
 ```bash
-make serve
+make hugo-server
 ```
 
 This starts a local web server -- Hugo prints the URL, usually
