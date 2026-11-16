@@ -88,6 +88,7 @@ Beyond  English:
 
 * **[Fedify](https://fedify.dev)**: TypeScript federation framework 
 * **[Fedipub](https://fedipub.dev)**: Engine that brings ActivityPub to Ruby on Rails applications
+* **[ActivityPub for Elixir](https://github.com/bonfire-networks/activity_pub#activitypub-for-elixir)**: federation library for Phoenix apps
 
 ### Testing:
 
